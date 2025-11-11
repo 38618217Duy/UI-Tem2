@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOL Logistics Vietnam Inc. - Global Logistics Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <img src="img/logo/logo_mol-1.png" alt="MOL Logistics Vietnam">
+                    </div>
+                    
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="#home" class="nav-link active" data-lang-key="nav_home">Home</a></li>
+                        <li><a href="#services" class="nav-link" data-lang-key="nav_services">Services</a></li>
+                        <li><a href="#tracking" class="nav-link" data-lang-key="nav_tracking">Tracking</a></li>
+                        <li><a href="#about" class="nav-link" data-lang-key="nav_about">About Us</a></li>
+                        <li><a href="#contact" class="nav-link" data-lang-key="nav_contact">Contact</a></li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <div class="language-switcher">
+                            <button class="lang-btn active" data-lang="en">EN</button>
+                            <button class="lang-btn" data-lang="vi">VI</button>
+                            <button class="lang-btn" data-lang="ja">JA</button>
+                        </div>
+                        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                            <span class="material-icons">menu</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-lang-key="hero_title">Global Logistics Excellence</h1>
+            <p class="hero-subtitle" data-lang-key="hero_subtitle">Connecting Vietnam to the World with Reliable Shipping and Logistics Solutions</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary">
+                    <span class="material-icons">local_shipping</span>
+                    <span data-lang-key="hero_btn_services">Our Services</span>
+                </a>
+                <a href="#tracking" class="btn btn-secondary">
+                    <span class="material-icons">search</span>
+                    <span data-lang-key="hero_btn_tracking">Track Shipment</span>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="material-icons">keyboard_arrow_down</span>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-lang-key="services_title">Our Services</h2>
+                <p class="section-description" data-lang-key="services_desc">Comprehensive logistics solutions tailored to your business needs</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=80" alt="Ocean Freight">
+                    </div>
+                    <h3 data-lang-key="service_ocean_title">Ocean Freight</h3>
+                    <p data-lang-key="service_ocean_desc">Full Container Load (FCL) and Less than Container Load (LCL) services with worldwide coverage. Competitive rates and reliable transit times.</p>
+                    <ul class="service-features">
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="service_ocean_f1">FCL & LCL Services</span></li>
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="service_ocean_f2">Global Network Coverage</span></li>
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="service_ocean_f3">Temperature Controlled</span></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=800&q=80" alt="Air Freight">
+                    </div>
+                    <h3 data-lang-key="service_air_title">Air Freight</h3>
+                    <p data-lang-key="service_air_desc">Fast and efficient air cargo services for time-sensitive shipments. Door-to-door delivery with customs clearance support.</p>
+                    <ul class="service-features">
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="service_air_f1">Express Delivery</span></li>
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="service_air_f2">Customs Clearance</span></li>
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="service_air_f3">Dangerous Goods Handling</span></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80" alt="Warehousing">
+                    </div>
+                    <h3 data-lang-key="service_warehouse_title">Warehousing</h3>
+                    <p data-lang-key="service_warehouse_desc">Modern warehouse facilities with inventory management systems. Pick & pack, cross-docking, and distribution services available.</p>
+                    <ul class="service-features">
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="service_warehouse_f1">Inventory Management</span></li>
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="service_warehouse_f2">Cross-Docking</span></li>
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="service_warehouse_f3">Distribution Services</span></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80" alt="Land Transportation">
+                    </div>
+                    <h3 data-lang-key="service_land_title">Land Transportation</h3>
+                    <p data-lang-key="service_land_desc">Domestic and cross-border trucking services. Full truckload (FTL) and less than truckload (LTL) options with real-time tracking.</p>
+                    <ul class="service-features">
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="service_land_f1">FTL & LTL Services</span></li>
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="service_land_f2">Cross-Border Transport</span></li>
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="service_land_f3">Real-Time GPS Tracking</span></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80" alt="Customs Brokerage">
+                    </div>
+                    <h3 data-lang-key="service_customs_title">Customs Brokerage</h3>
+                    <p data-lang-key="service_customs_desc">Expert customs clearance services for import and export. Documentation support and compliance management.</p>
+                    <ul class="service-features">
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="service_customs_f1">Import/Export Clearance</span></li>
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="service_customs_f2">Compliance Consulting</span></li>
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="service_customs_f3">Duty & Tax Management</span></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" alt="Supply Chain Solutions">
+                    </div>
+                    <h3 data-lang-key="service_supply_title">Supply Chain Solutions</h3>
+                    <p data-lang-key="service_supply_desc">End-to-end supply chain management and optimization. Consulting services to improve efficiency and reduce costs.</p>
+                    <ul class="service-features">
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="service_supply_f1">Supply Chain Consulting</span></li>
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="service_supply_f2">Process Optimization</span></li>
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="service_supply_f3">Technology Integration</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracking Section -->
+    <section id="tracking" class="tracking">
+        <div class="container">
+            <div class="tracking-wrapper">
+                <div class="tracking-content">
+                    <h2 class="section-title" data-lang-key="tracking_title">Track Your Shipment</h2>
+                    <p class="tracking-description" data-lang-key="tracking_desc">Enter your tracking number to get real-time updates on your shipment status</p>
+                    
+                    <div class="tracking-form">
+                        <div class="input-group">
+                            <span class="material-icons">search</span>
+                            <input type="text" id="trackingInput" placeholder="Enter tracking number (e.g., MOL123456789)" data-lang-key-placeholder="tracking_placeholder">
+                            <button class="btn btn-primary" id="trackBtn">
+                                <span data-lang-key="tracking_btn">Track Now</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="tracking-features">
+                        <div class="feature-item">
+                            <span class="material-icons">schedule</span>
+                            <span data-lang-key="tracking_feature1">Real-time Updates</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="material-icons">notifications_active</span>
+                            <span data-lang-key="tracking_feature2">Email Notifications</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="material-icons">location_on</span>
+                            <span data-lang-key="tracking_feature3">Location History</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tracking-image">
+                    <img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=800&q=80" alt="Shipping Container Tracking">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title" data-lang-key="about_title">About MOL Logistics Vietnam</h2>
+                    <p data-lang-key="about_p1">MOL Logistics (Vietnam) Co., Ltd. is a leading provider of comprehensive logistics solutions in Vietnam, backed by the global expertise of Mitsui O.S.K. Lines (MOL), one of the world's largest shipping companies.</p>
+                    
+                    <p data-lang-key="about_p2">With a strong presence in major Vietnamese cities including Ho Chi Minh City and Hanoi, we offer integrated logistics services that connect Vietnam to the world through our extensive global network spanning over 650 locations in more than 100 countries.</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label" data-lang-key="stat_countries">Countries Worldwide</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">650+</div>
+                            <div class="stat-label" data-lang-key="stat_locations">Global Locations</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label" data-lang-key="stat_support">Customer Support</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label" data-lang-key="stat_experience">Years in Vietnam</div>
+                        </div>
+                    </div>
+
+                    <div class="about-features">
+                        <div class="feature-box">
+                            <span class="material-icons">verified</span>
+                            <div>
+                                <h4 data-lang-key="about_feature1_title">Trusted Partner</h4>
+                                <p data-lang-key="about_feature1_desc">Part of MOL Group with over 130 years of maritime excellence</p>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <span class="material-icons">public</span>
+                            <div>
+                                <h4 data-lang-key="about_feature2_title">Global Network</h4>
+                                <p data-lang-key="about_feature2_desc">Seamless connections to major ports and cities worldwide</p>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <span class="material-icons">eco</span>
+                            <div>
+                                <h4 data-lang-key="about_feature3_title">Sustainability</h4>
+                                <p data-lang-key="about_feature3_desc">Committed to environmental responsibility and green logistics</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-images">
+                    <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&q=80" alt="Port Operations" class="about-img-main">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=80" alt="Container Ship" class="about-img-secondary">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-lang-key="contact_title">Contact Us</h2>
+                <p class="section-description" data-lang-key="contact_desc">Get in touch with our team for logistics solutions tailored to your needs</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="branch-selector-card">
+                        <h4 data-lang-key="contact_select_branch">Select Branch</h4>
+                        <select id="branchSelector" class="branch-select">
+                            <option value="hcm" data-lang-key="branch_hcm">Ho Chi Minh City Office</option>
+                            <option value="hanoi" data-lang-key="branch_hanoi">Hanoi Office</option>
+                            <option value="haiphong" data-lang-key="branch_haiphong">Hai Phong Office</option>
+                            <option value="danang" data-lang-key="branch_danang">Da Nang Office</option>
+                        </select>
+                    </div>
+
+                    <div id="branchInfo">
+                        <div class="info-card">
+                            <span class="material-icons">location_on</span>
+                            <div>
+                                <h4 id="branchTitle" data-lang-key="contact_address_title">Head Office - Ho Chi Minh City</h4>
+                                <p id="branchAddress" data-lang-key="contact_address">18th Floor, Vincom Center, 72 Le Thanh Ton Street, District 1, Ho Chi Minh City, Vietnam</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <span class="material-icons">phone</span>
+                            <div>
+                                <h4 data-lang-key="contact_phone_title">Phone</h4>
+                                <p id="branchPhone">+84 (28) 3827 0888</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <span class="material-icons">email</span>
+                            <div>
+                                <h4 data-lang-key="contact_email_title">Email</h4>
+                                <p id="branchEmail">hcm@mollogistics.com.vn</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <span class="material-icons">access_time</span>
+                            <div>
+                                <h4 data-lang-key="contact_hours_title">Business Hours</h4>
+                                <p id="branchHours" data-lang-key="contact_hours">Monday - Friday: 8:00 AM - 5:30 PM<br>Saturday: 8:00 AM - 12:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" data-lang-key="form_name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" data-lang-key="form_email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" data-lang-key="form_phone">Phone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service" data-lang-key="form_service">Service Interested</label>
+                            <select id="service" name="service">
+                                <option value="ocean" data-lang-key="form_opt_ocean">Ocean Freight</option>
+                                <option value="air" data-lang-key="form_opt_air">Air Freight</option>
+                                <option value="warehouse" data-lang-key="form_opt_warehouse">Warehousing</option>
+                                <option value="land" data-lang-key="form_opt_land">Land Transportation</option>
+                                <option value="customs" data-lang-key="form_opt_customs">Customs Brokerage</option>
+                                <option value="supply" data-lang-key="form_opt_supply">Supply Chain Solutions</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" data-lang-key="form_message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span class="material-icons">send</span>
+                            <span data-lang-key="form_submit">Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="img/logo/logo_mol-1.png" alt="MOL Logistics Vietnam" class="footer-logo">
+                    <p data-lang-key="footer_desc">Your trusted partner for comprehensive logistics solutions in Vietnam and worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><span class="material-icons">link</span></a>
+                        <a href="#" aria-label="Facebook"><span class="material-icons">facebook</span></a>
+                        <a href="#" aria-label="Twitter"><span class="material-icons">tag</span></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-lang-key="footer_services">Services</h4>
+                    <ul>
+                        <li><a href="#services" data-lang-key="service_ocean_title">Ocean Freight</a></li>
+                        <li><a href="#services" data-lang-key="service_air_title">Air Freight</a></li>
+                        <li><a href="#services" data-lang-key="service_warehouse_title">Warehousing</a></li>
+                        <li><a href="#services" data-lang-key="service_land_title">Land Transportation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-lang-key="footer_company">Company</h4>
+                    <ul>
+                        <li><a href="#about" data-lang-key="nav_about">About Us</a></li>
+                        <li><a href="#contact" data-lang-key="nav_contact">Contact</a></li>
+                        <li><a href="#" data-lang-key="footer_careers">Careers</a></li>
+                        <li><a href="#" data-lang-key="footer_news">News & Updates</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-lang-key="footer_support">Support</h4>
+                    <ul>
+                        <li><a href="#tracking" data-lang-key="nav_tracking">Track Shipment</a></li>
+                        <li><a href="#" data-lang-key="footer_faq">FAQ</a></li>
+                        <li><a href="#" data-lang-key="footer_terms">Terms & Conditions</a></li>
+                        <li><a href="#" data-lang-key="footer_privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 MOL Logistics (Vietnam) Co., Ltd. <span data-lang-key="footer_rights">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
