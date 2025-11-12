@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Updates - MOL Logistics Vietnam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Page Hero -->
+    <section class="page-hero news-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">News & Updates</h1>
+            <p class="hero-subtitle">Stay informed about our latest developments and industry insights</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="material-icons">chevron_right</span>
+                <span>News</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Filter Bar -->
+    <section class="news-filters-section">
+        <div class="container">
+            <div class="news-search-bar">
+                <div class="search-input-group">
+                    <span class="material-icons">search</span>
+                    <input type="text" id="newsSearchInput" placeholder="Search news articles...">
+                    <button class="btn btn-primary" id="newsSearchBtn">Search</button>
+                </div>
+            </div>
+
+            <div class="news-filter-bar">
+                <div class="filter-label">
+                    <span class="material-icons">filter_list</span>
+                    <span>Filter by:</span>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">All News</button>
+                    <button class="filter-btn" data-category="company">Company News</button>
+                    <button class="filter-btn" data-category="investment">Investments</button>
+                    <button class="filter-btn" data-category="service">New Services</button>
+                    <button class="filter-btn" data-category="certification">Certifications</button>
+                    <button class="filter-btn" data-category="partnership">Partnerships</button>
+                </div>
+            </div>
+
+            <div class="sort-bar">
+                <label for="sortSelect">Sort by:</label>
+                <select id="sortSelect" class="sort-select">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="title">Title (A-Z)</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Grid -->
+    <section class="news-grid-section">
+        <div class="container">
+            <div class="news-results-info">
+                <p id="resultsCount">Showing <strong>6</strong> articles</p>
+            </div>
+
+            <div class="news-grid" id="newsGrid">
+                <!-- News articles will be dynamically loaded -->
+                <article class="news-card" data-category="investment" data-date="2025-09">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1586528116493-a029325540fa?w=600&q=80" alt="Cold Chain Investment">
+                        <span class="news-badge featured">Featured</span>
+                        <span class="news-category">Investment</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <span class="material-icons">calendar_today</span>
+                                September 2025
+                            </span>
+                        </div>
+                        <h3 class="news-title">Strategic Investment in Mekong Logistics Hub</h3>
+                        <p class="news-excerpt">MOL Logistics Vietnam acquires 39% stake in Toan Phat Logistics, partnering with Kawanishi Warehouse to develop Vietnam's first integrated cold chain center with 11,000-ton capacity.</p>
+                        <div class="news-footer">
+                            <a href="#" class="news-link">Read More <span class="material-icons">arrow_forward</span></a>
+                            <div class="news-share">
+                                <button class="share-btn" title="Share"><span class="material-icons">share</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="service" data-date="2024-08">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=600&q=80" alt="Network Expansion">
+                        <span class="news-category">Service</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <span class="material-icons">calendar_today</span>
+                                August 2024
+                            </span>
+                        </div>
+                        <h3 class="news-title">Network Expansion to 17 Locations</h3>
+                        <p class="news-excerpt">Expanding our presence across Vietnam with new offices in key industrial zones, strengthening our nationwide logistics network.</p>
+                        <div class="news-footer">
+                            <a href="#" class="news-link">Read More <span class="material-icons">arrow_forward</span></a>
+                            <div class="news-share">
+                                <button class="share-btn" title="Share"><span class="material-icons">share</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="certification" data-date="2023-03">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80" alt="ISO Certification">
+                        <span class="news-category">Certification</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <span class="material-icons">calendar_today</span>
+                                March 2023
+                            </span>
+                        </div>
+                        <h3 class="news-title">ISO 9001 & 14001 Recertification Success</h3>
+                        <p class="news-excerpt">Successfully renewed our ISO 9001 Quality Management and ISO 14001 Environmental Management System certifications.</p>
+                        <div class="news-footer">
+                            <a href="#" class="news-link">Read More <span class="material-icons">arrow_forward</span></a>
+                            <div class="news-share">
+                                <button class="share-btn" title="Share"><span class="material-icons">share</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="company" data-date="2022-11">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80" alt="Team Growth">
+                        <span class="news-category">Company</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <span class="material-icons">calendar_today</span>
+                                November 2022
+                            </span>
+                        </div>
+                        <h3 class="news-title">Team Expansion and New Leadership</h3>
+                        <p class="news-excerpt">Welcoming new talent and leadership to drive our growth strategy and enhance service delivery across Vietnam.</p>
+                        <div class="news-footer">
+                            <a href="#" class="news-link">Read More <span class="material-icons">arrow_forward</span></a>
+                            <div class="news-share">
+                                <button class="share-btn" title="Share"><span class="material-icons">share</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="partnership" data-date="2021-06">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80" alt="Partnership">
+                        <span class="news-category">Partnership</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <span class="material-icons">calendar_today</span>
+                                June 2021
+                            </span>
+                        </div>
+                        <h3 class="news-title">Strategic Partnership with Major Electronics Manufacturer</h3>
+                        <p class="news-excerpt">Announcing long-term partnership to provide comprehensive supply chain solutions for major electronics production.</p>
+                        <div class="news-footer">
+                            <a href="#" class="news-link">Read More <span class="material-icons">arrow_forward</span></a>
+                            <div class="news-share">
+                                <button class="share-btn" title="Share"><span class="material-icons">share</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="certification" data-date="2019-05">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&q=80" alt="Warehouse Opening">
+                        <span class="news-category">Service</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <span class="material-icons">calendar_today</span>
+                                May 2019
+                            </span>
+                        </div>
+                        <h3 class="news-title">Hai Phong Logistics Center Grand Opening</h3>
+                        <p class="news-excerpt">Officially opened our state-of-the-art 6,000m² warehouse facility in Hai Phong, northern Vietnam's key logistics hub.</p>
+                        <div class="news-footer">
+                            <a href="#" class="news-link">Read More <span class="material-icons">arrow_forward</span></a>
+                            <div class="news-share">
+                                <button class="share-btn" title="Share"><span class="material-icons">share</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination-btn" disabled>
+                    <span class="material-icons">chevron_left</span>
+                    Previous
+                </button>
+                <div class="pagination-numbers">
+                    <button class="page-num active">1</button>
+                    <button class="page-num">2</button>
+                    <button class="page-num">3</button>
+                </div>
+                <button class="pagination-btn">
+                    Next
+                    <span class="material-icons">chevron_right</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <span class="material-icons">mail_outline</span>
+                <div class="newsletter-text">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter for the latest news and insights</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    
+    <script src="script.js"></script>
+    <script src="news-page.js"></script>
+</body>
+</html>

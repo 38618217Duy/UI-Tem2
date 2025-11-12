@@ -7,9 +7,27 @@ const translations = {
         // Navigation
         nav_home: "Home",
         nav_services: "Services",
-        nav_tracking: "Tracking",
+        nav_company: "Company",
         nav_about: "About Us",
+        nav_sustainability: "Sustainability",
+        nav_network: "Network",
+        nav_testimonials: "Testimonials",
+        nav_news: "News",
         nav_contact: "Contact",
+        
+        // Mega Menu
+        mega_freight: "Freight Services",
+        mega_logistics: "Logistics Solutions",
+        mega_featured: "Featured",
+        mega_cold_chain: "Cold Chain Solutions",
+        mega_cold_chain_desc: "Mekong Logistics Hub - 11,000 tons capacity cold storage with irradiation facility",
+        mega_learn_more: "Learn More",
+        service_ocean_desc: "Global sea transport solutions",
+        service_air_desc: "Fast international delivery",
+        service_land_desc: "Nationwide trucking services",
+        service_warehouse_desc: "Modern storage facilities",
+        service_customs_desc: "Expert customs brokerage",
+        service_supply_desc: "End-to-end management",
         
         // Hero
         hero_title: "Global Logistics Excellence",
@@ -65,9 +83,215 @@ const translations = {
         about_p1: "MOL Logistics (Vietnam) Co., Ltd. is a leading provider of comprehensive logistics solutions in Vietnam, backed by the global expertise of Mitsui O.S.K. Lines (MOL), one of the world's largest shipping companies.",
         about_p2: "With a strong presence in major Vietnamese cities including Ho Chi Minh City and Hanoi, we offer integrated logistics services that connect Vietnam to the world through our extensive global network spanning over 650 locations in more than 100 countries.",
         stat_countries: "Countries Worldwide",
-        stat_locations: "Global Locations",
+        stat_locations: "Global Offices",
+        stat_offices_vn: "Offices in Vietnam",
         stat_support: "Customer Support",
         stat_experience: "Years in Vietnam",
+        
+        // Timeline
+        timeline_title: "Our Journey in Vietnam",
+        timeline_desc: "From our first representative office to becoming a strategic logistics partner",
+        milestone_2001: "Representative Office in Ho Chi Minh City",
+        milestone_2001_desc: "Established our first presence in Vietnam",
+        milestone_2005: "Official Incorporation",
+        milestone_2005_desc: "MOL Logistics (Vietnam) Inc. officially established",
+        milestone_2006: "100% Japanese Ownership Approved",
+        milestone_2006_desc: "First and only Japanese shipping company granted 100% ownership",
+        milestone_2019: "Hai Phong Logistics Center",
+        milestone_2019_desc: "Opened 6,000m² warehouse facility",
+        milestone_2024: "Network Expansion",
+        milestone_2024_desc: "Expanded to 17 locations nationwide",
+        milestone_2025: "Strategic Cold Chain Investment",
+        milestone_2025_desc: "39% stake in Toan Phat Logistics - Mekong Logistics Hub",
+        
+        // Certifications
+        cert_title: "Quality Certifications",
+        cert_desc: "Committed to international quality and environmental standards",
+        cert_iso9001: "Quality Management System",
+        cert_iso14001: "Environmental Management System",
+        cert_iata: "International Air Transport Association",
+        cert_aeo: "Authorized Economic Operator",
+        
+        // Sustainability
+        sustainability_title: "Sustainability & ESG Commitment",
+        sustainability_desc: "Building a sustainable future through responsible business practices and environmental stewardship",
+        blue_action_title: "BLUE ACTION for ALL",
+        blue_action_desc: "MOL Group's initiative to contribute to the realization of a sustainable society through marine environment, social responsibility, and community engagement",
+        sust_marine_title: "Marine Environment Protection",
+        sust_marine_desc: "Active participation in beach cleanup activities and marine conservation projects across Vietnam",
+        sust_marine_f1: "Beach cleanup at Phu Quoc Island",
+        sust_marine_f2: "Marine debris collection programs",
+        sust_marine_f3: "Ocean awareness campaigns",
+        sust_green_title: "Green Logistics Practices",
+        sust_green_desc: "Implementing sustainable logistics solutions to reduce environmental impact and carbon footprint",
+        sust_green_f1: "CO2 emission reduction initiatives",
+        sust_green_f2: "Energy-efficient warehouse operations",
+        sust_green_f3: "Sustainable packaging solutions",
+        sust_social_title: "Social Responsibility",
+        sust_social_desc: "Contributing to local communities and developing next-generation human resources",
+        sust_social_f1: "Community engagement programs",
+        sust_social_f2: "Disaster relief support ($36,000 USD)",
+        sust_social_f3: "Education & skills development",
+        sust_stat_iso: "Environmental Management System Certified",
+        sust_stat_fleet: "800+ Vessels",
+        sust_stat_fleet_desc: "MOL Group fleet with eco-friendly initiatives",
+        sust_stat_target: "Carbon Neutral",
+        sust_stat_target_desc: "Targeting net-zero emissions by 2050",
+        
+        // Enhanced Tracking
+        tracking_single: "Single Tracking",
+        tracking_multiple: "Multiple Tracking",
+        tracking_multiple_placeholder: "Enter multiple tracking numbers (one per line)",
+        tracking_track_all: "Track All Shipments",
+        tracking_email_opt: "Email me status updates",
+        tracking_feature4: "Mobile App Available",
+        
+        // Testimonials
+        testimonials_title: "Client Success Stories",
+        testimonials_desc: "Trusted by leading companies across Vietnam and beyond",
+        testimonial_1_company: "Major Automotive Manufacturer",
+        testimonial_1_industry: "Automotive Parts - Binh Duong",
+        testimonial_1_text: "MOL Logistics has been instrumental in optimizing our supply chain from Japan to Vietnam. Their expertise in customs clearance and just-in-time delivery has reduced our inventory costs by 25% while improving delivery reliability.",
+        testimonial_2_company: "Leading Seafood Exporter",
+        testimonial_2_industry: "Agricultural & Seafood - Mekong Delta",
+        testimonial_2_text: "The investment in Mekong Logistics Hub has transformed our cold chain operations. With MOL's integrated cold storage and global network, we've expanded our exports to 15 new markets while maintaining perfect temperature control throughout the journey.",
+        testimonial_3_company: "Electronics Manufacturing",
+        testimonial_3_industry: "Electronics - Hanoi & Hai Phong",
+        testimonial_3_text: "Working with MOL for 8+ years across multiple facilities. Their Hai Phong Logistics Center provides seamless coordination between our northern production sites and international shipments. Real-time tracking and proactive communication are exceptional.",
+        testimonial_verified: "Verified Client",
+        testimonial_featured: "Featured Case Study",
+        testimonial_partnership: "8+ Years Partnership",
+        stat_new_markets: "New Markets",
+        stat_quality: "Quality Rate",
+        stat_cost_saving: "Cost Reduction",
+        trust_clients: "Active Clients",
+        trust_satisfaction: "Client Satisfaction",
+        trust_shipments: "Shipments Handled",
+        trust_on_time: "On-Time Delivery",
+        
+        // Search
+        search_title: "Search",
+        search_placeholder: "Search for services, news, offices...",
+        search_all: "All",
+        search_services: "Services",
+        search_news: "News",
+        search_offices: "Offices",
+        search_popular: "Popular Searches",
+        search_tag_tracking: "Track Shipment",
+        search_tag_ocean: "Ocean Freight",
+        search_tag_customs: "Customs Clearance",
+        search_tag_quote: "Get Quote",
+        
+        // Tools & Resources
+        tools_title: "Tools & Resources",
+        tools_desc: "Powerful tools to help you plan and manage your logistics needs",
+        tool_quote_title: "Get Instant Quote",
+        tool_quote_desc: "Receive a customized quote for your shipping needs in minutes",
+        tool_quote_service_placeholder: "Select Service",
+        tool_quote_origin: "Origin",
+        tool_quote_destination: "Destination",
+        tool_quote_weight: "Weight (kg)",
+        tool_quote_volume: "Volume (m³)",
+        tool_quote_submit: "Get Quote",
+        tool_co2_title: "CO2 Emissions Calculator",
+        tool_co2_desc: "Calculate and track your shipment's carbon footprint",
+        tool_co2_transport_placeholder: "Transport Mode",
+        transport_ocean: "Ocean Freight",
+        transport_air: "Air Freight",
+        transport_truck: "Truck",
+        transport_rail: "Rail",
+        tool_co2_distance: "Distance (km)",
+        tool_co2_cargo: "Cargo Weight (kg)",
+        tool_co2_calculate: "Calculate CO2",
+        tool_shipping_title: "Shipping Cost Estimator",
+        tool_shipping_desc: "Estimate shipping costs based on dimensions and distance",
+        tool_ship_length: "Length (cm)",
+        tool_ship_width: "Width (cm)",
+        tool_ship_height: "Height (cm)",
+        tool_ship_weight: "Weight (kg)",
+        tool_ship_service_placeholder: "Shipping Method",
+        ship_express: "Express (1-3 days)",
+        ship_standard: "Standard (5-7 days)",
+        ship_economy: "Economy (10-14 days)",
+        tool_ship_estimate: "Estimate Cost",
+        tool_locator_title: "Find Nearest Office",
+        tool_locator_search: "Enter your city or province...",
+        location_hcm: "Ho Chi Minh City",
+        location_hanoi: "Hanoi",
+        location_haiphong: "Hai Phong",
+        location_danang: "Da Nang",
+        
+        // Office Network
+        network_title: "Nationwide Coverage",
+        network_desc: "17 strategic locations across Vietnam serving major industrial zones",
+        region_north: "Northern Region",
+        region_south: "Southern Region",
+        office_hanoi: "Hanoi Branch",
+        office_noibai: "Noi Bai Airport Office",
+        office_haiphong: "Hai Phong Office",
+        office_hp_logistics: "Hai Phong Logistics Center (6,000m²)",
+        office_haiduong: "Hai Duong Office",
+        office_thaibinh: "Thai Binh Office",
+        office_quangninh: "Quang Ninh Office",
+        office_hanam: "Ha Nam Office",
+        office_nomura: "Nomura Industrial Park",
+        office_hcm: "Ho Chi Minh City (HQ)",
+        office_bentre: "Ben Tre Office",
+        office_songthan: "Song Than - Binh Duong",
+        office_vsip2: "VSIP II - Binh Duong",
+        office_amata: "Amata - Dong Nai",
+        office_brvt: "Ba Ria - Vung Tau",
+        office_danang: "Da Nang Office",
+        
+        // Industries
+        industries_title: "Industries We Serve",
+        industries_desc: "Specialized logistics solutions across diverse sectors",
+        industry_auto: "Automobile Parts",
+        industry_electrical: "Electrical Components",
+        industry_electronics: "Electronics",
+        industry_furniture: "Furniture",
+        industry_chemicals: "Chemicals",
+        industry_toys: "Toys",
+        industry_machinery: "Machinery",
+        industry_medical: "Medical Equipment",
+        industry_steel: "Iron & Steel",
+        industry_apparel: "Clothing & Footwear",
+        industry_food: "Food Products",
+        
+        // News
+        news_title: "Latest News & Updates",
+        news_desc: "Stay informed about our latest developments and achievements",
+        news_badge_featured: "Featured",
+        news_date_1: "September 2025",
+        news_date_2: "January 2024",
+        news_date_3: "2023",
+        news_date_4: "2019",
+        news_cat_investment: "Investment",
+        news_cat_expansion: "Expansion",
+        news_cat_service: "Service",
+        news_cat_certification: "Certification",
+        news_title_1: "MOL Logistics Invests in Mekong Cold Chain Hub",
+        news_excerpt_1: "Strategic 39% stake in Toan Phat Logistics to develop Vietnam's first integrated cold chain center with 11,000 tons capacity.",
+        news_title_2: "Expanded to 17 Locations Nationwide",
+        news_excerpt_2: "Strengthening our presence across Vietnam to serve major industrial zones and manufacturing hubs more effectively.",
+        news_title_3: "Cross-Border Logistics to Thailand",
+        news_excerpt_3: "Launching comprehensive land freight services connecting Vietnam and Thailand for seamless regional trade.",
+        news_title_4: "Hai Phong Logistics Center Opens",
+        news_excerpt_4: "Grand opening of our 6,000m² state-of-the-art warehouse facility in Hai Phong, northern Vietnam's key logistics hub.",
+        news_read_more: "Read More",
+        
+        // Strategic Investment
+        investment_title: "Strategic Cold Chain Investment",
+        investment_subtitle: "Mekong Logistics Hub - Vietnam's First Integrated Cold Chain Center",
+        investment_p1: "In September 2025, MOL Logistics Vietnam became a strategic shareholder (39%) in Toan Phat Logistics, partnering with Kawanishi Warehouse (51%) to develop the Mekong Logistics Hub in Tay Ninh Province.",
+        invest_feature1_title: "11,000 Tons Capacity",
+        invest_feature1_desc: "State-of-the-art cold storage facility",
+        invest_feature2_title: "Agricultural & Seafood Exports",
+        invest_feature2_desc: "Supporting Vietnam's export growth",
+        invest_feature3_title: "Integrated Solution",
+        invest_feature3_desc: "Combined cold storage with irradiation facility",
+        investment_quote: "We highly value Toan Phat Logistics' efficient cold storage operation capabilities. This is a crucial factor for agricultural and seafood exports - sectors that require strict temperature management.",
+        quote_position: "Chairman & CEO, MOL Logistics",
         about_feature1_title: "Trusted Partner",
         about_feature1_desc: "Part of MOL Group with over 130 years of maritime excellence",
         about_feature2_title: "Global Network",
@@ -122,6 +346,7 @@ const translations = {
         nav_services: "Dịch Vụ",
         nav_tracking: "Tra Cứu",
         nav_about: "Về Chúng Tôi",
+        nav_network: "Mạng Lưới",
         nav_contact: "Liên Hệ",
         
         // Hero
@@ -178,9 +403,106 @@ const translations = {
         about_p1: "MOL Logistics (Vietnam) Co., Ltd. là nhà cung cấp hàng đầu các giải pháp logistics toàn diện tại Việt Nam, được hỗ trợ bởi chuyên môn toàn cầu của Mitsui O.S.K. Lines (MOL), một trong những công ty vận tải biển lớn nhất thế giới.",
         about_p2: "Với sự hiện diện mạnh mẽ tại các thành phố lớn của Việt Nam bao gồm TP. Hồ Chí Minh và Hà Nội, chúng tôi cung cấp dịch vụ logistics tích hợp kết nối Việt Nam với thế giới thông qua mạng lưới toàn cầu rộng khắp hơn 650 địa điểm tại hơn 100 quốc gia.",
         stat_countries: "Quốc Gia Trên Thế Giới",
-        stat_locations: "Địa Điểm Toàn Cầu",
+        stat_locations: "Văn Phòng Toàn Cầu",
+        stat_offices_vn: "Văn Phòng Tại Việt Nam",
         stat_support: "Hỗ Trợ Khách Hàng",
         stat_experience: "Năm Tại Việt Nam",
+        
+        // Timeline
+        timeline_title: "Hành Trình Tại Việt Nam",
+        timeline_desc: "Từ văn phòng đại diện đầu tiên đến đối tác logistics chiến lược",
+        milestone_2001: "Văn Phòng Đại Diện tại TP. Hồ Chí Minh",
+        milestone_2001_desc: "Thiết lập sự hiện diện đầu tiên tại Việt Nam",
+        milestone_2005: "Thành Lập Chính Thức",
+        milestone_2005_desc: "Công ty TNHH MOL Logistics (Việt Nam) chính thức thành lập",
+        milestone_2006: "Được Phê Duyệt Sở Hữu 100% Vốn Nhật",
+        milestone_2006_desc: "Công ty vận tải biển Nhật Bản đầu tiên và duy nhất được cấp phép sở hữu 100%",
+        milestone_2019: "Trung Tâm Logistics Hải Phòng",
+        milestone_2019_desc: "Khai trương kho bãi 6.000m²",
+        milestone_2024: "Mở Rộng Mạng Lưới",
+        milestone_2024_desc: "Mở rộng lên 17 địa điểm trên toàn quốc",
+        milestone_2025: "Đầu Tư Chiến Lược Chuỗi Lạnh",
+        milestone_2025_desc: "Sở hữu 39% cổ phần Toàn Phát Logistics - Mekong Logistics Hub",
+        
+        // Certifications
+        cert_title: "Chứng Nhận Chất Lượng",
+        cert_desc: "Cam kết với các tiêu chuẩn chất lượng và môi trường quốc tế",
+        cert_iso9001: "Hệ Thống Quản Lý Chất Lượng",
+        cert_iso14001: "Hệ Thống Quản Lý Môi Trường",
+        cert_iata: "Hiệp Hội Vận Tải Hàng Không Quốc Tế",
+        cert_aeo: "Nhà Khai Thác Kinh Tế Được Ủy Quyền",
+        
+        // Office Network
+        network_title: "Phủ Sóng Toàn Quốc",
+        network_desc: "17 địa điểm chiến lược trên khắp Việt Nam phục vụ các khu công nghiệp chính",
+        region_north: "Miền Bắc",
+        region_south: "Miền Nam",
+        office_hanoi: "Chi Nhánh Hà Nội",
+        office_noibai: "Văn Phòng Sân Bay Nội Bài",
+        office_haiphong: "Văn Phòng Hải Phòng",
+        office_hp_logistics: "Trung Tâm Logistics Hải Phòng (6.000m²)",
+        office_haiduong: "Văn Phòng Hải Dương",
+        office_thaibinh: "Văn Phòng Thái Bình",
+        office_quangninh: "Văn Phòng Quảng Ninh",
+        office_hanam: "Văn Phòng Hà Nam",
+        office_nomura: "KCN Nomura",
+        office_hcm: "TP. Hồ Chí Minh (Trụ Sở)",
+        office_bentre: "Văn Phòng Bến Tre",
+        office_songthan: "Song Than - Bình Dương",
+        office_vsip2: "VSIP II - Bình Dương",
+        office_amata: "Amata - Đồng Nai",
+        office_brvt: "Bà Rịa - Vũng Tàu",
+        office_danang: "Văn Phòng Đà Nẵng",
+        
+        // Industries
+        industries_title: "Ngành Hàng Phục Vụ",
+        industries_desc: "Giải pháp logistics chuyên biệt cho nhiều lĩnh vực",
+        industry_auto: "Linh Kiện Ô Tô",
+        industry_electrical: "Linh Kiện Điện",
+        industry_electronics: "Thiết Bị Điện Tử",
+        industry_furniture: "Nội Thất",
+        industry_chemicals: "Hóa Chất",
+        industry_toys: "Đồ Chơi",
+        industry_machinery: "Máy Móc",
+        industry_medical: "Thiết Bị Y Tế",
+        industry_steel: "Sắt và Thép",
+        industry_apparel: "Quần Áo & Giày Dép",
+        industry_food: "Thực Phẩm",
+        
+        // News
+        news_title: "Tin Tức & Cập Nhật Mới Nhất",
+        news_desc: "Theo dõi những phát triển và thành tựu mới nhất của chúng tôi",
+        news_badge_featured: "Nổi Bật",
+        news_date_1: "Tháng 9/2025",
+        news_date_2: "Tháng 1/2024",
+        news_date_3: "2023",
+        news_date_4: "2019",
+        news_cat_investment: "Đầu Tư",
+        news_cat_expansion: "Mở Rộng",
+        news_cat_service: "Dịch Vụ",
+        news_cat_certification: "Chứng Nhận",
+        news_title_1: "MOL Logistics Đầu Tư Vào Mekong Cold Chain Hub",
+        news_excerpt_1: "Chiến lược sở hữu 39% cổ phần Toàn Phát Logistics để phát triển trung tâm chuỗi lạnh tích hợp đầu tiên của Việt Nam với công suất 11.000 tấn.",
+        news_title_2: "Mở Rộng Lên 17 Địa Điểm Toàn Quốc",
+        news_excerpt_2: "Tăng cường sự hiện diện khắp Việt Nam để phục vụ các khu công nghiệp và trung tâm sản xuất lớn hiệu quả hơn.",
+        news_title_3: "Logistics Xuyên Biên Giới Đến Thái Lan",
+        news_excerpt_3: "Ra mắt dịch vụ vận tải đường bộ toàn diện kết nối Việt Nam và Thái Lan cho thương mại khu vực liền mạch.",
+        news_title_4: "Khai Trương Trung Tâm Logistics Hải Phòng",
+        news_excerpt_4: "Khai trương hoành tráng kho bãi hiện đại 6.000m² tại Hải Phòng, trung tâm logistics chính của miền Bắc Việt Nam.",
+        news_read_more: "Đọc Thêm",
+        
+        // Strategic Investment
+        investment_title: "Đầu Tư Chiến Lược Chuỗi Lạnh",
+        investment_subtitle: "Mekong Logistics Hub - Trung Tâm Chuỗi Lạnh Tích Hợp Đầu Tiên Việt Nam",
+        investment_p1: "Tháng 9/2025, MOL Logistics Vietnam trở thành cổ đông chiến lược (39%) của Toàn Phát Logistics, hợp tác với Kawanishi Warehouse (51%) để phát triển Mekong Logistics Hub tại tỉnh Tây Ninh.",
+        invest_feature1_title: "Công Suất 11.000 Tấn",
+        invest_feature1_desc: "Kho lạnh hiện đại tiên tiến",
+        invest_feature2_title: "Xuất Khẩu Nông - Thủy Sản",
+        invest_feature2_desc: "Hỗ trợ tăng trưởng xuất khẩu Việt Nam",
+        invest_feature3_title: "Giải Pháp Tích Hợp",
+        invest_feature3_desc: "Kết hợp kho lạnh với cơ sở chiếu xạ",
+        investment_quote: "Chúng tôi đánh giá cao năng lực vận hành kho lạnh hiệu quả của Toàn Phát Logistics. Đây là yếu tố then chốt đối với xuất khẩu nông sản và thủy sản - những ngành đòi hỏi quản lý nhiệt độ nghiêm ngặt.",
+        quote_position: "Chủ tịch kiêm CEO, MOL Logistics",
         about_feature1_title: "Đối Tác Tin Cậy",
         about_feature1_desc: "Là một phần của Tập đoàn MOL với hơn 130 năm xuất sắc trong hàng hải",
         about_feature2_title: "Mạng Lưới Toàn Cầu",
@@ -235,6 +557,7 @@ const translations = {
         nav_services: "サービス",
         nav_tracking: "追跡",
         nav_about: "会社概要",
+        nav_network: "ネットワーク",
         nav_contact: "お問い合わせ",
         
         // Hero
@@ -291,9 +614,106 @@ const translations = {
         about_p1: "MOL Logistics (Vietnam) Co., Ltd.は、世界最大の海運会社の一つである商船三井（MOL）のグローバルな専門知識に支えられた、ベトナムにおける包括的な物流ソリューションの主要プロバイダーです。",
         about_p2: "ホーチミン市やハノイを含むベトナムの主要都市に強固な拠点を持ち、100カ国以上の650以上の拠点に広がる広範なグローバルネットワークを通じて、ベトナムと世界をつなぐ統合物流サービスを提供しています。",
         stat_countries: "世界の国々",
-        stat_locations: "グローバル拠点",
+        stat_locations: "グローバルオフィス",
+        stat_offices_vn: "ベトナムのオフィス",
         stat_support: "カスタマーサポート",
         stat_experience: "ベトナムでの年数",
+        
+        // Timeline
+        timeline_title: "ベトナムでの歩み",
+        timeline_desc: "最初の駐在員事務所から戦略的物流パートナーへ",
+        milestone_2001: "ホーチミン市駐在員事務所",
+        milestone_2001_desc: "ベトナムで最初の拠点を設立",
+        milestone_2005: "正式設立",
+        milestone_2005_desc: "MOLロジスティクス（ベトナム）正式設立",
+        milestone_2006: "100%日本資本承認",
+        milestone_2006_desc: "日本の海運会社として初めて100%出資が認められた",
+        milestone_2019: "ハイフォン物流センター",
+        milestone_2019_desc: "6,000m²の倉庫施設オープン",
+        milestone_2024: "ネットワーク拡大",
+        milestone_2024_desc: "全国17拠点に拡大",
+        milestone_2025: "戦略的コールドチェーン投資",
+        milestone_2025_desc: "Toan Phat Logisticsの39%株式取得 - メコン物流ハブ",
+        
+        // Certifications
+        cert_title: "品質認証",
+        cert_desc: "国際的な品質・環境基準へのコミットメント",
+        cert_iso9001: "品質マネジメントシステム",
+        cert_iso14001: "環境マネジメントシステム",
+        cert_iata: "国際航空運送協会",
+        cert_aeo: "認定事業者",
+        
+        // Office Network
+        network_title: "全国ネットワーク",
+        network_desc: "主要工業団地にサービスを提供する17の戦略拠点",
+        region_north: "北部地域",
+        region_south: "南部地域",
+        office_hanoi: "ハノイ支店",
+        office_noibai: "ノイバイ空港オフィス",
+        office_haiphong: "ハイフォンオフィス",
+        office_hp_logistics: "ハイフォン物流センター（6,000m²）",
+        office_haiduong: "ハイズオンオフィス",
+        office_thaibinh: "タイビンオフィス",
+        office_quangninh: "クアンニンオフィス",
+        office_hanam: "ハナムオフィス",
+        office_nomura: "野村工業団地",
+        office_hcm: "ホーチミン市（本社）",
+        office_bentre: "ベンチェオフィス",
+        office_songthan: "ソンタン - ビンズオン",
+        office_vsip2: "VSIP II - ビンズオン",
+        office_amata: "アマタ - ドンナイ",
+        office_brvt: "バリア - ブンタウ",
+        office_danang: "ダナンオフィス",
+        
+        // Industries
+        industries_title: "サービス業界",
+        industries_desc: "多様な分野に特化した物流ソリューション",
+        industry_auto: "自動車部品",
+        industry_electrical: "電気部品",
+        industry_electronics: "電子機器",
+        industry_furniture: "家具",
+        industry_chemicals: "化学品",
+        industry_toys: "玩具",
+        industry_machinery: "機械",
+        industry_medical: "医療機器",
+        industry_steel: "鉄鋼",
+        industry_apparel: "衣料品・履物",
+        industry_food: "食品",
+        
+        // News
+        news_title: "最新ニュース＆アップデート",
+        news_desc: "最新の開発と成果についてご確認ください",
+        news_badge_featured: "注目",
+        news_date_1: "2025年9月",
+        news_date_2: "2024年1月",
+        news_date_3: "2023年",
+        news_date_4: "2019年",
+        news_cat_investment: "投資",
+        news_cat_expansion: "拡大",
+        news_cat_service: "サービス",
+        news_cat_certification: "認証",
+        news_title_1: "MOLロジスティクス、メコンコールドチェーンハブに投資",
+        news_excerpt_1: "Toan Phat Logisticsの39%株式を戦略的に取得し、11,000トン容量のベトナム初の統合コールドチェーンセンターを開発。",
+        news_title_2: "全国17拠点に拡大",
+        news_excerpt_2: "ベトナム全土での存在感を強化し、主要工業団地と製造ハブにより効果的にサービスを提供。",
+        news_title_3: "タイへの越境物流サービス",
+        news_excerpt_3: "ベトナムとタイを結ぶ包括的な陸上貨物サービスを開始し、シームレスな地域貿易を実現。",
+        news_title_4: "ハイフォン物流センター開設",
+        news_excerpt_4: "北部ベトナムの主要物流ハブ、ハイフォンに6,000m²の最新鋭倉庫施設をグランドオープン。",
+        news_read_more: "続きを読む",
+        
+        // Strategic Investment
+        investment_title: "戦略的コールドチェーン投資",
+        investment_subtitle: "メコン物流ハブ - ベトナム初の統合コールドチェーンセンター",
+        investment_p1: "2025年9月、MOLロジスティクスベトナムはToan Phat Logisticsの戦略的株主（39%）となり、Kawanishi Warehouse（51%）と提携してタイニン省にメコン物流ハブを開発しています。",
+        invest_feature1_title: "11,000トン容量",
+        invest_feature1_desc: "最新鋭の冷蔵保管施設",
+        invest_feature2_title: "農産物・水産物輸出",
+        invest_feature2_desc: "ベトナムの輸出成長を支援",
+        invest_feature3_title: "統合ソリューション",
+        invest_feature3_desc: "冷蔵保管と放射線照射施設を統合",
+        investment_quote: "Toan Phat Logisticsの効率的な冷蔵保管運営能力を高く評価しています。これは、厳格な温度管理を必要とする農産物・水産物輸出にとって重要な要素です。",
+        quote_position: "会長兼CEO、MOLロジスティクス",
         about_feature1_title: "信頼できるパートナー",
         about_feature1_desc: "130年以上の海運の卓越性を持つMOLグループの一員",
         about_feature2_title: "グローバルネットワーク",
@@ -436,6 +856,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initContactForm();
     initTracking();
     initBranchSelector();
+    initTrackingTabs();
+    initSearchModal();
+    initToolsSection();
 });
 
 // Language Switcher
@@ -617,4 +1040,305 @@ function updateBranchInfo(branchId) {
     document.getElementById('branchPhone').innerHTML = branch.phone;
     document.getElementById('branchEmail').innerHTML = branch.email;
     document.getElementById('branchHours').innerHTML = branch.hours[currentLang];
+}
+
+// Tracking Tabs Functionality
+function initTrackingTabs() {
+    const trackingTabs = document.querySelectorAll('.tracking-tab');
+    const trackingTabContents = document.querySelectorAll('.tracking-tab-content');
+    
+    trackingTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+            
+            // Remove active class from all tabs and contents
+            trackingTabs.forEach(t => t.classList.remove('active'));
+            trackingTabContents.forEach(c => c.classList.remove('active'));
+            
+            // Add active class to clicked tab and corresponding content
+            this.classList.add('active');
+            document.getElementById(targetTab + '-tracking').classList.add('active');
+        });
+    });
+    
+    // Multiple tracking button
+    const trackMultipleBtn = document.getElementById('trackMultipleBtn');
+    const multipleTrackingInput = document.getElementById('multipleTrackingInput');
+    
+    if (trackMultipleBtn && multipleTrackingInput) {
+        trackMultipleBtn.addEventListener('click', function() {
+            const trackingNumbers = multipleTrackingInput.value.trim().split('\n').filter(num => num.trim() !== '');
+            
+            if (trackingNumbers.length === 0) {
+                alert('Please enter at least one tracking number');
+                return;
+            }
+            
+            // In a real application, you would query a tracking API for multiple numbers
+            let resultsMessage = `Tracking ${trackingNumbers.length} shipments:\n\n`;
+            trackingNumbers.forEach((num, index) => {
+                resultsMessage += `${index + 1}. ${num.trim()}: In Transit\n`;
+            });
+            
+            alert(resultsMessage);
+        });
+    }
+}
+
+// Search Modal Functionality
+function initSearchModal() {
+    const searchToggle = document.getElementById('searchToggle');
+    const searchModal = document.getElementById('searchModal');
+    const searchClose = document.getElementById('searchClose');
+    const searchInput = document.getElementById('searchInput');
+    const searchFilters = document.querySelectorAll('.search-filter');
+    
+    // Open search modal
+    if (searchToggle && searchModal) {
+        searchToggle.addEventListener('click', function() {
+            searchModal.classList.add('active');
+            setTimeout(() => {
+                if (searchInput) searchInput.focus();
+            }, 100);
+        });
+    }
+    
+    // Close search modal
+    if (searchClose && searchModal) {
+        searchClose.addEventListener('click', function() {
+            searchModal.classList.remove('active');
+        });
+        
+        // Close modal when clicking outside
+        searchModal.addEventListener('click', function(e) {
+            if (e.target === searchModal) {
+                searchModal.classList.remove('active');
+            }
+        });
+        
+        // Close modal on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && searchModal.classList.contains('active')) {
+                searchModal.classList.remove('active');
+            }
+        });
+    }
+    
+    // Search filters
+    searchFilters.forEach(filter => {
+        filter.addEventListener('click', function() {
+            searchFilters.forEach(f => f.classList.remove('active'));
+            this.classList.add('active');
+            
+            const filterType = this.getAttribute('data-filter');
+            // In a real application, you would filter search results here
+            console.log('Filter selected:', filterType);
+        });
+    });
+    
+    // Search input
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.trim().toLowerCase();
+            
+            // In a real application, you would perform actual search here
+            if (searchTerm.length > 2) {
+                console.log('Searching for:', searchTerm);
+                // You could show search results here
+            }
+        });
+        
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const searchTerm = this.value.trim();
+                if (searchTerm) {
+                    performSearch(searchTerm);
+                }
+            }
+        });
+    }
+    
+    // Suggestion tags
+    const suggestionTags = document.querySelectorAll('.suggestion-tag');
+    suggestionTags.forEach(tag => {
+        tag.addEventListener('click', function() {
+            const searchTerm = this.textContent;
+            if (searchInput) {
+                searchInput.value = searchTerm;
+                performSearch(searchTerm);
+            }
+        });
+    });
+}
+
+function performSearch(searchTerm) {
+    // In a real application, this would search through content and display results
+    console.log('Performing search for:', searchTerm);
+    alert(`Searching for: "${searchTerm}"\n\nThis would show search results in a real implementation.`);
+}
+
+// Tools & Resources Functionality
+function initToolsSection() {
+    initQuoteForm();
+    initCO2Calculator();
+    initShippingCalculator();
+    initOfficeLocator();
+}
+
+// Quote Form
+function initQuoteForm() {
+    const quoteForm = document.getElementById('quoteForm');
+    
+    if (quoteForm) {
+        quoteForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const service = document.getElementById('quoteService').value;
+            const formData = new FormData(quoteForm);
+            
+            // In a real application, send to server
+            alert(`Quote Request Submitted!\n\nService: ${service}\nWe'll send you a detailed quote within 2 hours.`);
+            quoteForm.reset();
+        });
+    }
+}
+
+// CO2 Calculator
+function initCO2Calculator() {
+    const co2Form = document.getElementById('co2Form');
+    const co2Result = document.getElementById('co2Result');
+    const co2Value = document.getElementById('co2Value');
+    
+    if (co2Form) {
+        co2Form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const transport = document.getElementById('co2Transport').value;
+            const distance = parseFloat(document.getElementById('co2Distance').value);
+            const weight = parseFloat(document.getElementById('co2Weight').value);
+            
+            // CO2 emission factors (kg CO2 per ton-km)
+            const emissionFactors = {
+                ocean: 0.008,   // Sea freight
+                air: 0.602,     // Air freight
+                truck: 0.062,   // Road transport
+                rail: 0.022     // Rail transport
+            };
+            
+            const factor = emissionFactors[transport] || 0.05;
+            const co2Emissions = (weight / 1000) * distance * factor;
+            
+            co2Value.textContent = co2Emissions.toFixed(2);
+            co2Result.style.display = 'block';
+        });
+    }
+}
+
+// Shipping Cost Calculator
+function initShippingCalculator() {
+    const shippingForm = document.getElementById('shippingForm');
+    const shippingResult = document.getElementById('shippingResult');
+    const shippingValue = document.getElementById('shippingValue');
+    
+    if (shippingForm) {
+        shippingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const weight = parseFloat(document.getElementById('shipWeight').value);
+            const service = document.getElementById('shipService').value;
+            
+            // Base rates (USD per kg)
+            const baseRates = {
+                express: 8.5,
+                standard: 5.0,
+                economy: 3.2
+            };
+            
+            const rate = baseRates[service] || 5.0;
+            let totalCost = weight * rate;
+            
+            // Add volumetric weight consideration (simplified)
+            const dimensions = shippingForm.querySelectorAll('input[type="number"]');
+            if (dimensions.length >= 3) {
+                const length = parseFloat(dimensions[0].value);
+                const width = parseFloat(dimensions[1].value);
+                const height = parseFloat(dimensions[2].value);
+                const volumetricWeight = (length * width * height) / 5000; // Dimensional weight divisor
+                
+                if (volumetricWeight > weight) {
+                    totalCost = volumetricWeight * rate;
+                }
+            }
+            
+            // Add minimum charge
+            if (totalCost < 25) totalCost = 25;
+            
+            shippingValue.textContent = '$' + totalCost.toFixed(2);
+            shippingResult.style.display = 'block';
+        });
+    }
+}
+
+// Office Locator
+function initOfficeLocator() {
+    const locationChips = document.querySelectorAll('.location-chip');
+    const officeSearch = document.getElementById('officeSearch');
+    
+    locationChips.forEach(chip => {
+        chip.addEventListener('click', function() {
+            const location = this.getAttribute('data-location');
+            showOfficeInfo(location);
+        });
+    });
+    
+    if (officeSearch) {
+        officeSearch.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const searchTerm = this.value.trim().toLowerCase();
+                // Search for matching location
+                if (searchTerm.includes('ho chi minh') || searchTerm.includes('hcm') || searchTerm.includes('saigon')) {
+                    showOfficeInfo('hcm');
+                } else if (searchTerm.includes('hanoi') || searchTerm.includes('ha noi')) {
+                    showOfficeInfo('hanoi');
+                } else if (searchTerm.includes('hai phong') || searchTerm.includes('haiphong')) {
+                    showOfficeInfo('haiphong');
+                } else if (searchTerm.includes('da nang') || searchTerm.includes('danang')) {
+                    showOfficeInfo('danang');
+                } else {
+                    alert('Office not found. Please select from the quick locations.');
+                }
+            }
+        });
+    }
+}
+
+function showOfficeInfo(location) {
+    const branch = branchData[location];
+    if (!branch) return;
+    
+    const info = `
+📍 ${branch.title[currentLang]}
+
+📧 ${branch.email}
+📞 ${branch.phone}
+⏰ ${branch.hours[currentLang].replace(/<br>/g, '\n')}
+
+🏢 ${branch.address[currentLang]}
+    `;
+    
+    alert(info);
+    
+    // Scroll to contact section
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+        setTimeout(() => {
+            contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Update branch selector
+            const branchSelector = document.getElementById('branchSelector');
+            if (branchSelector) {
+                branchSelector.value = location;
+                updateBranchInfo(location);
+            }
+        }, 300);
+    }
 }

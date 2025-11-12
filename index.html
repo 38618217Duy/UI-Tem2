@@ -21,13 +21,134 @@
                     
                     <ul class="nav-menu" id="navMenu">
                         <li><a href="#home" class="nav-link active" data-lang-key="nav_home">Home</a></li>
-                        <li><a href="#services" class="nav-link" data-lang-key="nav_services">Services</a></li>
-                        <li><a href="#tracking" class="nav-link" data-lang-key="nav_tracking">Tracking</a></li>
-                        <li><a href="#about" class="nav-link" data-lang-key="nav_about">About Us</a></li>
+                        <li class="nav-dropdown">
+                            <a href="services.html" class="nav-link" data-lang-key="nav_services">
+                                Services
+                                <span class="material-icons dropdown-icon">expand_more</span>
+                            </a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-grid">
+                                    <div class="mega-menu-column">
+                                        <h4 data-lang-key="mega_freight">Freight Services</h4>
+                                        <ul class="mega-menu-list">
+                                            <li>
+                                                <a href="#services">
+                                                    <span class="material-icons">directions_boat</span>
+                                                    <div>
+                                                        <strong data-lang-key="service_ocean">Ocean Freight</strong>
+                                                        <span data-lang-key="service_ocean_desc">Global sea transport solutions</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#services">
+                                                    <span class="material-icons">flight</span>
+                                                    <div>
+                                                        <strong data-lang-key="service_air">Air Freight</strong>
+                                                        <span data-lang-key="service_air_desc">Fast international delivery</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#services">
+                                                    <span class="material-icons">local_shipping</span>
+                                                    <div>
+                                                        <strong data-lang-key="service_land">Land Transport</strong>
+                                                        <span data-lang-key="service_land_desc">Nationwide trucking services</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-column">
+                                        <h4 data-lang-key="mega_logistics">Logistics Solutions</h4>
+                                        <ul class="mega-menu-list">
+                                            <li>
+                                                <a href="#services">
+                                                    <span class="material-icons">warehouse</span>
+                                                    <div>
+                                                        <strong data-lang-key="service_warehouse">Warehousing</strong>
+                                                        <span data-lang-key="service_warehouse_desc">Modern storage facilities</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#services">
+                                                    <span class="material-icons">gavel</span>
+                                                    <div>
+                                                        <strong data-lang-key="service_customs">Customs Clearance</strong>
+                                                        <span data-lang-key="service_customs_desc">Expert customs brokerage</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#services">
+                                                    <span class="material-icons">hub</span>
+                                                    <div>
+                                                        <strong data-lang-key="service_supply">Supply Chain</strong>
+                                                        <span data-lang-key="service_supply_desc">End-to-end management</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-column mega-menu-featured">
+                                        <div class="featured-service">
+                                            <span class="featured-badge" data-lang-key="mega_featured">Featured</span>
+                                            <span class="material-icons featured-icon">ac_unit</span>
+                                            <h4 data-lang-key="mega_cold_chain">Cold Chain Solutions</h4>
+                                            <p data-lang-key="mega_cold_chain_desc">Mekong Logistics Hub - 11,000 tons capacity cold storage with irradiation facility</p>
+                                            <a href="#investment" class="featured-link">
+                                                <span data-lang-key="mega_learn_more">Learn More</span>
+                                                <span class="material-icons">arrow_forward</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="#about" class="nav-link" data-lang-key="nav_company">
+                                Company
+                                <span class="material-icons dropdown-icon">expand_more</span>
+                            </a>
+                            <div class="compact-menu">
+                                <ul class="compact-menu-list">
+                                    <li>
+                                        <a href="#about">
+                                            <span class="material-icons">info</span>
+                                            <span data-lang-key="nav_about">About Us</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#sustainability">
+                                            <span class="material-icons">eco</span>
+                                            <span data-lang-key="nav_sustainability">Sustainability</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#network">
+                                            <span class="material-icons">location_on</span>
+                                            <span data-lang-key="nav_network">Network</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#testimonials">
+                                            <span class="material-icons">star</span>
+                                            <span data-lang-key="nav_testimonials">Testimonials</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="news.html" class="nav-link" data-lang-key="nav_news">News</a></li>
                         <li><a href="#contact" class="nav-link" data-lang-key="nav_contact">Contact</a></li>
                     </ul>
 
                     <div class="nav-actions">
+                        <button class="search-toggle" id="searchToggle">
+                            <span class="material-icons">search</span>
+                        </button>
                         <div class="language-switcher">
                             <button class="lang-btn active" data-lang="en">EN</button>
                             <button class="lang-btn" data-lang="vi">VI</button>
@@ -40,6 +161,39 @@
                 </div>
             </div>
         </nav>
+
+        <!-- Search Modal -->
+        <div class="search-modal" id="searchModal">
+            <div class="search-modal-content">
+                <div class="search-modal-header">
+                    <h3 data-lang-key="search_title">Search</h3>
+                    <button class="search-close" id="searchClose">
+                        <span class="material-icons">close</span>
+                    </button>
+                </div>
+                <div class="search-input-wrapper">
+                    <span class="material-icons">search</span>
+                    <input type="text" id="searchInput" placeholder="Search for services, news, offices..." data-lang-key-placeholder="search_placeholder" autofocus>
+                </div>
+                <div class="search-filters">
+                    <button class="search-filter active" data-filter="all" data-lang-key="search_all">All</button>
+                    <button class="search-filter" data-filter="services" data-lang-key="search_services">Services</button>
+                    <button class="search-filter" data-filter="news" data-lang-key="search_news">News</button>
+                    <button class="search-filter" data-filter="offices" data-lang-key="search_offices">Offices</button>
+                </div>
+                <div class="search-results" id="searchResults">
+                    <div class="search-suggestions">
+                        <h4 data-lang-key="search_popular">Popular Searches</h4>
+                        <div class="suggestion-tags">
+                            <span class="suggestion-tag" data-lang-key="search_tag_tracking">Track Shipment</span>
+                            <span class="suggestion-tag" data-lang-key="search_tag_ocean">Ocean Freight</span>
+                            <span class="suggestion-tag" data-lang-key="search_tag_customs">Customs Clearance</span>
+                            <span class="suggestion-tag" data-lang-key="search_tag_quote">Get Quote</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -162,13 +316,44 @@
                     <h2 class="section-title" data-lang-key="tracking_title">Track Your Shipment</h2>
                     <p class="tracking-description" data-lang-key="tracking_desc">Enter your tracking number to get real-time updates on your shipment status</p>
                     
-                    <div class="tracking-form">
-                        <div class="input-group">
-                            <span class="material-icons">search</span>
-                            <input type="text" id="trackingInput" placeholder="Enter tracking number (e.g., MOL123456789)" data-lang-key-placeholder="tracking_placeholder">
-                            <button class="btn btn-primary" id="trackBtn">
-                                <span data-lang-key="tracking_btn">Track Now</span>
+                    <div class="tracking-form-enhanced">
+                        <div class="tracking-tabs">
+                            <button class="tracking-tab active" data-tab="single">
+                                <span class="material-icons">inventory_2</span>
+                                <span data-lang-key="tracking_single">Single Tracking</span>
                             </button>
+                            <button class="tracking-tab" data-tab="multiple">
+                                <span class="material-icons">widgets</span>
+                                <span data-lang-key="tracking_multiple">Multiple Tracking</span>
+                            </button>
+                        </div>
+
+                        <div class="tracking-tab-content active" id="single-tracking">
+                            <div class="input-group-enhanced">
+                                <span class="material-icons">search</span>
+                                <input type="text" id="trackingInput" placeholder="Enter tracking number (e.g., MOL123456789)" data-lang-key-placeholder="tracking_placeholder">
+                                <button class="btn btn-primary" id="trackBtn">
+                                    <span data-lang-key="tracking_btn">Track Now</span>
+                                    <span class="material-icons">arrow_forward</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="tracking-tab-content" id="multiple-tracking">
+                            <div class="multiple-tracking-area">
+                                <textarea id="multipleTrackingInput" rows="4" placeholder="Enter multiple tracking numbers (one per line)" data-lang-key-placeholder="tracking_multiple_placeholder"></textarea>
+                                <button class="btn btn-primary btn-block" id="trackMultipleBtn">
+                                    <span data-lang-key="tracking_track_all">Track All Shipments</span>
+                                    <span class="material-icons">done_all</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="tracking-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="emailNotifications">
+                                <span data-lang-key="tracking_email_opt">Email me status updates</span>
+                            </label>
                         </div>
                     </div>
 
@@ -184,6 +369,10 @@
                         <div class="feature-item">
                             <span class="material-icons">location_on</span>
                             <span data-lang-key="tracking_feature3">Location History</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="material-icons">smartphone</span>
+                            <span data-lang-key="tracking_feature4">Mobile App Available</span>
                         </div>
                     </div>
                 </div>
@@ -207,19 +396,19 @@
 
                     <div class="stats-grid">
                         <div class="stat-card">
-                            <div class="stat-number">100+</div>
+                            <div class="stat-number">26</div>
                             <div class="stat-label" data-lang-key="stat_countries">Countries Worldwide</div>
                         </div>
                         <div class="stat-card">
-                            <div class="stat-number">650+</div>
-                            <div class="stat-label" data-lang-key="stat_locations">Global Locations</div>
+                            <div class="stat-number">140</div>
+                            <div class="stat-label" data-lang-key="stat_locations">Global Offices</div>
                         </div>
                         <div class="stat-card">
-                            <div class="stat-number">24/7</div>
-                            <div class="stat-label" data-lang-key="stat_support">Customer Support</div>
+                            <div class="stat-number">17</div>
+                            <div class="stat-label" data-lang-key="stat_offices_vn">Offices in Vietnam</div>
                         </div>
                         <div class="stat-card">
-                            <div class="stat-number">15+</div>
+                            <div class="stat-number">19+</div>
                             <div class="stat-label" data-lang-key="stat_experience">Years in Vietnam</div>
                         </div>
                     </div>
@@ -252,6 +441,753 @@
                 <div class="about-images">
                     <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&q=80" alt="Port Operations" class="about-img-main">
                     <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=80" alt="Container Ship" class="about-img-secondary">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-lang-key="timeline_title">Our Journey in Vietnam</h2>
+                <p class="section-description" data-lang-key="timeline_desc">From our first representative office to becoming a strategic logistics partner</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item" data-year="2001">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-lang-key="milestone_2001">Representative Office in Ho Chi Minh City</h3>
+                        <p data-lang-key="milestone_2001_desc">Established our first presence in Vietnam</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2005">
+                    <div class="timeline-dot highlight"></div>
+                    <div class="timeline-content">
+                        <h3 data-lang-key="milestone_2005">Official Incorporation</h3>
+                        <p data-lang-key="milestone_2005_desc">MOL Logistics (Vietnam) Inc. officially established</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2006">
+                    <div class="timeline-dot highlight"></div>
+                    <div class="timeline-content">
+                        <h3 data-lang-key="milestone_2006">100% Japanese Ownership Approved</h3>
+                        <p data-lang-key="milestone_2006_desc">First and only Japanese shipping company granted 100% ownership</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2019">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-lang-key="milestone_2019">Hai Phong Logistics Center</h3>
+                        <p data-lang-key="milestone_2019_desc">Opened 6,000m² warehouse facility</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2024">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-lang-key="milestone_2024">Network Expansion</h3>
+                        <p data-lang-key="milestone_2024_desc">Expanded to 17 locations nationwide</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2025">
+                    <div class="timeline-dot highlight"></div>
+                    <div class="timeline-content">
+                        <h3 data-lang-key="milestone_2025">Strategic Cold Chain Investment</h3>
+                        <p data-lang-key="milestone_2025_desc">39% stake in Toan Phat Logistics - Mekong Logistics Hub</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-lang-key="cert_title">Quality Certifications</h2>
+                <p class="section-description" data-lang-key="cert_desc">Committed to international quality and environmental standards</p>
+            </div>
+
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <span class="material-icons">verified_user</span>
+                    </div>
+                    <h3>ISO 9001:2015</h3>
+                    <p data-lang-key="cert_iso9001">Quality Management System</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <span class="material-icons">eco</span>
+                    </div>
+                    <h3>ISO 14001</h3>
+                    <p data-lang-key="cert_iso14001">Environmental Management System</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <span class="material-icons">flight</span>
+                    </div>
+                    <h3>IATA</h3>
+                    <p data-lang-key="cert_iata">International Air Transport Association</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <span class="material-icons">security</span>
+                    </div>
+                    <h3>AEO</h3>
+                    <p data-lang-key="cert_aeo">Authorized Economic Operator</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability/ESG Section -->
+    <section id="sustainability" class="sustainability">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-lang-key="sustainability_title">Sustainability & ESG Commitment</h2>
+                <p class="section-description" data-lang-key="sustainability_desc">Building a sustainable future through responsible business practices and environmental stewardship</p>
+            </div>
+
+            <div class="sustainability-intro">
+                <div class="blue-action-banner">
+                    <div class="blue-action-logo">
+                        <span class="material-icons">water_drop</span>
+                        <h3 data-lang-key="blue_action_title">BLUE ACTION for ALL</h3>
+                    </div>
+                    <p data-lang-key="blue_action_desc">MOL Group's initiative to contribute to the realization of a sustainable society through marine environment, social responsibility, and community engagement</p>
+                </div>
+            </div>
+
+            <div class="sustainability-grid">
+                <div class="sustainability-card">
+                    <div class="sust-icon" style="background: linear-gradient(135deg, #0080FF, #00B4D8);">
+                        <span class="material-icons">waves</span>
+                    </div>
+                    <h3 data-lang-key="sust_marine_title">Marine Environment Protection</h3>
+                    <p data-lang-key="sust_marine_desc">Active participation in beach cleanup activities and marine conservation projects across Vietnam</p>
+                    <ul class="sust-features">
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="sust_marine_f1">Beach cleanup at Phu Quoc Island</span></li>
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="sust_marine_f2">Marine debris collection programs</span></li>
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="sust_marine_f3">Ocean awareness campaigns</span></li>
+                    </ul>
+                </div>
+
+                <div class="sustainability-card">
+                    <div class="sust-icon" style="background: linear-gradient(135deg, #10B981, #059669);">
+                        <span class="material-icons">eco</span>
+                    </div>
+                    <h3 data-lang-key="sust_green_title">Green Logistics Practices</h3>
+                    <p data-lang-key="sust_green_desc">Implementing sustainable logistics solutions to reduce environmental impact and carbon footprint</p>
+                    <ul class="sust-features">
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="sust_green_f1">CO2 emission reduction initiatives</span></li>
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="sust_green_f2">Energy-efficient warehouse operations</span></li>
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="sust_green_f3">Sustainable packaging solutions</span></li>
+                    </ul>
+                </div>
+
+                <div class="sustainability-card">
+                    <div class="sust-icon" style="background: linear-gradient(135deg, #F59E0B, #D97706);">
+                        <span class="material-icons">groups</span>
+                    </div>
+                    <h3 data-lang-key="sust_social_title">Social Responsibility</h3>
+                    <p data-lang-key="sust_social_desc">Contributing to local communities and developing next-generation human resources</p>
+                    <ul class="sust-features">
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="sust_social_f1">Community engagement programs</span></li>
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="sust_social_f2">Disaster relief support ($36,000 USD)</span></li>
+                        <li><span class="material-icons">check_circle</span><span data-lang-key="sust_social_f3">Education & skills development</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sustainability-stats">
+                <div class="sust-stat-card">
+                    <div class="sust-stat-icon">
+                        <span class="material-icons">verified</span>
+                    </div>
+                    <div class="sust-stat-content">
+                        <h4>ISO 14001</h4>
+                        <p data-lang-key="sust_stat_iso">Environmental Management System Certified</p>
+                    </div>
+                </div>
+                <div class="sust-stat-card">
+                    <div class="sust-stat-icon">
+                        <span class="material-icons">local_shipping</span>
+                    </div>
+                    <div class="sust-stat-content">
+                        <h4 data-lang-key="sust_stat_fleet">800+ Vessels</h4>
+                        <p data-lang-key="sust_stat_fleet_desc">MOL Group fleet with eco-friendly initiatives</p>
+                    </div>
+                </div>
+                <div class="sust-stat-card">
+                    <div class="sust-stat-icon">
+                        <span class="material-icons">trending_down</span>
+                    </div>
+                    <div class="sust-stat-content">
+                        <h4 data-lang-key="sust_stat_target">Carbon Neutral</h4>
+                        <p data-lang-key="sust_stat_target_desc">Targeting net-zero emissions by 2050</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Network Section -->
+    <section id="network" class="office-network">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-lang-key="network_title">Nationwide Coverage</h2>
+                <p class="section-description" data-lang-key="network_desc">17 strategic locations across Vietnam serving major industrial zones</p>
+            </div>
+
+            <div class="network-grid">
+                <div class="network-region">
+                    <h3 data-lang-key="region_north">Northern Region</h3>
+                    <div class="office-list">
+                        <div class="office-item">
+                            <span class="material-icons">location_city</span>
+                            <strong data-lang-key="office_hanoi">Hanoi Branch</strong>
+                        </div>
+                        <div class="office-item">
+                            <span class="material-icons">flight_takeoff</span>
+                            <span data-lang-key="office_noibai">Noi Bai Airport Office</span>
+                        </div>
+                        <div class="office-item">
+                            <span class="material-icons">location_city</span>
+                            <strong data-lang-key="office_haiphong">Hai Phong Office</strong>
+                        </div>
+                        <div class="office-item">
+                            <span class="material-icons">warehouse</span>
+                            <strong data-lang-key="office_hp_logistics">Hai Phong Logistics Center (6,000m²)</strong>
+                        </div>
+                        <div class="office-item">
+                            <span class="material-icons">place</span>
+                            <span data-lang-key="office_haiduong">Hai Duong Office</span>
+                        </div>
+                        <div class="office-item">
+                            <span class="material-icons">place</span>
+                            <span data-lang-key="office_thaibinh">Thai Binh Office</span>
+                        </div>
+                        <div class="office-item">
+                            <span class="material-icons">place</span>
+                            <span data-lang-key="office_quangninh">Quang Ninh Office</span>
+                        </div>
+                        <div class="office-item">
+                            <span class="material-icons">place</span>
+                            <span data-lang-key="office_hanam">Ha Nam Office</span>
+                        </div>
+                        <div class="office-item">
+                            <span class="material-icons">factory</span>
+                            <span data-lang-key="office_nomura">Nomura Industrial Park</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="network-region">
+                    <h3 data-lang-key="region_south">Southern Region</h3>
+                    <div class="office-list">
+                        <div class="office-item">
+                            <span class="material-icons">business</span>
+                            <strong data-lang-key="office_hcm">Ho Chi Minh City (HQ)</strong>
+                        </div>
+                        <div class="office-item">
+                            <span class="material-icons">place</span>
+                            <span data-lang-key="office_bentre">Ben Tre Office</span>
+                        </div>
+                        <div class="office-item">
+                            <span class="material-icons">factory</span>
+                            <span data-lang-key="office_songthan">Song Than - Binh Duong</span>
+                        </div>
+                        <div class="office-item">
+                            <span class="material-icons">factory</span>
+                            <span data-lang-key="office_vsip2">VSIP II - Binh Duong</span>
+                        </div>
+                        <div class="office-item">
+                            <span class="material-icons">factory</span>
+                            <span data-lang-key="office_amata">Amata - Dong Nai</span>
+                        </div>
+                        <div class="office-item">
+                            <span class="material-icons">place</span>
+                            <span data-lang-key="office_brvt">Ba Ria - Vung Tau</span>
+                        </div>
+                        <div class="office-item">
+                            <span class="material-icons">location_city</span>
+                            <span data-lang-key="office_danang">Da Nang Office</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Served Section -->
+    <section id="industries" class="industries">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-lang-key="industries_title">Industries We Serve</h2>
+                <p class="section-description" data-lang-key="industries_desc">Specialized logistics solutions across diverse sectors</p>
+            </div>
+
+            <div class="industries-grid">
+                <div class="industry-item">
+                    <span class="material-icons">directions_car</span>
+                    <span data-lang-key="industry_auto">Automobile Parts</span>
+                </div>
+                <div class="industry-item">
+                    <span class="material-icons">electrical_services</span>
+                    <span data-lang-key="industry_electrical">Electrical Components</span>
+                </div>
+                <div class="industry-item">
+                    <span class="material-icons">devices</span>
+                    <span data-lang-key="industry_electronics">Electronics</span>
+                </div>
+                <div class="industry-item">
+                    <span class="material-icons">weekend</span>
+                    <span data-lang-key="industry_furniture">Furniture</span>
+                </div>
+                <div class="industry-item">
+                    <span class="material-icons">science</span>
+                    <span data-lang-key="industry_chemicals">Chemicals</span>
+                </div>
+                <div class="industry-item">
+                    <span class="material-icons">toys</span>
+                    <span data-lang-key="industry_toys">Toys</span>
+                </div>
+                <div class="industry-item">
+                    <span class="material-icons">precision_manufacturing</span>
+                    <span data-lang-key="industry_machinery">Machinery</span>
+                </div>
+                <div class="industry-item">
+                    <span class="material-icons">medical_services</span>
+                    <span data-lang-key="industry_medical">Medical Equipment</span>
+                </div>
+                <div class="industry-item">
+                    <span class="material-icons">construction</span>
+                    <span data-lang-key="industry_steel">Iron & Steel</span>
+                </div>
+                <div class="industry-item">
+                    <span class="material-icons">checkroom</span>
+                    <span data-lang-key="industry_apparel">Clothing & Footwear</span>
+                </div>
+                <div class="industry-item">
+                    <span class="material-icons">restaurant</span>
+                    <span data-lang-key="industry_food">Food Products</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies / Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-lang-key="testimonials_title">Client Success Stories</h2>
+                <p class="section-description" data-lang-key="testimonials_desc">Trusted by leading companies across Vietnam and beyond</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="company-logo-placeholder">
+                            <span class="material-icons">business</span>
+                        </div>
+                        <div class="testimonial-meta">
+                            <h4 data-lang-key="testimonial_1_company">Major Automotive Manufacturer</h4>
+                            <p data-lang-key="testimonial_1_industry">Automotive Parts - Binh Duong</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                    </div>
+                    <p class="testimonial-text" data-lang-key="testimonial_1_text">"MOL Logistics has been instrumental in optimizing our supply chain from Japan to Vietnam. Their expertise in customs clearance and just-in-time delivery has reduced our inventory costs by 25% while improving delivery reliability."</p>
+                    <div class="testimonial-footer">
+                        <span class="material-icons">check_circle</span>
+                        <span data-lang-key="testimonial_verified">Verified Client</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card featured">
+                    <div class="featured-badge" data-lang-key="testimonial_featured">Featured Case Study</div>
+                    <div class="testimonial-header">
+                        <div class="company-logo-placeholder" style="background: linear-gradient(135deg, #10B981, #059669);">
+                            <span class="material-icons">restaurant</span>
+                        </div>
+                        <div class="testimonial-meta">
+                            <h4 data-lang-key="testimonial_2_company">Leading Seafood Exporter</h4>
+                            <p data-lang-key="testimonial_2_industry">Agricultural & Seafood - Mekong Delta</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                    </div>
+                    <p class="testimonial-text" data-lang-key="testimonial_2_text">"The investment in Mekong Logistics Hub has transformed our cold chain operations. With MOL's integrated cold storage and global network, we've expanded our exports to 15 new markets while maintaining perfect temperature control throughout the journey."</p>
+                    <div class="case-study-stats">
+                        <div class="stat-item">
+                            <strong>15+</strong>
+                            <span data-lang-key="stat_new_markets">New Markets</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>100%</strong>
+                            <span data-lang-key="stat_quality">Quality Rate</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>30%</strong>
+                            <span data-lang-key="stat_cost_saving">Cost Reduction</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="company-logo-placeholder" style="background: linear-gradient(135deg, #F59E0B, #D97706);">
+                            <span class="material-icons">precision_manufacturing</span>
+                        </div>
+                        <div class="testimonial-meta">
+                            <h4 data-lang-key="testimonial_3_company">Electronics Manufacturing</h4>
+                            <p data-lang-key="testimonial_3_industry">Electronics - Hanoi & Hai Phong</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                    </div>
+                    <p class="testimonial-text" data-lang-key="testimonial_3_text">"Working with MOL for 8+ years across multiple facilities. Their Hai Phong Logistics Center provides seamless coordination between our northern production sites and international shipments. Real-time tracking and proactive communication are exceptional."</p>
+                    <div class="testimonial-footer">
+                        <span class="material-icons">schedule</span>
+                        <span data-lang-key="testimonial_partnership">8+ Years Partnership</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <div class="trust-number">500+</div>
+                    <p data-lang-key="trust_clients">Active Clients</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">98%</div>
+                    <p data-lang-key="trust_satisfaction">Client Satisfaction</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">10M+</div>
+                    <p data-lang-key="trust_shipments">Shipments Handled</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">99.5%</div>
+                    <p data-lang-key="trust_on_time">On-Time Delivery</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="news-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-lang-key="news_title">Latest News & Updates</h2>
+                <p class="section-description" data-lang-key="news_desc">Stay informed about our latest developments and achievements</p>
+            </div>
+
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1586528116493-a029325540fa?w=600&q=80" alt="Cold Chain Investment">
+                        <span class="news-badge" data-lang-key="news_badge_featured">Featured</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <span class="material-icons">calendar_today</span>
+                                <span data-lang-key="news_date_1">September 2025</span>
+                            </span>
+                            <span class="news-category" data-lang-key="news_cat_investment">Investment</span>
+                        </div>
+                        <h3 class="news-title" data-lang-key="news_title_1">MOL Logistics Invests in Mekong Cold Chain Hub</h3>
+                        <p class="news-excerpt" data-lang-key="news_excerpt_1">Strategic 39% stake in Toan Phat Logistics to develop Vietnam's first integrated cold chain center with 11,000 tons capacity.</p>
+                        <a href="#" class="news-link" data-lang-key="news_read_more">Read More <span class="material-icons">arrow_forward</span></a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=600&q=80" alt="Network Expansion">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <span class="material-icons">calendar_today</span>
+                                <span data-lang-key="news_date_2">January 2024</span>
+                            </span>
+                            <span class="news-category" data-lang-key="news_cat_expansion">Expansion</span>
+                        </div>
+                        <h3 class="news-title" data-lang-key="news_title_2">Expanded to 17 Locations Nationwide</h3>
+                        <p class="news-excerpt" data-lang-key="news_excerpt_2">Strengthening our presence across Vietnam to serve major industrial zones and manufacturing hubs more effectively.</p>
+                        <a href="#" class="news-link" data-lang-key="news_read_more">Read More <span class="material-icons">arrow_forward</span></a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80" alt="Cross Border">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <span class="material-icons">calendar_today</span>
+                                <span data-lang-key="news_date_3">2023</span>
+                            </span>
+                            <span class="news-category" data-lang-key="news_cat_service">Service</span>
+                        </div>
+                        <h3 class="news-title" data-lang-key="news_title_3">Cross-Border Logistics to Thailand</h3>
+                        <p class="news-excerpt" data-lang-key="news_excerpt_3">Launching comprehensive land freight services connecting Vietnam and Thailand for seamless regional trade.</p>
+                        <a href="#" class="news-link" data-lang-key="news_read_more">Read More <span class="material-icons">arrow_forward</span></a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=600&q=80" alt="ISO Certification">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <span class="material-icons">calendar_today</span>
+                                <span data-lang-key="news_date_4">2019</span>
+                            </span>
+                            <span class="news-category" data-lang-key="news_cat_certification">Certification</span>
+                        </div>
+                        <h3 class="news-title" data-lang-key="news_title_4">Hai Phong Logistics Center Opens</h3>
+                        <p class="news-excerpt" data-lang-key="news_excerpt_4">Grand opening of our 6,000m² state-of-the-art warehouse facility in Hai Phong, northern Vietnam's key logistics hub.</p>
+                        <a href="#" class="news-link" data-lang-key="news_read_more">Read More <span class="material-icons">arrow_forward</span></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools & Resources Section -->
+    <section id="tools" class="tools-resources">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-lang-key="tools_title">Tools & Resources</h2>
+                <p class="section-description" data-lang-key="tools_desc">Powerful tools to help you plan and manage your logistics needs</p>
+            </div>
+
+            <div class="tools-grid">
+                <!-- Quick Quote Tool -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon" style="background: linear-gradient(135deg, #0080FF, #00B4D8);">
+                            <span class="material-icons">request_quote</span>
+                        </div>
+                        <h3 data-lang-key="tool_quote_title">Get Instant Quote</h3>
+                    </div>
+                    <p data-lang-key="tool_quote_desc">Receive a customized quote for your shipping needs in minutes</p>
+                    
+                    <form class="tool-form" id="quoteForm">
+                        <div class="form-group">
+                            <select class="form-control" id="quoteService" required>
+                                <option value="" data-lang-key="tool_quote_service_placeholder">Select Service</option>
+                                <option value="ocean" data-lang-key="service_ocean">Ocean Freight</option>
+                                <option value="air" data-lang-key="service_air">Air Freight</option>
+                                <option value="land" data-lang-key="service_land">Land Transport</option>
+                                <option value="warehouse" data-lang-key="service_warehouse">Warehousing</option>
+                            </select>
+                        </div>
+                        <div class="form-row-2col">
+                            <input type="text" class="form-control" placeholder="Origin" data-lang-key-placeholder="tool_quote_origin" required>
+                            <input type="text" class="form-control" placeholder="Destination" data-lang-key-placeholder="tool_quote_destination" required>
+                        </div>
+                        <div class="form-row-2col">
+                            <input type="number" class="form-control" placeholder="Weight (kg)" data-lang-key-placeholder="tool_quote_weight" required>
+                            <input type="number" class="form-control" placeholder="Volume (m³)" data-lang-key-placeholder="tool_quote_volume" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span data-lang-key="tool_quote_submit">Get Quote</span>
+                            <span class="material-icons">arrow_forward</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- CO2 Calculator -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon" style="background: linear-gradient(135deg, #10B981, #059669);">
+                            <span class="material-icons">eco</span>
+                        </div>
+                        <h3 data-lang-key="tool_co2_title">CO2 Emissions Calculator</h3>
+                    </div>
+                    <p data-lang-key="tool_co2_desc">Calculate and track your shipment's carbon footprint</p>
+                    
+                    <form class="tool-form" id="co2Form">
+                        <div class="form-group">
+                            <select class="form-control" id="co2Transport" required>
+                                <option value="" data-lang-key="tool_co2_transport_placeholder">Transport Mode</option>
+                                <option value="ocean" data-lang-key="transport_ocean">Ocean Freight</option>
+                                <option value="air" data-lang-key="transport_air">Air Freight</option>
+                                <option value="truck" data-lang-key="transport_truck">Truck</option>
+                                <option value="rail" data-lang-key="transport_rail">Rail</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="Distance (km)" data-lang-key-placeholder="tool_co2_distance" id="co2Distance" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="Cargo Weight (kg)" data-lang-key-placeholder="tool_co2_cargo" id="co2Weight" required>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block">
+                            <span data-lang-key="tool_co2_calculate">Calculate CO2</span>
+                            <span class="material-icons">calculate</span>
+                        </button>
+                        <div class="co2-result" id="co2Result" style="display: none;">
+                            <div class="result-badge">
+                                <span class="material-icons">cloud</span>
+                                <strong id="co2Value">0</strong> kg CO2
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Shipping Cost Calculator -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon" style="background: linear-gradient(135deg, #F59E0B, #D97706);">
+                            <span class="material-icons">calculate</span>
+                        </div>
+                        <h3 data-lang-key="tool_shipping_title">Shipping Cost Estimator</h3>
+                    </div>
+                    <p data-lang-key="tool_shipping_desc">Estimate shipping costs based on dimensions and distance</p>
+                    
+                    <form class="tool-form" id="shippingForm">
+                        <div class="form-row-3col">
+                            <input type="number" class="form-control" placeholder="Length (cm)" data-lang-key-placeholder="tool_ship_length" step="0.1" required>
+                            <input type="number" class="form-control" placeholder="Width (cm)" data-lang-key-placeholder="tool_ship_width" step="0.1" required>
+                            <input type="number" class="form-control" placeholder="Height (cm)" data-lang-key-placeholder="tool_ship_height" step="0.1" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="Weight (kg)" data-lang-key-placeholder="tool_ship_weight" id="shipWeight" required>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="shipService" required>
+                                <option value="" data-lang-key="tool_ship_service_placeholder">Shipping Method</option>
+                                <option value="express" data-lang-key="ship_express">Express (1-3 days)</option>
+                                <option value="standard" data-lang-key="ship_standard">Standard (5-7 days)</option>
+                                <option value="economy" data-lang-key="ship_economy">Economy (10-14 days)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-warning btn-block">
+                            <span data-lang-key="tool_ship_estimate">Estimate Cost</span>
+                            <span class="material-icons">local_atm</span>
+                        </button>
+                        <div class="shipping-result" id="shippingResult" style="display: none;">
+                            <div class="result-badge">
+                                <span class="material-icons">payments</span>
+                                <strong id="shippingValue">$0</strong> USD
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Office Locator -->
+            <div class="office-locator-widget">
+                <div class="locator-header">
+                    <span class="material-icons">location_on</span>
+                    <h3 data-lang-key="tool_locator_title">Find Nearest Office</h3>
+                </div>
+                <div class="locator-content">
+                    <div class="locator-search">
+                        <input type="text" class="form-control" placeholder="Enter your city or province..." data-lang-key-placeholder="tool_locator_search" id="officeSearch">
+                        <button class="btn btn-primary">
+                            <span class="material-icons">search</span>
+                        </button>
+                    </div>
+                    <div class="quick-locations">
+                        <button class="location-chip" data-location="hcm">
+                            <span class="material-icons">location_city</span>
+                            <span data-lang-key="location_hcm">Ho Chi Minh City</span>
+                        </button>
+                        <button class="location-chip" data-location="hanoi">
+                            <span class="material-icons">location_city</span>
+                            <span data-lang-key="location_hanoi">Hanoi</span>
+                        </button>
+                        <button class="location-chip" data-location="haiphong">
+                            <span class="material-icons">location_city</span>
+                            <span data-lang-key="location_haiphong">Hai Phong</span>
+                        </button>
+                        <button class="location-chip" data-location="danang">
+                            <span class="material-icons">location_city</span>
+                            <span data-lang-key="location_danang">Da Nang</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Investment Section -->
+    <section id="investment" class="strategic-investment">
+        <div class="container">
+            <div class="investment-wrapper">
+                <div class="investment-content">
+                    <h2 class="section-title" data-lang-key="investment_title">Strategic Cold Chain Investment</h2>
+                    <h3 data-lang-key="investment_subtitle">Mekong Logistics Hub - Vietnam's First Integrated Cold Chain Center</h3>
+                    
+                    <p data-lang-key="investment_p1">In September 2025, MOL Logistics Vietnam became a strategic shareholder (39%) in Toan Phat Logistics, partnering with Kawanishi Warehouse (51%) to develop the Mekong Logistics Hub in Tay Ninh Province.</p>
+
+                    <div class="investment-features">
+                        <div class="invest-feature">
+                            <span class="material-icons">ac_unit</span>
+                            <div>
+                                <h4 data-lang-key="invest_feature1_title">11,000 Tons Capacity</h4>
+                                <p data-lang-key="invest_feature1_desc">State-of-the-art cold storage facility</p>
+                            </div>
+                        </div>
+                        <div class="invest-feature">
+                            <span class="material-icons">restaurant_menu</span>
+                            <div>
+                                <h4 data-lang-key="invest_feature2_title">Agricultural & Seafood Exports</h4>
+                                <p data-lang-key="invest_feature2_desc">Supporting Vietnam's export growth</p>
+                            </div>
+                        </div>
+                        <div class="invest-feature">
+                            <span class="material-icons">hub</span>
+                            <div>
+                                <h4 data-lang-key="invest_feature3_title">Integrated Solution</h4>
+                                <p data-lang-key="invest_feature3_desc">Combined cold storage with irradiation facility</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quote-box">
+                        <span class="material-icons quote-icon">format_quote</span>
+                        <p class="quote-text" data-lang-key="investment_quote">"We highly value Toan Phat Logistics' efficient cold storage operation capabilities. This is a crucial factor for agricultural and seafood exports - sectors that require strict temperature management."</p>
+                        <p class="quote-author">— <strong>Osamu Sakurada</strong>, <span data-lang-key="quote_position">Chairman & CEO, MOL Logistics</span></p>
+                    </div>
+                </div>
+
+                <div class="investment-image">
+                    <img src="https://images.unsplash.com/photo-1586528116493-a029325540fa?w=800&q=80" alt="Cold Chain Logistics">
                 </div>
             </div>
         </div>
@@ -409,6 +1345,8 @@
         </div>
     </footer>
 
+    <!-- Load company data -->
+    <script src="company-data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
