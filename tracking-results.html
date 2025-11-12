@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Results - MOL Logistics Vietnam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modern-design.css">
+    <link rel="stylesheet" href="back-to-top.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Tracking Results Hero -->
+    <section class="page-hero tracking-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Shipment Tracking</h1>
+            <p class="hero-subtitle">Real-time status updates for your cargo</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="material-icons">chevron_right</span>
+                <a href="index.html#tracking">Tracking</a>
+                <span class="material-icons">chevron_right</span>
+                <span>Results</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracking Search Bar -->
+    <section class="tracking-search-sticky">
+        <div class="container">
+            <div class="tracking-search-card glass-card">
+                <div class="search-input-group">
+                    <span class="material-icons">search</span>
+                    <input type="text" id="trackingNumber" value="MOL123456789" placeholder="Enter tracking number">
+                    <button class="btn btn-primary">
+                        <span class="material-icons">track_changes</span>
+                        Track
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracking Results -->
+    <section class="tracking-results-section">
+        <div class="container">
+            <!-- Shipment Summary Card -->
+            <div class="shipment-summary modern-card">
+                <div class="summary-header">
+                    <div class="tracking-status status-in-transit">
+                        <span class="material-icons">local_shipping</span>
+                        <div>
+                            <h3>In Transit</h3>
+                            <p>Tracking Number: <strong>MOL123456789</strong></p>
+                        </div>
+                    </div>
+                    <div class="summary-actions">
+                        <button class="btn-icon" title="Download PDF">
+                            <span class="material-icons">download</span>
+                        </button>
+                        <button class="btn-icon" title="Share">
+                            <span class="material-icons">share</span>
+                        </button>
+                        <button class="btn-icon" title="Print">
+                            <span class="material-icons">print</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="summary-grid">
+                    <div class="summary-item">
+                        <span class="material-icons">location_on</span>
+                        <div>
+                            <label>Origin</label>
+                            <strong>Ho Chi Minh City, Vietnam</strong>
+                        </div>
+                    </div>
+                    <div class="summary-item">
+                        <span class="material-icons">flag</span>
+                        <div>
+                            <label>Destination</label>
+                            <strong>Los Angeles, USA</strong>
+                        </div>
+                    </div>
+                    <div class="summary-item">
+                        <span class="material-icons">event</span>
+                        <div>
+                            <label>Estimated Arrival</label>
+                            <strong>Dec 20, 2025</strong>
+                        </div>
+                    </div>
+                    <div class="summary-item">
+                        <span class="material-icons">inventory_2</span>
+                        <div>
+                            <label>Container Type</label>
+                            <strong>40' HC Container</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-tracker">
+                    <div class="progress-step completed">
+                        <div class="step-icon"><span class="material-icons">check_circle</span></div>
+                        <div class="step-label">Booked</div>
+                        <div class="step-date">Nov 15</div>
+                    </div>
+                    <div class="progress-line completed"></div>
+                    <div class="progress-step completed">
+                        <div class="step-icon"><span class="material-icons">check_circle</span></div>
+                        <div class="step-label">Departed</div>
+                        <div class="step-date">Nov 18</div>
+                    </div>
+                    <div class="progress-line active"></div>
+                    <div class="progress-step active">
+                        <div class="step-icon"><span class="material-icons">local_shipping</span></div>
+                        <div class="step-label">In Transit</div>
+                        <div class="step-date">Current</div>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">
+                        <div class="step-icon"><span class="material-icons">circle</span></div>
+                        <div class="step-label">Arrived</div>
+                        <div class="step-date">Dec 20</div>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">
+                        <div class="step-icon"><span class="material-icons">circle</span></div>
+                        <div class="step-label">Delivered</div>
+                        <div class="step-date">Est. Dec 22</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Two Column Layout -->
+            <div class="tracking-details-grid">
+                <!-- Timeline -->
+                <div class="timeline-card modern-card">
+                    <h3><span class="material-icons">timeline</span> Shipment Timeline</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon active">
+                                <span class="material-icons">place</span>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <strong>Current Location</strong>
+                                    <span class="timeline-date">Nov 28, 2025 - 14:30</span>
+                                </div>
+                                <p>Container at sea - Pacific Ocean</p>
+                                <div class="timeline-location">
+                                    <span class="material-icons">navigation</span>
+                                    Latitude: 15.5°N, Longitude: 145.2°E
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <span class="material-icons">sailing</span>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <strong>Vessel Departed</strong>
+                                    <span class="timeline-date">Nov 18, 2025 - 08:00</span>
+                                </div>
+                                <p>Loaded on vessel "MOL CREATION"</p>
+                                <div class="timeline-location">
+                                    <span class="material-icons">anchor</span>
+                                    Port of Ho Chi Minh
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <span class="material-icons">warehouse</span>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <strong>Container Loaded</strong>
+                                    <span class="timeline-date">Nov 17, 2025 - 16:20</span>
+                                </div>
+                                <p>Container loaded at warehouse</p>
+                                <div class="timeline-location">
+                                    <span class="material-icons">business</span>
+                                    MOL Logistics Warehouse, Cat Lai
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <span class="material-icons">assignment</span>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <strong>Booking Confirmed</strong>
+                                    <span class="timeline-date">Nov 15, 2025 - 10:00</span>
+                                </div>
+                                <p>Shipment booking confirmed</p>
+                                <div class="timeline-location">
+                                    <span class="material-icons">confirmation_number</span>
+                                    Booking Ref: BK789456123
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Details Sidebar -->
+                <div class="details-sidebar">
+                    <!-- Vessel Information -->
+                    <div class="info-card modern-card">
+                        <h4><span class="material-icons">directions_boat</span> Vessel Information</h4>
+                        <div class="info-list">
+                            <div class="info-row">
+                                <span>Vessel Name:</span>
+                                <strong>MOL CREATION</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Voyage Number:</span>
+                                <strong>MC125W</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Service:</span>
+                                <strong>Pacific Express</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Flag:</span>
+                                <strong>🇯🇵 Japan</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Container Details -->
+                    <div class="info-card modern-card">
+                        <h4><span class="material-icons">inventory_2</span> Container Details</h4>
+                        <div class="info-list">
+                            <div class="info-row">
+                                <span>Container No:</span>
+                                <strong>MOLU1234567</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Type:</span>
+                                <strong>40' High Cube</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Seal No:</span>
+                                <strong>SL789456</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Weight:</span>
+                                <strong>18,500 kg</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notifications -->
+                    <div class="info-card modern-card notification-card">
+                        <h4><span class="material-icons">notifications_active</span> Set Alerts</h4>
+                        <p>Get notified about shipment updates</p>
+                        <div class="notification-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                <span>Email notifications</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                <span>SMS alerts</span>
+                            </label>
+                        </div>
+                        <button class="btn btn-primary btn-block">
+                            <span class="material-icons">notifications</span>
+                            Subscribe to Updates
+                        </button>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="info-card modern-card">
+                        <h4><span class="material-icons">bolt</span> Quick Actions</h4>
+                        <div class="action-buttons">
+                            <button class="action-btn">
+                                <span class="material-icons">picture_as_pdf</span>
+                                Download BOL
+                            </button>
+                            <button class="action-btn">
+                                <span class="material-icons">description</span>
+                                View Invoice
+                            </button>
+                            <button class="action-btn">
+                                <span class="material-icons">contact_support</span>
+                                Contact Support
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <span class="material-icons">arrow_upward</span>
+    </button>
+
+    <script src="script.js"></script>
+    <script>
+        // Load header/footer dynamically
+        document.addEventListener('DOMContentLoaded', () => {
+            loadHeaderFooter();
+        });
+
+        function loadHeaderFooter() {
+            // Simple header
+            const headerHTML = `
+            <header>
+                <nav class="navbar">
+                    <div class="container">
+                        <div class="nav-wrapper">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="img/logo/logo_mol-1.png" alt="MOL Logistics Vietnam">
+                                </a>
+                            </div>
+                            <div class="nav-actions">
+                                <a href="index.html" class="btn btn-secondary">
+                                    <span class="material-icons">home</span>
+                                    Back to Home
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            `;
+            
+            const footerHTML = `
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 MOL Logistics (Vietnam) Co., Ltd. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+            `;
+            
+            document.getElementById('header-placeholder').outerHTML = headerHTML;
+            document.getElementById('footer-placeholder').outerHTML = footerHTML;
+        }
+    </script>
+    <script src="back-to-top.js"></script>
+</body>
+</html>

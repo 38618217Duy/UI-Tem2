@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOL Logistics Vietnam Inc. - Global Logistics Solutions</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modern-design.css">
+    <link rel="stylesheet" href="hero-carousel.css">
+    <link rel="stylesheet" href="back-to-top.css">
+    <link rel="stylesheet" href="timeline-animations.css">
     <!-- Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Floating Decorative Elements -->
+    <div class="floating-decor" style="position: fixed; top: 10%; right: 5%; z-index: 1; pointer-events: none;">
+        <div class="blob" style="width: 200px; height: 200px; opacity: 0.05;"></div>
+    </div>
+    <div class="floating-decor" style="position: fixed; bottom: 20%; left: 3%; z-index: 1; pointer-events: none;">
+        <div class="blob" style="width: 150px; height: 150px; opacity: 0.05; animation-delay: -3s;"></div>
+    </div>
     <!-- Header & Navigation -->
     <header>
         <nav class="navbar">
@@ -196,23 +207,126 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title" data-lang-key="hero_title">Global Logistics Excellence</h1>
-            <p class="hero-subtitle" data-lang-key="hero_subtitle">Connecting Vietnam to the World with Reliable Shipping and Logistics Solutions</p>
-            <div class="hero-buttons">
-                <a href="#services" class="btn btn-primary">
-                    <span class="material-icons">local_shipping</span>
-                    <span data-lang-key="hero_btn_services">Our Services</span>
-                </a>
-                <a href="#tracking" class="btn btn-secondary">
-                    <span class="material-icons">search</span>
-                    <span data-lang-key="hero_btn_tracking">Track Shipment</span>
-                </a>
+    <!-- Dynamic Hero Carousel -->
+    <section id="home" class="hero-carousel">
+        <!-- Slide 1: Global Logistics -->
+        <div class="hero-slide active" data-slide="1" style="background-image: url('img/img_bussiness/slide1-1857x774.jpeg');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-badge">Global Network</span>
+                <h1 class="hero-title">Global Logistics Excellence</h1>
+                <p class="hero-subtitle">Connecting Vietnam to the World with Reliable Shipping and Logistics Solutions</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">
+                        <span class="material-icons">local_shipping</span>
+                        <span>Our Services</span>
+                    </a>
+                    <a href="#tracking" class="btn btn-secondary">
+                        <span class="material-icons">search</span>
+                        <span>Track Shipment</span>
+                    </a>
+                </div>
             </div>
         </div>
+
+        <!-- Slide 2: Ocean Freight -->
+        <div class="hero-slide" data-slide="2" style="background-image: url('img/img_bussiness/banner-2-1872x780.jpg');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-badge">Ocean Freight</span>
+                <h1 class="hero-title">Navigate Global Waters</h1>
+                <p class="hero-subtitle">Comprehensive sea freight solutions with MOL Group's 800+ vessel network</p>
+                <div class="hero-buttons">
+                    <a href="services.html#ocean-freight" class="btn btn-primary">
+                        <span class="material-icons">directions_boat</span>
+                        <span>Ocean Services</span>
+                    </a>
+                    <a href="#tools" class="btn btn-secondary">
+                        <span class="material-icons">request_quote</span>
+                        <span>Get Quote</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Cold Chain -->
+        <div class="hero-slide" data-slide="3" style="background-image: url('img/img_bussiness/banner-4-1872x780.jpg');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-badge">Featured Investment</span>
+                <h1 class="hero-title">Mekong Logistics Hub</h1>
+                <p class="hero-subtitle">Vietnam's First Integrated Cold Chain Center - 11,000 tons capacity with irradiation facility</p>
+                <div class="hero-buttons">
+                    <a href="#investment" class="btn btn-primary">
+                        <span class="material-icons">ac_unit</span>
+                        <span>Learn More</span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span class="material-icons">phone</span>
+                        <span>Contact Us</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Sustainability -->
+        <div class="hero-slide" data-slide="4" style="background-image: url('img/img_bussiness/banner-5-1872x780.jpg');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-badge">BLUE ACTION</span>
+                <h1 class="hero-title">Sustainable Future</h1>
+                <p class="hero-subtitle">Building environmental stewardship through marine protection and green logistics</p>
+                <div class="hero-buttons">
+                    <a href="#sustainability" class="btn btn-primary">
+                        <span class="material-icons">eco</span>
+                        <span>Our Commitment</span>
+                    </a>
+                    <a href="#sustainability" class="btn btn-secondary">
+                        <span class="material-icons">water_drop</span>
+                        <span>BLUE ACTION</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Technology -->
+        <div class="hero-slide" data-slide="5" style="background-image: url('img/img_bussiness/banner-6-1872x780.jpg');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-badge">Digital Innovation</span>
+                <h1 class="hero-title">Smart Logistics Solutions</h1>
+                <p class="hero-subtitle">Real-time tracking, AI-powered optimization, and seamless digital integration</p>
+                <div class="hero-buttons">
+                    <a href="#tracking" class="btn btn-primary">
+                        <span class="material-icons">track_changes</span>
+                        <span>Track Now</span>
+                    </a>
+                    <a href="#tools" class="btn btn-secondary">
+                        <span class="material-icons">calculate</span>
+                        <span>Tools & Resources</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="hero-nav hero-prev" aria-label="Previous slide">
+            <span class="material-icons">chevron_left</span>
+        </button>
+        <button class="hero-nav hero-next" aria-label="Next slide">
+            <span class="material-icons">chevron_right</span>
+        </button>
+
+        <!-- Slide Indicators -->
+        <div class="hero-indicators">
+            <button class="indicator active" data-slide-to="1"></button>
+            <button class="indicator" data-slide-to="2"></button>
+            <button class="indicator" data-slide-to="3"></button>
+            <button class="indicator" data-slide-to="4"></button>
+            <button class="indicator" data-slide-to="5"></button>
+        </div>
+
+        <!-- Scroll Indicator -->
         <div class="scroll-indicator">
             <span class="material-icons">keyboard_arrow_down</span>
         </div>
@@ -1345,8 +1459,16 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <span class="material-icons">arrow_upward</span>
+    </button>
+
     <!-- Load company data -->
     <script src="company-data.js"></script>
     <script src="script.js"></script>
+    <script src="hero-carousel.js"></script>
+    <script src="back-to-top.js"></script>
+    <script src="timeline-animations.js"></script>
 </body>
 </html>

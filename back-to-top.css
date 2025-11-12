@@ -1,0 +1,180 @@
+/* ========================================
+   BACK TO TOP BUTTON
+   Smooth scroll to top with modern design
+   ======================================== */
+
+.back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0066CC 0%, #4F9CF9 100%);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 102, 204, 0.4);
+    z-index: 999;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.8);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 12px 32px rgba(0, 102, 204, 0.5);
+}
+
+.back-to-top:active {
+    transform: translateY(-3px) scale(1.05);
+}
+
+.back-to-top .material-icons {
+    font-size: 24px;
+    animation: bounce-arrow 2s ease-in-out infinite;
+}
+
+.back-to-top:hover .material-icons {
+    animation: bounce-arrow-fast 0.6s ease-in-out infinite;
+}
+
+/* Arrow bounce animation */
+@keyframes bounce-arrow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes bounce-arrow-fast {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* Progress ring (optional enhancement) */
+.back-to-top::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.back-to-top:hover::before {
+    opacity: 1;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Glassmorphism variant (optional) */
+.back-to-top.glass {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 102, 204, 0.2);
+}
+
+.back-to-top.glass:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 48px;
+        height: 48px;
+    }
+    
+    .back-to-top .material-icons {
+        font-size: 20px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .back-to-top {
+        bottom: 30px;
+        right: 30px;
+        width: 52px;
+        height: 52px;
+    }
+}
+
+/* Accessibility */
+.back-to-top:focus {
+    outline: 3px solid rgba(79, 156, 249, 0.5);
+    outline-offset: 4px;
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+    .back-to-top {
+        box-shadow: 0 8px 24px rgba(79, 156, 249, 0.6);
+    }
+}
+
+/* Print - hide button */
+@media print {
+    .back-to-top {
+        display: none !important;
+    }
+}
+
+/* Alternative styles */
+
+/* Square variant */
+.back-to-top.square {
+    border-radius: 16px;
+}
+
+/* Minimal variant */
+.back-to-top.minimal {
+    background: white;
+    color: #0066CC;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.back-to-top.minimal:hover {
+    background: #0066CC;
+    color: white;
+}
+
+/* Large variant */
+.back-to-top.large {
+    width: 64px;
+    height: 64px;
+}
+
+.back-to-top.large .material-icons {
+    font-size: 28px;
+}
