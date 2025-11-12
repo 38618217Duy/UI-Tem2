@@ -68,6 +68,8 @@ const translations = {
         service_supply_f1: "Supply Chain Consulting",
         service_supply_f2: "Process Optimization",
         service_supply_f3: "Technology Integration",
+        service_learn_more: "Learn More",
+        view_all_services: "View All Services",
         
         // Tracking
         tracking_title: "Track Your Shipment",
@@ -344,10 +346,33 @@ const translations = {
         // Navigation
         nav_home: "Trang Chủ",
         nav_services: "Dịch Vụ",
-        nav_tracking: "Tra Cứu",
+        nav_company: "Công Ty",
         nav_about: "Về Chúng Tôi",
+        nav_sustainability: "Phát Triển Bền Vững",
         nav_network: "Mạng Lưới",
+        nav_testimonials: "Đánh Giá Khách Hàng",
+        nav_news: "Tin Tức",
         nav_contact: "Liên Hệ",
+        
+        // Mega Menu
+        mega_freight: "Dịch Vụ Vận Chuyển",
+        mega_logistics: "Giải Pháp Logistics",
+        mega_featured: "Nổi Bật",
+        mega_cold_chain: "Giải Pháp Chuỗi Lạnh",
+        mega_cold_chain_desc: "Mekong Logistics Hub - Kho lạnh 11.000 tấn với cơ sở chiếu xạ",
+        mega_learn_more: "Tìm Hiểu Thêm",
+        service_ocean: "Vận Tải Đường Biển",
+        service_ocean_desc: "Giải pháp vận tải biển toàn cầu",
+        service_air: "Vận Tải Hàng Không",
+        service_air_desc: "Giao hàng quốc tế nhanh chóng",
+        service_land: "Vận Tải Đường Bộ",
+        service_land_desc: "Dịch vụ vận tải đường bộ toàn quốc",
+        service_warehouse: "Kho Bãi",
+        service_warehouse_desc: "Cơ sở kho hiện đại",
+        service_customs: "Thông Quan Hải Quan",
+        service_customs_desc: "Môi giới hải quan chuyên nghiệp",
+        service_supply: "Chuỗi Cung Ứng",
+        service_supply_desc: "Quản lý toàn diện",
         
         // Hero
         hero_title: "Xuất Sắc Trong Logistics Toàn Cầu",
@@ -388,6 +413,8 @@ const translations = {
         service_supply_f1: "Tư Vấn Chuỗi Cung Ứng",
         service_supply_f2: "Tối Ưu Hóa Quy Trình",
         service_supply_f3: "Tích Hợp Công Nghệ",
+        service_learn_more: "Xem Chi Tiết",
+        view_all_services: "Xem Tất Cả Dịch Vụ",
         
         // Tracking
         tracking_title: "Tra Cứu Vận Đơn",
@@ -555,10 +582,35 @@ const translations = {
         // Navigation
         nav_home: "ホーム",
         nav_services: "サービス",
-        nav_tracking: "追跡",
+        nav_company: "会社情報",
         nav_about: "会社概要",
+        nav_sustainability: "サステナビリティ",
         nav_network: "ネットワーク",
+        nav_testimonials: "お客様の声",
+        nav_news: "ニュース",
         nav_contact: "お問い合わせ",
+        
+        // Mega Menu
+        mega_freight: "輸送サービス",
+        mega_logistics: "ロジスティクスソリューション",
+        mega_featured: "注目",
+        mega_cold_chain: "コールドチェーンソリューション",
+        mega_cold_chain_desc: "メコンロジスティクスハブ - 11,000トン容量の冷蔵施設と照射設備",
+        mega_learn_more: "詳細を見る",
+        service_ocean: "海上輸送",
+        service_ocean_desc: "グローバル海上輸送ソリューション",
+        service_air: "航空輸送",
+        service_air_desc: "迅速な国際配送",
+        service_land: "陸上輸送",
+        service_land_desc: "全国トラック輸送サービス",
+        service_warehouse: "倉庫保管",
+        service_warehouse_desc: "最新の保管施設",
+        service_customs: "通関業務",
+        service_customs_desc: "専門的な通関サービス",
+        service_supply: "サプライチェーン",
+        service_supply_desc: "エンドツーエンド管理",
+        service_learn_more: "詳細を見る",
+        view_all_services: "すべてのサービスを見る",
         
         // Hero
         hero_title: "グローバル物流エクセレンス",
@@ -888,11 +940,13 @@ function changeLanguage(lang) {
         }
     });
     
-    // Update placeholder text
-    const trackingInput = document.getElementById('trackingInput');
-    if (trackingInput && translations[lang]['tracking_placeholder']) {
-        trackingInput.placeholder = translations[lang]['tracking_placeholder'];
-    }
+    // Update all placeholder texts
+    document.querySelectorAll('[data-lang-key-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-lang-key-placeholder');
+        if (translations[lang] && translations[lang][key]) {
+            element.placeholder = translations[lang][key];
+        }
+    });
     
     // Update branch info when language changes
     const branchSelector = document.getElementById('branchSelector');
