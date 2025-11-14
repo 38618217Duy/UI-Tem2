@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - MOL Logistics Vietnam</title>
+    <title>Giới thiệu - MOL Logistics Vietnam</title>
+    <meta name="description" content="MOL Logistics Vietnam - Gần 20 năm kinh nghiệm logistics tại Việt Nam, thuộc tập đoàn MOL Nhật Bản với 140+ năm lịch sử vận tải biển.">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -12,208 +13,557 @@
 </head>
 <body>
     <div id="header-placeholder"></div>
-
-    <!-- About Hero -->
-    <section class="page-hero about-hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <span class="hero-badge">Est. 2006</span>
-            <h1 class="hero-title">About MOL Logistics Vietnam</h1>
-            <p class="hero-subtitle">19+ Years of Excellence in Logistics</p>
+    
+    <!-- About Hero - Modern Design -->
+    <section style="position: relative; min-height: 75vh; display: flex; align-items: center; background: linear-gradient(135deg, #0066CC 0%, #004499 100%); overflow: hidden;">
+        <!-- Background Image Overlay -->
+        <div style="position: absolute; inset: 0; background: url('img/img_bussiness/banner-2-1872x780.jpg') center/cover; opacity: 0.15;"></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,102,204,0.95) 0%, rgba(0,68,153,0.9) 100%);"></div>
+        
+        <!-- Animated Background Shapes -->
+        <div style="position: absolute; width: 500px; height: 500px; background: rgba(255,255,255,0.05); border-radius: 50%; top: -250px; right: -100px; animation: float 8s ease-in-out infinite;"></div>
+        <div style="position: absolute; width: 300px; height: 300px; background: rgba(255,255,255,0.03); border-radius: 50%; bottom: -150px; left: -50px; animation: float 6s ease-in-out infinite reverse;"></div>
+        
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="max-width: 900px; margin: 0 auto; text-align: center; color: white;">
+                <!-- Badge -->
+                <div style="display: inline-flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 12px 28px; border-radius: 50px; margin-bottom: 32px; animation: fadeInDown 0.8s ease;">
+                    <span class="material-icons" style="font-size: 22px;">verified</span>
+                    <span style="font-weight: 600; letter-spacing: 1px; font-size: 0.95rem;">Thành lập 11/2005</span>
+                </div>
+                
+                <!-- Title -->
+                <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; margin-bottom: 28px; line-height: 1.15; animation: fadeInUp 0.8s ease 0.2s both;">
+                    Giới thiệu <span style="background: linear-gradient(135deg, #fff 0%, #90CAF9 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">MOL Logistics Vietnam</span>
+                </h1>
+                
+                <!-- Subtitle -->
+                <p style="font-size: clamp(1.15rem, 2.5vw, 1.5rem); opacity: 0.95; max-width: 700px; margin: 0 auto 40px; line-height: 1.6; animation: fadeInUp 0.8s ease 0.4s both;">
+                    Gần 20 năm xuất sắc trong ngành Logistics tại Việt Nam
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; animation: fadeInUp 0.8s ease 0.6s both;">
+                    <a href="#company-overview" style="display: inline-flex; align-items: center; gap: 10px; background: white; color: #0066CC; padding: 16px 36px; border-radius: 50px; font-weight: 600; font-size: 1.05rem; box-shadow: 0 8px 24px rgba(0,0,0,0.2); transition: all 0.3s ease; text-decoration: none;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.2)'">
+                        <span class="material-icons">arrow_downward</span>
+                        Khám phá thêm
+                    </a>
+                    <a href="contact.html" style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: white; padding: 16px 36px; border-radius: 50px; font-weight: 600; font-size: 1.05rem; border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease; text-decoration: none;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+                        <span class="material-icons">contact_mail</span>
+                        Liên hệ ngay
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); animation: bounce 2s infinite;">
+            <span class="material-icons" style="font-size: 40px; color: rgba(255,255,255,0.7);">keyboard_arrow_down</span>
         </div>
     </section>
+    
+    <!-- Animations -->
+    <style>
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-30px) scale(1.05); }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-10px) translateX(-50%); }
+            60% { transform: translateY(-5px) translateX(-50%); }
+        }
+    </style>
 
-    <!-- Company Overview -->
-    <section class="company-overview">
+    <!-- Company Overview - Enhanced -->
+    <section id="company-overview" style="padding: 100px 0; background: #FAFBFC;">
         <div class="container">
-            <div class="overview-grid">
-                <div class="overview-content">
-                    <h2 class="section-title">Your Trusted Logistics Partner</h2>
-                    <p class="lead-text">MOL Logistics (Vietnam) Co., Ltd. is a leading provider of comprehensive logistics solutions, backed by the global expertise of Mitsui O.S.K. Lines (MOL).</p>
-                    <p>Since our establishment in 2006, we have been dedicated to connecting Vietnam to the world through innovative logistics solutions, reliable service, and a commitment to excellence.</p>
-                    <div class="key-points">
-                        <div class="point-item">
-                            <span class="material-icons">verified</span>
+            <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: center;">
+                <!-- Content Column -->
+                <div>
+                    <!-- Section Badge -->
+                    <div style="display: inline-block; background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); color: #0066CC; padding: 10px 24px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; margin-bottom: 24px;">
+                        <span class="material-icons" style="font-size: 18px; vertical-align: middle; margin-right: 8px;">business</span>
+                        Về chúng tôi
+                    </div>
+                    
+                    <!-- Title -->
+                    <h2 style="font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800; color: #1F2937; margin-bottom: 28px; line-height: 1.2;">
+                        Đối tác <span style="background: linear-gradient(135deg, #0066CC 0%, #4F9CF9 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Logistics</span> đáng tin cậy
+                    </h2>
+                    
+                    <!-- Description -->
+                    <p style="font-size: 1.2rem; color: #4B5563; line-height: 1.8; margin-bottom: 20px;">
+                        Công ty TNHH <strong style="color: #0066CC;">MOL Logistics (Việt Nam)</strong> là nhà cung cấp hàng đầu các giải pháp logistics tổng hợp, được hỗ trợ bởi chuyên môn toàn cầu của tập đoàn Mitsui O.S.K. Lines (MOL).
+                    </p>
+                    
+                    <p style="font-size: 1.05rem; color: #6B7280; line-height: 1.8; margin-bottom: 36px;">
+                        Kể từ khi thành lập vào tháng 11/2005, chúng tôi đã không ngừng kết nối Việt Nam với thế giới thông qua các giải pháp logistics sáng tạo, dịch vụ đáng tin cậy và cam kết về sự xuất sắc.
+                    </p>
+                    
+                    <!-- Key Points Cards -->
+                    <div style="display: flex; flex-direction: column; gap: 20px;">
+                        <!-- Point 1 -->
+                        <div style="display: flex; gap: 20px; align-items: start; padding: 24px; background: white; border-radius: 20px; box-shadow: 0 4px 16px rgba(0,102,204,0.08); transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(10px)';this.style.boxShadow='0 8px 24px rgba(0,102,204,0.15)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 4px 16px rgba(0,102,204,0.08)'">
+                            <div style="flex-shrink: 0; width: 56px; height: 56px; background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+                                <span class="material-icons" style="color: #0066CC; font-size: 28px;">verified</span>
+                            </div>
                             <div>
-                                <h4>Part of MOL Group</h4>
-                                <p>130+ years of maritime excellence</p>
+                                <h4 style="font-size: 1.15rem; font-weight: 700; color: #1F2937; margin-bottom: 8px;">Thuộc Tập đoàn MOL</h4>
+                                <p style="font-size: 1rem; color: #6B7280; margin: 0; line-height: 1.6;">140+ năm xuất sắc trong vận tải biển toàn cầu</p>
                             </div>
                         </div>
-                        <div class="point-item">
-                            <span class="material-icons">public</span>
+                        
+                        <!-- Point 2 -->
+                        <div style="display: flex; gap: 20px; align-items: start; padding: 24px; background: white; border-radius: 20px; box-shadow: 0 4px 16px rgba(0,102,204,0.08); transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(10px)';this.style.boxShadow='0 8px 24px rgba(0,102,204,0.15)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 4px 16px rgba(0,102,204,0.08)'">
+                            <div style="flex-shrink: 0; width: 56px; height: 56px; background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+                                <span class="material-icons" style="color: #0066CC; font-size: 28px;">public</span>
+                            </div>
                             <div>
-                                <h4>Global Network</h4>
-                                <p>100+ countries, 650+ locations</p>
+                                <h4 style="font-size: 1.15rem; font-weight: 700; color: #1F2937; margin-bottom: 8px;">Mạng lưới toàn cầu</h4>
+                                <p style="font-size: 1rem; color: #6B7280; margin: 0; line-height: 1.6;">140 văn phòng tại 26 quốc gia + 189 đại lý tại 51 quốc gia</p>
                             </div>
                         </div>
-                        <div class="point-item">
-                            <span class="material-icons">groups</span>
+                        
+                        <!-- Point 3 -->
+                        <div style="display: flex; gap: 20px; align-items: start; padding: 24px; background: white; border-radius: 20px; box-shadow: 0 4px 16px rgba(0,102,204,0.08); transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(10px)';this.style.boxShadow='0 8px 24px rgba(0,102,204,0.15)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 4px 16px rgba(0,102,204,0.08)'">
+                            <div style="flex-shrink: 0; width: 56px; height: 56px; background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+                                <span class="material-icons" style="color: #0066CC; font-size: 28px;">groups</span>
+                            </div>
                             <div>
-                                <h4>Expert Team</h4>
-                                <p>Skilled logistics professionals</p>
+                                <h4 style="font-size: 1.15rem; font-weight: 700; color: #1F2937; margin-bottom: 8px;">Đội ngũ chuyên gia</h4>
+                                <p style="font-size: 1rem; color: #6B7280; margin: 0; line-height: 1.6;">192 chuyên gia logistics tại Việt Nam</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="overview-image">
-    <img src="img/img_bussiness/banner-2-1872x780.jpg" alt="MOL Logistics Team">
+                
+                <!-- Image Column -->
+                <div style="position: relative;">
+                    <!-- Decorative Shape -->
+                    <div style="position: absolute; width: 100%; height: 100%; background: linear-gradient(135deg, #0066CC 0%, #4F9CF9 100%); border-radius: 32px; transform: rotate(3deg); opacity: 0.1; z-index: 0;"></div>
+                    
+                    <!-- Image Container -->
+                    <div style="position: relative; border-radius: 32px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,102,204,0.25); z-index: 1;">
+                        <img src="img/img_bussiness/banner-2-1872x780.jpg" alt="MOL Logistics Team" style="width: 100%; height: auto; display: block; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 0%, rgba(0,102,204,0.15) 100%);"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    <!-- Responsive Styles -->
+    <style>
+        @media (max-width: 968px) {
+            #company-overview > div > div {
+                grid-template-columns: 1fr !important;
+                gap: 50px !important;
+            }
+        }
+    </style>
 
-    <!-- Timeline -->
-    <section class="company-timeline">
-        <div class="container">
-            <h2 class="section-title text-center">Our Journey</h2>
-            <p class="section-description text-center">Milestones in our growth story</p>
+    <!-- Company Stats - Glass Effect -->
+    <section style="position: relative; padding: 100px 0; background: linear-gradient(135deg, #0066CC 0%, #004499 100%); overflow: hidden;">
+        <!-- Decorative Elements -->
+        <div style="position: absolute; inset: 0; opacity: 0.08;">
+            <div style="position: absolute; width: 600px; height: 600px; background: white; border-radius: 50%; top: -300px; right: -200px; filter: blur(120px);"></div>
+            <div style="position: absolute; width: 400px; height: 400px; background: white; border-radius: 50%; bottom: -200px; left: -100px; filter: blur(100px);"></div>
+        </div>
+        
+        <div class="container" style="position: relative; z-index: 2;">
+            <!-- Section Header -->
+            <div style="text-align: center; margin-bottom: 70px; color: white;">
+                <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 16px; text-shadow: 0 2px 20px rgba(0,0,0,0.2);">
+                    Thành tựu nổi bật
+                </h2>
+                <p style="font-size: 1.15rem; opacity: 0.95; max-width: 600px; margin: 0 auto;">
+                    Con số ấn tượng phản ánh sức mạnh và cam kết của chúng tôi
+                </p>
+            </div>
             
-            <div class="timeline-horizontal">
-                <div class="timeline-item-h">
-                    <div class="timeline-year">2006</div>
-                    <div class="timeline-content-h">
-                        <h4>Company Established</h4>
-                        <p>MOL Logistics Vietnam founded in Ho Chi Minh City</p>
+            <!-- Stats Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 28px;">
+                <!-- Stat 1 -->
+                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); border-radius: 24px; padding: 44px 28px; text-align: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.transform='translateY(-12px)';this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(255,255,255,0.1)'">
+                    <div style="width: 64px; height: 64px; background: rgba(255,255,255,0.2); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+                        <span class="material-icons" style="font-size: 36px; color: white;">verified</span>
                     </div>
+                    <div style="font-size: clamp(2.8rem, 5vw, 4rem); font-weight: 900; margin-bottom: 12px; color: white; text-shadow: 0 4px 24px rgba(0,0,0,0.3);">19+</div>
+                    <div style="font-size: 1.05rem; opacity: 0.95; color: white; font-weight: 500;">Năm kinh nghiệm</div>
                 </div>
-
-                <div class="timeline-item-h">
-                    <div class="timeline-year">2010</div>
-                    <div class="timeline-content-h">
-                        <h4>Network Expansion</h4>
-                        <p>Opened offices in Hanoi and Hai Phong</p>
+                
+                <!-- Stat 2 -->
+                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); border-radius: 24px; padding: 44px 28px; text-align: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.transform='translateY(-12px)';this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(255,255,255,0.1)'">
+                    <div style="width: 64px; height: 64px; background: rgba(255,255,255,0.2); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+                        <span class="material-icons" style="font-size: 36px; color: white;">location_on</span>
                     </div>
+                    <div style="font-size: clamp(2.8rem, 5vw, 4rem); font-weight: 900; margin-bottom: 12px; color: white; text-shadow: 0 4px 24px rgba(0,0,0,0.3);">17</div>
+                    <div style="font-size: 1.05rem; opacity: 0.95; color: white; font-weight: 500;">Địa điểm toàn quốc</div>
                 </div>
-
-                <div class="timeline-item-h">
-                    <div class="timeline-year">2015</div>
-                    <div class="timeline-content-h">
-                        <h4>ISO Certification</h4>
-                        <p>Achieved ISO 9001 & 14001 certifications</p>
+                
+                <!-- Stat 3 -->
+                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); border-radius: 24px; padding: 44px 28px; text-align: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.transform='translateY(-12px)';this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(255,255,255,0.1)'">
+                    <div style="width: 64px; height: 64px; background: rgba(255,255,255,0.2); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+                        <span class="material-icons" style="font-size: 36px; color: white;">groups</span>
                     </div>
+                    <div style="font-size: clamp(2.8rem, 5vw, 4rem); font-weight: 900; margin-bottom: 12px; color: white; text-shadow: 0 4px 24px rgba(0,0,0,0.3);">192</div>
+                    <div style="font-size: 1.05rem; opacity: 0.95; color: white; font-weight: 500;">Nhân viên chuyên nghiệp</div>
                 </div>
-
-                <div class="timeline-item-h">
-                    <div class="timeline-year">2020</div>
-                    <div class="timeline-content-h">
-                        <h4>Digital Transformation</h4>
-                        <p>Launched advanced tracking systems</p>
+                
+                <!-- Stat 4 -->
+                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); border-radius: 24px; padding: 44px 28px; text-align: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.transform='translateY(-12px)';this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(255,255,255,0.1)'">
+                    <div style="width: 64px; height: 64px; background: rgba(255,255,255,0.2); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+                        <span class="material-icons" style="font-size: 36px; color: white;">warehouse</span>
                     </div>
+                    <div style="font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 900; margin-bottom: 12px; color: white; text-shadow: 0 4px 24px rgba(0,0,0,0.3);">6,000m²</div>
+                    <div style="font-size: 1.05rem; opacity: 0.95; color: white; font-weight: 500;">Kho bãi Hải Phòng</div>
                 </div>
-
-                <div class="timeline-item-h">
-                    <div class="timeline-year">2025</div>
-                    <div class="timeline-content-h">
-                        <h4>Cold Chain Investment</h4>
-                        <p>Strategic investment in Mekong Logistics Hub</p>
+                
+                <!-- Stat 5 -->
+                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); border-radius: 24px; padding: 44px 28px; text-align: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.transform='translateY(-12px)';this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(255,255,255,0.1)'">
+                    <div style="width: 64px; height: 64px; background: rgba(255,255,255,0.2); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+                        <span class="material-icons" style="font-size: 36px; color: white;">directions_boat</span>
                     </div>
+                    <div style="font-size: clamp(2.8rem, 5vw, 4rem); font-weight: 900; margin-bottom: 12px; color: white; text-shadow: 0 4px 24px rgba(0,0,0,0.3);">800+</div>
+                    <div style="font-size: 1.05rem; opacity: 0.95; color: white; font-weight: 500;">Tàu MOL Group</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Leadership Team -->
-    <section class="leadership-team">
+    <!-- Timeline - Modern Vertical Design -->
+    <section style="padding: 100px 0; background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%); position: relative; overflow: hidden;">
+        <!-- Decorative Background -->
+        <div style="position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(0,102,204,0.05) 0%, transparent 70%); top: 10%; left: -10%; pointer-events: none;"></div>
+        <div style="position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(79,156,249,0.05) 0%, transparent 70%); bottom: 10%; right: -10%; pointer-events: none;"></div>
+        
         <div class="container">
-            <h2 class="section-title text-center">Leadership Team</h2>
-            <p class="section-description text-center">Meet the experts guiding our success</p>
+            <!-- Section Header -->
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 80px;">
+                <div style="display: inline-block; background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); color: #0066CC; padding: 10px 24px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; margin-bottom: 20px;">
+                    <span class="material-icons" style="font-size: 18px; vertical-align: middle; margin-right: 8px;">timeline</span>
+                    Lịch sử của chúng tôi
+                </div>
+                <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: #1F2937; margin-bottom: 20px; line-height: 1.2;">
+                    <span style="background: linear-gradient(135deg, #0066CC 0%, #4F9CF9 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hành trình phát triển</span> của MOL
+                </h2>
+                <p style="font-size: 1.1rem; color: #6B7280; line-height: 1.7;">
+                    Những mốc quan trọng đánh dấu sự phát triển vượt bậc qua từng giai đoạn
+                </p>
+            </div>
             
-            <div class="team-grid">
-                <div class="team-card modern-card">
-                    <div class="team-image">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" alt="CEO">
+            <!-- Timeline Container -->
+            <div style="position: relative; max-width: 1000px; margin: 0 auto;">
+                <!-- Center Line -->
+                <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, #E3F2FD 0%, #0066CC 50%, #004499 100%); transform: translateX(-50%); border-radius: 4px;"></div>
+                
+                <!-- Timeline Items -->
+                <div style="display: flex; flex-direction: column; gap: 60px;">
+                    <!-- 2001 - Left -->
+                    <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 40px; align-items: center;">
+                        <div style="text-align: right;">
+                            <div style="background: white; padding: 32px; border-radius: 24px; box-shadow: 0 8px 32px rgba(0,102,204,0.12); border: 1px solid rgba(0,102,204,0.1); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.transform='translateX(-10px)';this.style.boxShadow='0 12px 48px rgba(0,102,204,0.2)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 8px 32px rgba(0,102,204,0.12)'">
+                                <div style="display: inline-block; background: linear-gradient(135deg, #FFF9E6 0%, #FFE699 100%); padding: 12px 24px; border-radius: 50px; margin-bottom: 16px;">
+                                    <span style="font-size: 2rem; font-weight: 800; color: #F59E0B;">2001</span>
+                                </div>
+                                <h3 style="font-size: 1.4rem; font-weight: 700; color: #1F2937; margin-bottom: 12px;">Văn phòng đại diện TP.HCM</h3>
+                                <p style="color: #6B7280; font-size: 1rem; line-height: 1.6; margin: 0;">Mở văn phòng đại diện đầu tiên tại Việt Nam</p>
+                            </div>
+                        </div>
+                        <div style="position: relative; width: 80px; height: 80px; background: linear-gradient(135deg, #FFF9E6 0%, #FFE699 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 8px rgba(245,158,11,0.1), 0 8px 24px rgba(245,158,11,0.3); z-index: 2;">
+                            <span class="material-icons" style="font-size: 40px; color: #F59E0B;">location_city</span>
+                        </div>
+                        <div></div>
                     </div>
-                    <div class="team-info">
-                        <h4>Takashi Yamamoto</h4>
-                        <p class="team-position">Managing Director</p>
-                        <p class="team-bio">25+ years in logistics industry, leading Vietnam operations since 2018</p>
-                        <div class="team-social">
-                            <a href="#"><span class="material-icons">email</span></a>
-                            <a href="#"><span class="material-icons">link</span></a>
+                    
+                    <!-- 2005 - Right -->
+                    <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 40px; align-items: center;">
+                        <div></div>
+                        <div style="position: relative; width: 80px; height: 80px; background: linear-gradient(135deg, #E3F2FD 0%, #90CAF9 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 8px rgba(0,102,204,0.1), 0 8px 24px rgba(0,102,204,0.3); z-index: 2;">
+                            <span class="material-icons" style="font-size: 40px; color: #0066CC;">business_center</span>
+                        </div>
+                        <div>
+                            <div style="background: white; padding: 32px; border-radius: 24px; box-shadow: 0 8px 32px rgba(0,102,204,0.12); border: 1px solid rgba(0,102,204,0.1); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.transform='translateX(10px)';this.style.boxShadow='0 12px 48px rgba(0,102,204,0.2)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 8px 32px rgba(0,102,204,0.12)'">
+                                <div style="display: inline-block; background: linear-gradient(135deg, #E3F2FD 0%, #90CAF9 100%); padding: 12px 24px; border-radius: 50px; margin-bottom: 16px;">
+                                    <span style="font-size: 2rem; font-weight: 800; color: #0066CC;">2005</span>
+                                </div>
+                                <h3 style="font-size: 1.4rem; font-weight: 700; color: #1F2937; margin-bottom: 12px;">Thành lập công ty</h3>
+                                <p style="color: #6B7280; font-size: 1rem; line-height: 1.6; margin: 0;">Chính thức thành lập MOL Logistics Vietnam Inc.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="team-card modern-card">
-                    <div class="team-image">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="COO">
+                    
+                    <!-- 2006 - Left -->
+                    <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 40px; align-items: center;">
+                        <div style="text-align: right;">
+                            <div style="background: white; padding: 32px; border-radius: 24px; box-shadow: 0 8px 32px rgba(0,102,204,0.12); border: 1px solid rgba(0,102,204,0.1); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.transform='translateX(-10px)';this.style.boxShadow='0 12px 48px rgba(0,102,204,0.2)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 8px 32px rgba(0,102,204,0.12)'">
+                                <div style="display: inline-block; background: linear-gradient(135deg, #E8F5E9 0%, #81C784 100%); padding: 12px 24px; border-radius: 50px; margin-bottom: 16px;">
+                                    <span style="font-size: 2rem; font-weight: 800; color: #388E3C;">2006</span>
+                                </div>
+                                <h3 style="font-size: 1.4rem; font-weight: 700; color: #1F2937; margin-bottom: 12px;">Công ty 100% vốn Nhật</h3>
+                                <p style="color: #6B7280; font-size: 1rem; line-height: 1.6; margin: 0;">Công ty vận tải biển Nhật duy nhất được phép sở hữu 100%</p>
+                            </div>
+                        </div>
+                        <div style="position: relative; width: 80px; height: 80px; background: linear-gradient(135deg, #E8F5E9 0%, #81C784 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 8px rgba(56,142,60,0.1), 0 8px 24px rgba(56,142,60,0.3); z-index: 2;">
+                            <span class="material-icons" style="font-size: 40px; color: #388E3C;">verified</span>
+                        </div>
+                        <div></div>
                     </div>
-                    <div class="team-info">
-                        <h4>Nguyen Thi Lan</h4>
-                        <p class="team-position">Operations Director</p>
-                        <p class="team-bio">Expert in supply chain management with 20 years experience</p>
-                        <div class="team-social">
-                            <a href="#"><span class="material-icons">email</span></a>
-                            <a href="#"><span class="material-icons">link</span></a>
+                    
+                    <!-- 2019 - Right -->
+                    <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 40px; align-items: center;">
+                        <div></div>
+                        <div style="position: relative; width: 80px; height: 80px; background: linear-gradient(135deg, #E0F2F1 0%, #4DB6AC 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 8px rgba(0,121,107,0.1), 0 8px 24px rgba(0,121,107,0.3); z-index: 2;">
+                            <span class="material-icons" style="font-size: 40px; color: #00796B;">warehouse</span>
+                        </div>
+                        <div>
+                            <div style="background: white; padding: 32px; border-radius: 24px; box-shadow: 0 8px 32px rgba(0,102,204,0.12); border: 1px solid rgba(0,102,204,0.1); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.transform='translateX(10px)';this.style.boxShadow='0 12px 48px rgba(0,102,204,0.2)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 8px 32px rgba(0,102,204,0.12)'">
+                                <div style="display: inline-block; background: linear-gradient(135deg, #E0F2F1 0%, #4DB6AC 100%); padding: 12px 24px; border-radius: 50px; margin-bottom: 16px;">
+                                    <span style="font-size: 2rem; font-weight: 800; color: #00796B;">2019</span>
+                                </div>
+                                <h3 style="font-size: 1.4rem; font-weight: 700; color: #1F2937; margin-bottom: 12px;">Kho Hải Phòng</h3>
+                                <p style="color: #6B7280; font-size: 1rem; line-height: 1.6; margin: 0;">Khai trương Trung tâm Logistics Hải Phòng 6,000m²</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="team-card modern-card">
-                    <div class="team-image">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80" alt="Sales">
-                    </div>
-                    <div class="team-info">
-                        <h4>David Chen</h4>
-                        <p class="team-position">Sales Director</p>
-                        <p class="team-bio">Building strategic partnerships across Asia-Pacific region</p>
-                        <div class="team-social">
-                            <a href="#"><span class="material-icons">email</span></a>
-                            <a href="#"><span class="material-icons">link</span></a>
+                    
+                    <!-- 2024 - Left -->
+                    <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 40px; align-items: center;">
+                        <div style="text-align: right;">
+                            <div style="background: white; padding: 32px; border-radius: 24px; box-shadow: 0 8px 32px rgba(0,102,204,0.12); border: 1px solid rgba(0,102,204,0.1); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.transform='translateX(-10px)';this.style.boxShadow='0 12px 48px rgba(0,102,204,0.2)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 8px 32px rgba(0,102,204,0.12)'">
+                                <div style="display: inline-block; background: linear-gradient(135deg, #F3E5F5 0%, #CE93D8 100%); padding: 12px 24px; border-radius: 50px; margin-bottom: 16px;">
+                                    <span style="font-size: 2rem; font-weight: 800; color: #7B1FA2;">2024</span>
+                                </div>
+                                <h3 style="font-size: 1.4rem; font-weight: 700; color: #1F2937; margin-bottom: 12px;">Mở rộng 17 địa điểm</h3>
+                                <p style="color: #6B7280; font-size: 1rem; line-height: 1.6; margin: 0;">Mạng lưới bao phủ toàn quốc với 17 văn phòng</p>
+                            </div>
                         </div>
+                        <div style="position: relative; width: 80px; height: 80px; background: linear-gradient(135deg, #F3E5F5 0%, #CE93D8 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 8px rgba(123,31,162,0.1), 0 8px 24px rgba(123,31,162,0.3); z-index: 2;">
+                            <span class="material-icons" style="font-size: 40px; color: #7B1FA2;">map</span>
+                        </div>
+                        <div></div>
                     </div>
-                </div>
-
-                <div class="team-card modern-card">
-                    <div class="team-image">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" alt="Finance">
-                    </div>
-                    <div class="team-info">
-                        <h4>Sarah Johnson</h4>
-                        <p class="team-position">Finance Director</p>
-                        <p class="team-bio">CPA with expertise in international logistics finance</p>
-                        <div class="team-social">
-                            <a href="#"><span class="material-icons">email</span></a>
-                            <a href="#"><span class="material-icons">link</span></a>
+                    
+                    <!-- 2025 - Right - Highlight -->
+                    <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 40px; align-items: center;">
+                        <div></div>
+                        <div style="position: relative; width: 90px; height: 90px; background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 12px rgba(255,107,53,0.15), 0 12px 40px rgba(255,107,53,0.4); z-index: 2; animation: pulse 2s ease-in-out infinite;">
+                            <span class="material-icons" style="font-size: 48px; color: white;">rocket_launch</span>
+                        </div>
+                        <div>
+                            <div style="background: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, rgba(247,147,30,0.05) 100%); backdrop-filter: blur(10px); padding: 36px; border-radius: 24px; box-shadow: 0 8px 32px rgba(255,107,53,0.2); border: 2px solid rgba(255,107,53,0.2); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.transform='translateX(10px) scale(1.02)';this.style.boxShadow='0 16px 48px rgba(255,107,53,0.3)'" onmouseout="this.style.transform='translateX(0) scale(1)';this.style.boxShadow='0 8px 32px rgba(255,107,53,0.2)'">
+                                <div style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); padding: 10px 24px; border-radius: 50px; margin-bottom: 16px; box-shadow: 0 4px 16px rgba(255,107,53,0.3);">
+                                    <span class="material-icons" style="font-size: 20px; color: white;">new_releases</span>
+                                    <span style="font-size: 2rem; font-weight: 800; color: white;">2025</span>
+                                </div>
+                                <h3 style="font-size: 1.5rem; font-weight: 800; color: #1F2937; margin-bottom: 12px;">Mekong Logistics Hub</h3>
+                                <p style="color: #4B5563; font-size: 1.05rem; line-height: 1.6; margin: 0; font-weight: 500;">Đầu tư chiến lược 39% vào Toàn Phát Logistics - Trung tâm logistics lạnh tích hợp đầu tiên</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    <!-- Timeline Animation Styles -->
+    <style>
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 12px rgba(255,107,53,0.15), 0 12px 40px rgba(255,107,53,0.4); }
+            50% { transform: scale(1.05); box-shadow: 0 0 0 16px rgba(255,107,53,0.1), 0 16px 48px rgba(255,107,53,0.5); }
+        }
+        
+        @media (max-width: 968px) {
+            /* Mobile: Single column layout */
+            section div[style*="grid-template-columns: 1fr auto 1fr"] {
+                grid-template-columns: auto 1fr !important;
+                gap: 20px !important;
+            }
+            section div[style*="text-align: right"] {
+                text-align: left !important;
+            }
+            section div[style*="grid-template-columns: 1fr auto 1fr"] > div:first-child {
+                order: 2 !important;
+            }
+            section div[style*="grid-template-columns: 1fr auto 1fr"] > div:nth-child(2) {
+                order: 1 !important;
+            }
+            section div[style*="grid-template-columns: 1fr auto 1fr"] > div:last-child {
+                display: none !important;
+            }
+            section div[style*="position: absolute"][style*="left: 50%"] {
+                left: 20px !important;
+                transform: translateX(0) !important;
+            }
+        }
+    </style>
 
-    <!-- Values & Culture -->
-    <section class="company-values">
+    <!-- Strategic Investment -->
+    <section class="strategic-investment" style="background: #f8f9fa; padding: 80px 0;">
         <div class="container">
-            <h2 class="section-title text-center">Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">
-                        <span class="material-icons">emoji_objects</span>
+            <h2 class="section-title text-center">Đầu tư chiến lược 2025</h2>
+            <p class="section-description text-center">Mekong Logistics Hub - Trung tâm logistics lạnh tích hợp đầu tiên tại Việt Nam</p>
+            
+            <div class="investment-content" style="max-width: 900px; margin: 40px auto;">
+                <div class="modern-card" style="padding: 40px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 30px;">
+                        <div>
+                            <h3 style="color: #0066CC; margin-bottom: 20px;">Đối tác chiến lược</h3>
+                            <div style="margin-bottom: 15px;">
+                                <strong>MOL Logistics:</strong> 39%
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <strong>Kawanishi Warehouse:</strong> 51%
+                            </div>
+                            <div>
+                                <strong>Toàn Phát Irradiation:</strong> 10%
+                            </div>
+                        </div>
+                        <div>
+                            <h3 style="color: #0066CC; margin-bottom: 20px;">Thông tin dự án</h3>
+                            <div style="margin-bottom: 15px;">
+                                <strong>Địa điểm:</strong> Tây Ninh
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <strong>Công suất:</strong> 11,000 tấn lưu trữ lạnh
+                            </div>
+                            <div>
+                                <strong>Kết nối:</strong> Cảng TCIT (Cái Mép) & HICT (Hải Phòng)
+                            </div>
+                        </div>
                     </div>
-                    <h3>Innovation</h3>
-                    <p>Continuously improving through technology and creative solutions</p>
+                    
+                    <div style="background: #e3f2fd; padding: 25px; border-radius: 8px; border-left: 4px solid #0066CC;">
+                        <p style="font-style: italic; margin: 0; line-height: 1.6;">
+                            "Chúng tôi đánh giá cao năng lực vận hành kho lạnh hiệu quả của Toàn Phát Logistics. Đây là yếu tố then chốt đối với xuất khẩu nông sản và thủy sản - những ngành đòi hỏi quản lý nhiệt độ nghiêm ngặt."
+                        </p>
+                        <p style="margin: 15px 0 0 0; font-weight: 600; color: #0066CC;">
+                            - Ông Osamu Sakurada, Chủ tịch & CEO MOL Logistics
+                        </p>
+                    </div>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <span class="material-icons">handshake</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CSR - BLUE ACTION -->
+    <section class="csr-section" style="background: linear-gradient(135deg, #004499 0%, #0066CC 100%); padding: 80px 0; color: white;">
+        <div class="container">
+            <h2 class="section-title text-center" style="color: white;">BLUE ACTION for ALL</h2>
+            <p class="section-description text-center" style="color: rgba(255,255,255,0.9);">Cam kết trách nhiệm xã hội và môi trường</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px;">
+                <div class="modern-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                    <div style="text-align: center; padding: 30px;">
+                        <span class="material-icons" style="font-size: 3rem; color: #64B5F6; margin-bottom: 15px;">waves</span>
+                        <h3 style="color: white; margin-bottom: 15px;">Môi trường biển</h3>
+                        <p style="color: rgba(255,255,255,0.9);">Bảo vệ đại dương và hệ sinh thái biển cho thế hệ tương lai</p>
                     </div>
-                    <h3>Integrity</h3>
-                    <p>Building trust through transparency and ethical practices</p>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <span class="material-icons">verified_user</span>
+                
+                <div class="modern-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                    <div style="text-align: center; padding: 30px;">
+                        <span class="material-icons" style="font-size: 3rem; color: #64B5F6; margin-bottom: 15px;">school</span>
+                        <h3 style="color: white; margin-bottom: 15px;">Phát triển nhân lực</h3>
+                        <p style="color: rgba(255,255,255,0.9);">Đào tạo và phát triển nguồn nhân lực thế hệ tương lai</p>
                     </div>
-                    <h3>Quality</h3>
-                    <p>Delivering excellence in every shipment and service</p>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <span class="material-icons">eco</span>
+                
+                <div class="modern-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                    <div style="text-align: center; padding: 30px;">
+                        <span class="material-icons" style="font-size: 3rem; color: #64B5F6; margin-bottom: 15px;">volunteer_activism</span>
+                        <h3 style="color: white; margin-bottom: 15px;">Cộng đồng địa phương</h3>
+                        <p style="color: rgba(255,255,255,0.9);">Giải quyết các thách thức và hỗ trợ cộng đồng</p>
                     </div>
-                    <h3>Sustainability</h3>
-                    <p>Protecting our environment for future generations</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 50px; text-align: center;">
+                <h3 style="color: white; margin-bottom: 25px;">Hoạt động nổi bật</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto;">
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+                        <span class="material-icons" style="font-size: 2rem; margin-bottom: 10px;">beach_access</span>
+                        <p style="margin: 0;">Dọn dẹp bãi biển Phú Quốc</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+                        <span class="material-icons" style="font-size: 2rem; margin-bottom: 10px;">park</span>
+                        <p style="margin: 0;">Thu gom rác Vườn thú Sài Gòn</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+                        <span class="material-icons" style="font-size: 2rem; margin-bottom: 10px;">favorite</span>
+                        <p style="margin: 0;">Hỗ trợ thiên tai: $36,000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values & Culture - Enhanced -->
+    <section style="padding: 100px 0; background: linear-gradient(180deg, #FAFBFC 0%, #F8FAFC 100%);">
+        <div class="container">
+            <!-- Section Header -->
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 70px;">
+                <div style="display: inline-block; background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); color: #0066CC; padding: 10px 24px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; margin-bottom: 20px;">
+                    <span class="material-icons" style="font-size: 18px; vertical-align: middle; margin-right: 8px;">favorite</span>
+                    Giá trị của chúng tôi
+                </div>
+                <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: #1F2937; margin-bottom: 20px; line-height: 1.2;">
+                    <span style="background: linear-gradient(135deg, #0066CC 0%, #4F9CF9 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Giá trị cốt lõi</span> định hướng hành động
+                </h2>
+                <p style="font-size: 1.1rem; color: #6B7280; line-height: 1.7;">
+                    Những nguyên tắc nền tảng dẫn dắt mọi quyết định và hành động của chúng tôi
+                </p>
+            </div>
+            
+            <!-- Values Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
+                <!-- Value 1 -->
+                <div style="background: white; border-radius: 24px; padding: 40px 32px; text-align: center; box-shadow: 0 4px 20px rgba(0,102,204,0.08); border: 1px solid rgba(0,102,204,0.05); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-12px)';this.style.boxShadow='0 12px 40px rgba(0,102,204,0.15)';this.querySelector('.value-icon-bg').style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,102,204,0.08)';this.querySelector('.value-icon-bg').style.transform='scale(1) rotate(0deg)'">
+                    <div class="value-icon-bg" style="position: absolute; top: -40px; right: -40px; width: 120px; height: 120px; background: linear-gradient(135deg, #FFF9E6 0%, #FFE699 100%); border-radius: 50%; opacity: 0.3; transition: all 0.4s ease;"></div>
+                    <div style="position: relative; width: 80px; height: 80px; background: linear-gradient(135deg, #FFF9E6 0%, #FFE699 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+                        <span class="material-icons" style="font-size: 40px; color: #F59E0B;">emoji_objects</span>
+                    </div>
+                    <h3 style="font-size: 1.4rem; font-weight: 700; color: #1F2937; margin-bottom: 16px;">Đổi mới sáng tạo</h3>
+                    <p style="font-size: 1rem; color: #6B7280; line-height: 1.7; margin: 0;">Không ngừng cải tiến thông qua công nghệ và giải pháp sáng tạo</p>
+                </div>
+                
+                <!-- Value 2 -->
+                <div style="background: white; border-radius: 24px; padding: 40px 32px; text-align: center; box-shadow: 0 4px 20px rgba(0,102,204,0.08); border: 1px solid rgba(0,102,204,0.05); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-12px)';this.style.boxShadow='0 12px 40px rgba(0,102,204,0.15)';this.querySelector('.value-icon-bg').style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,102,204,0.08)';this.querySelector('.value-icon-bg').style.transform='scale(1) rotate(0deg)'">
+                    <div class="value-icon-bg" style="position: absolute; top: -40px; right: -40px; width: 120px; height: 120px; background: linear-gradient(135deg, #E3F2FD 0%, #90CAF9 100%); border-radius: 50%; opacity: 0.3; transition: all 0.4s ease;"></div>
+                    <div style="position: relative; width: 80px; height: 80px; background: linear-gradient(135deg, #E3F2FD 0%, #90CAF9 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+                        <span class="material-icons" style="font-size: 40px; color: #0066CC;">handshake</span>
+                    </div>
+                    <h3 style="font-size: 1.4rem; font-weight: 700; color: #1F2937; margin-bottom: 16px;">Chính trực</h3>
+                    <p style="font-size: 1rem; color: #6B7280; line-height: 1.7; margin: 0;">Xây dựng niềm tin thông qua minh bạch và thực hành đạo đức</p>
+                </div>
+                
+                <!-- Value 3 -->
+                <div style="background: white; border-radius: 24px; padding: 40px 32px; text-align: center; box-shadow: 0 4px 20px rgba(0,102,204,0.08); border: 1px solid rgba(0,102,204,0.05); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-12px)';this.style.boxShadow='0 12px 40px rgba(0,102,204,0.15)';this.querySelector('.value-icon-bg').style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,102,204,0.08)';this.querySelector('.value-icon-bg').style.transform='scale(1) rotate(0deg)'">
+                    <div class="value-icon-bg" style="position: absolute; top: -40px; right: -40px; width: 120px; height: 120px; background: linear-gradient(135deg, #E8F5E9 0%, #81C784 100%); border-radius: 50%; opacity: 0.3; transition: all 0.4s ease;"></div>
+                    <div style="position: relative; width: 80px; height: 80px; background: linear-gradient(135deg, #E8F5E9 0%, #81C784 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+                        <span class="material-icons" style="font-size: 40px; color: #388E3C;">verified_user</span>
+                    </div>
+                    <h3 style="font-size: 1.4rem; font-weight: 700; color: #1F2937; margin-bottom: 16px;">Chất lượng</h3>
+                    <p style="font-size: 1rem; color: #6B7280; line-height: 1.7; margin: 0;">Mang đến sự xuất sắc trong mọi lô hàng và dịch vụ</p>
+                </div>
+                
+                <!-- Value 4 -->
+                <div style="background: white; border-radius: 24px; padding: 40px 32px; text-align: center; box-shadow: 0 4px 20px rgba(0,102,204,0.08); border: 1px solid rgba(0,102,204,0.05); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-12px)';this.style.boxShadow='0 12px 40px rgba(0,102,204,0.15)';this.querySelector('.value-icon-bg').style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,102,204,0.08)';this.querySelector('.value-icon-bg').style.transform='scale(1) rotate(0deg)'">
+                    <div class="value-icon-bg" style="position: absolute; top: -40px; right: -40px; width: 120px; height: 120px; background: linear-gradient(135deg, #E0F2F1 0%, #4DB6AC 100%); border-radius: 50%; opacity: 0.3; transition: all 0.4s ease;"></div>
+                    <div style="position: relative; width: 80px; height: 80px; background: linear-gradient(135deg, #E0F2F1 0%, #4DB6AC 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+                        <span class="material-icons" style="font-size: 40px; color: #00796B;">eco</span>
+                    </div>
+                    <h3 style="font-size: 1.4rem; font-weight: 700; color: #1F2937; margin-bottom: 16px;">Bền vững</h3>
+                    <p style="font-size: 1rem; color: #6B7280; line-height: 1.7; margin: 0;">Bảo vệ môi trường cho các thế hệ tương lai</p>
                 </div>
             </div>
         </div>
@@ -222,46 +572,87 @@
     <!-- Certifications -->
     <section class="certifications">
         <div class="container">
-            <h2 class="section-title text-center">Certifications & Memberships</h2>
+            <h2 class="section-title text-center">Chứng nhận & Thành viên</h2>
             <div class="cert-grid">
                 <div class="cert-card glass-card">
                     <span class="material-icons">verified</span>
                     <h4>ISO 9001:2015</h4>
-                    <p>Quality Management</p>
+                    <p>Quản lý Chất lượng</p>
                 </div>
                 <div class="cert-card glass-card">
                     <span class="material-icons">eco</span>
                     <h4>ISO 14001:2015</h4>
-                    <p>Environmental Management</p>
+                    <p>Quản lý Môi trường</p>
                 </div>
                 <div class="cert-card glass-card">
-                    <span class="material-icons">security</span>
-                    <h4>AEO Certified</h4>
-                    <p>Authorized Economic Operator</p>
+                    <span class="material-icons">flight</span>
+                    <h4>IATA Certified</h4>
+                    <p>Hiệp hội Vận tải Hàng không Quốc tế</p>
                 </div>
                 <div class="cert-card glass-card">
                     <span class="material-icons">groups</span>
                     <h4>VIFFAS Member</h4>
-                    <p>Vietnam Freight Forwarders Association</p>
+                    <p>Hiệp hội Vận tải Hàng hóa Việt Nam</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Work With Us?</h2>
-            <p>Join hundreds of satisfied clients worldwide</p>
-            <div class="cta-buttons">
-                <a href="index.html#contact" class="btn btn-primary">
-                    <span class="material-icons">contact_mail</span>
-                    Contact Us
-                </a>
-                <a href="services.html" class="btn btn-secondary">
-                    <span class="material-icons">local_shipping</span>
-                    Our Services
-                </a>
+    <!-- CTA - Modern Design -->
+    <section style="position: relative; padding: 100px 0; background: linear-gradient(135deg, #0066CC 0%, #004499 100%); overflow: hidden;">
+        <!-- Animated Background -->
+        <div style="position: absolute; inset: 0; opacity: 0.1;">
+            <div style="position: absolute; width: 800px; height: 800px; background: white; border-radius: 50%; top: -400px; right: -200px; filter: blur(150px); animation: float 10s ease-in-out infinite;"></div>
+            <div style="position: absolute; width: 600px; height: 600px; background: white; border-radius: 50%; bottom: -300px; left: -150px; filter: blur(120px); animation: float 8s ease-in-out infinite reverse;"></div>
+        </div>
+        
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="max-width: 900px; margin: 0 auto; text-align: center; color: white;">
+                <!-- Badge -->
+                <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 12px 28px; border-radius: 50px; margin-bottom: 28px;">
+                    <span class="material-icons" style="font-size: 20px;">rocket_launch</span>
+                    <span style="font-weight: 600; font-size: 0.95rem; letter-spacing: 0.5px;">Bắt đầu ngay hôm nay</span>
+                </div>
+                
+                <!-- Title -->
+                <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; margin-bottom: 24px; line-height: 1.2; text-shadow: 0 4px 30px rgba(0,0,0,0.3);">
+                    Sẵn sàng làm việc<br>với chúng tôi?
+                </h2>
+                
+                <!-- Description -->
+                <p style="font-size: clamp(1.1rem, 2vw, 1.35rem); opacity: 0.95; max-width: 700px; margin: 0 auto 48px; line-height: 1.7;">
+                    Tham gia cùng hàng trăm khách hàng hài lòng trên toàn thế giới. Hãy để chúng tôi giúp bạn tối ưu hóa chuỗi cung ứng của bạn.
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" style="display: inline-flex; align-items: center; gap: 12px; background: white; color: #0066CC; padding: 18px 40px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; box-shadow: 0 8px 32px rgba(0,0,0,0.25); transition: all 0.3s ease; text-decoration: none;" onmouseover="this.style.transform='translateY(-4px) scale(1.05)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.35)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.25)'">
+                        <span class="material-icons" style="font-size: 24px;">contact_mail</span>
+                        Liên hệ ngay
+                    </a>
+                    <a href="services.html" style="display: inline-flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: white; padding: 18px 40px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; border: 2px solid rgba(255,255,255,0.4); transition: all 0.3s ease; text-decoration: none;" onmouseover="this.style.background='rgba(255,255,255,0.25)';this.style.transform='translateY(-4px)'" onmouseout="this.style.background='rgba(255,255,255,0.15)';this.style.transform='translateY(0)'">
+                        <span class="material-icons" style="font-size: 24px;">local_shipping</span>
+                        Dịch vụ của chúng tôi
+                    </a>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div style="margin-top: 60px; padding-top: 50px; border-top: 1px solid rgba(255,255,255,0.2);">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; max-width: 800px; margin: 0 auto;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 8px;">100%</div>
+                            <div style="font-size: 1rem; opacity: 0.9;">Cam kết chất lượng</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 8px;">24/7</div>
+                            <div style="font-size: 1rem; opacity: 0.9;">Hỗ trợ khách hàng</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 8px;">140+</div>
+                            <div style="font-size: 1rem; opacity: 0.9;">Văn phòng toàn cầu</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -273,36 +664,10 @@
         <span class="material-icons">arrow_upward</span>
     </button>
 
-    <script src="script.js"></script>
+    <script src="navbar-loader.js"></script>
     <script>
+        // Load footer
         document.addEventListener('DOMContentLoaded', () => {
-            loadHeaderFooter();
-        });
-
-        function loadHeaderFooter() {
-            const headerHTML = `
-            <header>
-                <nav class="navbar">
-                    <div class="container">
-                        <div class="nav-wrapper">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <img src="img/logo/logo_mol-1.png" alt="MOL Logistics Vietnam">
-                                </a>
-                            </div>
-                            <ul class="nav-menu">
-                                <li><a href="index.html" class="nav-link">Home</a></li>
-                                <li><a href="services.html" class="nav-link">Services</a></li>
-                                <li><a href="about.html" class="nav-link active">About</a></li>
-                                <li><a href="news.html" class="nav-link">News</a></li>
-                                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-            `;
-            
             const footerHTML = `
             <footer class="footer">
                 <div class="container">
@@ -312,11 +677,14 @@
                 </div>
             </footer>
             `;
-            
-            document.getElementById('header-placeholder').outerHTML = headerHTML;
-            document.getElementById('footer-placeholder').outerHTML = footerHTML;
-        }
+            const footerPlaceholder = document.getElementById('footer-placeholder');
+            if (footerPlaceholder) {
+                footerPlaceholder.outerHTML = footerHTML;
+            }
+        });
     </script>
+    <script src="script.js"></script>
+    <script src="i18n.js"></script>
     <script src="back-to-top.js"></script>
 </body>
 </html>

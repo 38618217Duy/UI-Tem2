@@ -1,0 +1,884 @@
+/* ========================================
+   MOL LOGISTICS VIETNAM
+   Corporate + Minimalism Design System
+   For B2B Logistics Business
+   ======================================== */
+
+/* ========================================
+   COLOR PALETTE - B2B PROFESSIONAL
+   ======================================== */
+:root {
+    /* Primary Brand Colors */
+    --mol-blue-primary: #0066CC;
+    --mol-blue-dark: #004C99;
+    --mol-blue-light: #3D8BFD;
+    --mol-blue-pale: #E6F2FF;
+    
+    /* Accent Orange - For CTAs */
+    --mol-orange: #FF6600;
+    --mol-orange-dark: #E55A00;
+    --mol-orange-light: #FF8533;
+    
+    /* Neutral Grays - Professional */
+    --gray-50: #FAFBFC;
+    --gray-100: #F5F7FA;
+    --gray-200: #E0E6ED;
+    --gray-300: #CBD5E0;
+    --gray-400: #A0AEC0;
+    --gray-500: #718096;
+    --gray-600: #6B7280;
+    --gray-700: #4A5568;
+    --gray-800: #2D3748;
+    --gray-900: #1A202C;
+    
+    /* Background Layers */
+    --bg-white: #FFFFFF;
+    --bg-light: #F5F7FA;
+    --bg-lighter: #FAFBFC;
+    
+    /* Text Colors */
+    --text-primary: #1A202C;
+    --text-secondary: #4A5568;
+    --text-tertiary: #718096;
+    
+    /* Borders */
+    --border-light: #E0E6ED;
+    --border-medium: #CBD5E0;
+    
+    /* Shadows - Subtle & Professional */
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.10);
+    --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.12);
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.25s ease;
+    --transition-slow: 0.35s ease;
+}
+
+/* ========================================
+   RESET & BASE STYLES
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   TYPOGRAPHY - CLEAR HIERARCHY
+   ======================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 2.25rem;
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+}
+
+/* ========================================
+   CONTAINER & LAYOUT
+   ======================================== */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+/* ========================================
+   NAVIGATION - CLEAN & PROFESSIONAL
+   ======================================== */
+header {
+    background-color: var(--bg-white);
+    border-bottom: 1px solid var(--border-light);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.nav-link {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.9375rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: var(--transition-fast);
+}
+
+.nav-link:hover {
+    color: var(--mol-blue-primary);
+    background-color: var(--mol-blue-pale);
+}
+
+.btn-quote {
+    background-color: var(--mol-orange);
+    color: white;
+    padding: 0.625rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    transition: var(--transition-base);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-quote:hover {
+    background-color: var(--mol-orange-dark);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+/* ========================================
+   HERO SECTION - MINIMALIST & IMPACTFUL
+   ======================================== */
+.hero-carousel {
+    margin-top: 76px;
+    position: relative;
+}
+
+.hero-slide {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 900px;
+    padding: 0 2rem;
+}
+
+.hero-badge {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    opacity: 0.95;
+    margin-bottom: 2.5rem;
+    color: white;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .hero-slide {
+        min-height: 500px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   BUTTONS - CLEAR HIERARCHY
+   ======================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition-base);
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: white;
+    color: var(--mol-blue-primary);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+    background-color: var(--gray-50);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: var(--mol-blue-primary);
+}
+
+.btn-large {
+    padding: 1.125rem 2.5rem;
+    font-size: 1.125rem;
+}
+
+/* ========================================
+   SECTION STYLES - CONSISTENT SPACING
+   ======================================== */
+section {
+    padding: 5rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.75;
+}
+
+/* Alternating Background Colors */
+section:nth-child(even) {
+    background-color: var(--bg-light);
+}
+
+section:nth-child(odd) {
+    background-color: var(--bg-white);
+}
+
+/* ========================================
+   SERVICES GRID - CLEAN & SCANNABLE
+   ======================================== */
+.services {
+    background-color: var(--bg-light);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    transition: var(--transition-base);
+}
+
+.service-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+    border-color: var(--mol-blue-primary);
+}
+
+.service-icon {
+    height: 200px;
+    overflow: hidden;
+}
+
+.service-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+
+.service-card:hover .service-icon img {
+    transform: scale(1.05);
+}
+
+.service-card h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    color: var(--mol-blue-primary);
+    font-size: 1.25rem;
+}
+
+.service-card p {
+    padding: 0 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+}
+
+.service-features {
+    padding: 0 1.5rem;
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.service-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.service-features .material-icons {
+    color: var(--mol-blue-primary);
+    font-size: 18px;
+}
+
+.service-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 1.5rem 1.5rem;
+    color: var(--mol-blue-primary);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    transition: var(--transition-fast);
+}
+
+.service-btn:hover {
+    color: var(--mol-orange);
+    gap: 0.75rem;
+}
+
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   TRACKING SECTION - B2B FOCUS
+   ======================================== */
+.tracking {
+    background: linear-gradient(135deg, var(--mol-blue-primary) 0%, var(--mol-blue-dark) 100%);
+    color: white;
+}
+
+.tracking-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.tracking-content .section-title {
+    color: white;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.tracking-description {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+}
+
+.tracking-form-enhanced {
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: var(--shadow-xl);
+}
+
+.input-group-enhanced {
+    display: flex;
+    align-items: center;
+    background-color: var(--gray-100);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    gap: 0.75rem;
+    border: 2px solid transparent;
+    transition: var(--transition-fast);
+}
+
+.input-group-enhanced:focus-within {
+    border-color: var(--mol-blue-primary);
+    background-color: white;
+}
+
+.input-group-enhanced .material-icons {
+    color: var(--gray-500);
+}
+
+.input-group-enhanced input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: transparent;
+    color: var(--text-primary);
+}
+
+.input-group-enhanced .btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--mol-orange);
+    color: white;
+    white-space: nowrap;
+}
+
+.input-group-enhanced .btn:hover {
+    background-color: var(--mol-orange-dark);
+}
+
+.tracking-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: white;
+}
+
+.feature-item .material-icons {
+    font-size: 24px;
+}
+
+.tracking-image {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}
+
+.tracking-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+    .tracking-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .tracking-image {
+        max-height: 400px;
+    }
+}
+
+/* ========================================
+   STATS - TRUST INDICATORS
+   ======================================== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--bg-white);
+    border-radius: 0.75rem;
+    border: 1px solid var(--border-light);
+    transition: var(--transition-base);
+}
+
+.stat-card:hover {
+    border-color: var(--mol-blue-primary);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--mol-blue-primary);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   FEATURE BOXES - ABOUT SECTION
+   ======================================== */
+.about-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.feature-box {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 0.75rem;
+    border: 1px solid var(--border-light);
+    transition: var(--transition-base);
+}
+
+.feature-box:hover {
+    border-color: var(--mol-blue-primary);
+    box-shadow: var(--shadow-md);
+}
+
+.feature-box .material-icons {
+    color: var(--mol-blue-primary);
+    font-size: 2rem;
+}
+
+.feature-box h4 {
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-box p {
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    margin: 0;
+}
+
+/* ========================================
+   TRUST INDICATORS - B2B CREDIBILITY
+   ======================================== */
+.trust-indicators {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border-light);
+}
+
+.trust-item {
+    text-align: center;
+}
+
+.trust-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--mol-blue-primary);
+    margin-bottom: 0.5rem;
+}
+
+.trust-item p {
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .trust-indicators {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ========================================
+   FOOTER - CLEAN & INFORMATIVE
+   ======================================== */
+.footer {
+    background-color: var(--gray-900);
+    color: white;
+    padding: 4rem 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-logo {
+    height: 50px;
+    width: auto;
+    margin-bottom: 1.5rem;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.footer-col p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.footer-col h4 {
+    color: white;
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-col ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9375rem;
+    transition: var(--transition-fast);
+}
+
+.footer-col ul li a:hover {
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+}
+
+.social-links a:hover {
+    background-color: var(--mol-blue-primary);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+}
+
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   TRUST BAR - B2B CREDIBILITY
+   ======================================== */
+.trust-bar {
+    background-color: white;
+    border-bottom: 1px solid var(--border-light);
+    padding: 2.5rem 0;
+}
+
+.trust-bar-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.trust-bar-item {
+    text-align: center;
+    padding: 1rem;
+    transition: var(--transition-base);
+}
+
+.trust-bar-item:hover {
+    transform: translateY(-4px);
+}
+
+@media (max-width: 1024px) {
+    .trust-bar-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .trust-bar-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .trust-bar {
+        padding: 2rem 0;
+    }
+}
+
+/* ========================================
+   UTILITIES
+   ======================================== */
+.text-center {
+    text-align: center;
+}
+
+.mt-4 {
+    margin-top: 2.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 2.5rem;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* ========================================
+   RESPONSIVE OPTIMIZATIONS
+   ======================================== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+    
+    .section-header {
+        margin-bottom: 2.5rem;
+    }
+}
+
+/* ========================================
+   ANIMATIONS - SUBTLE & PROFESSIONAL
+   ======================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}

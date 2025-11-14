@@ -310,48 +310,127 @@
     </button>
 
     <script src="script.js"></script>
+    <script src="tracking.js"></script>
     <script>
-        // Load header/footer dynamically
+        // Load tracking data and render results
         document.addEventListener('DOMContentLoaded', () => {
             loadHeaderFooter();
+            loadTrackingData();
+            setupExportPDF();
         });
 
         function loadHeaderFooter() {
-            // Simple header
-            const headerHTML = `
-            <header>
-                <nav class="navbar">
-                    <div class="container">
-                        <div class="nav-wrapper">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <img src="img/logo/logo_mol-1.png" alt="MOL Logistics Vietnam">
-                                </a>
+            fetch('index.html').then(r => r.text()).then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const header = doc.querySelector('header');
+                const footer = doc.querySelector('footer');
+                if (header) document.getElementById('header-placeholder').outerHTML = header.outerHTML;
+                if (footer) document.getElementById('footer-placeholder').outerHTML = footer.outerHTML;
+            });
+        }
+
+        function loadTrackingData() {
+            // Get tracking number from sessionStorage
+            const trackingNumber = sessionStorage.getItem('trackingNumber') || 'MOL123456789';
+            const trackingData = getTrackingData(trackingNumber);
+
+            if (!trackingData) {
+                showNoDataMessage();
+                return;
+            }
+
+            // Update UI with tracking data
+            updateTrackingUI(trackingData);
+        }
+
+        function updateTrackingUI(data) {
+            // Update tracking number input
+            document.getElementById('trackingNumber').value = data.trackingNumber;
+
+            // Update status
+            document.querySelector('.tracking-status h3').textContent = data.status;
+            document.querySelector('.tracking-status strong').textContent = data.trackingNumber;
+
+            // Update summary
+            document.querySelectorAll('.summary-item')[0].querySelector('strong').textContent = data.origin;
+            document.querySelectorAll('.summary-item')[1].querySelector('strong').textContent = data.destination;
+            document.querySelectorAll('.summary-item')[2].querySelector('strong').textContent = new Date(data.estimatedDelivery).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+            document.querySelectorAll('.summary-item')[3].querySelector('strong').textContent = data.service;
+
+            // Update timeline
+            const timelineContainer = document.querySelector('.timeline');
+            timelineContainer.innerHTML = '';
+            
+            data.events.forEach((event, index) => {
+                const itemClass = event.current ? 'timeline-item active' : 'timeline-item';
+                const iconClass = event.completed ? 'timeline-icon completed' : 'timeline-icon';
+                const icon = event.current ? 'place' : (event.completed ? 'check_circle' : 'circle');
+                
+                timelineContainer.innerHTML += `
+                    <div class="${itemClass}">
+                        <div class="${iconClass}">
+                            <span class="material-icons">${icon}</span>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <strong>${event.status}</strong>
+                                <span class="timeline-date">${formatDate(event.date)}</span>
                             </div>
-                            <div class="nav-actions">
-                                <a href="index.html" class="btn btn-secondary">
-                                    <span class="material-icons">home</span>
-                                    Back to Home
-                                </a>
+                            <p>${event.description}</p>
+                            <div class="timeline-location">
+                                <span class="material-icons">location_on</span>
+                                ${event.location}
                             </div>
                         </div>
                     </div>
-                </nav>
-            </header>
-            `;
-            
-            const footerHTML = `
-            <footer class="footer">
-                <div class="container">
-                    <div class="footer-bottom">
-                        <p>&copy; 2025 MOL Logistics (Vietnam) Co., Ltd. All rights reserved.</p>
-                    </div>
+                `;
+            });
+
+            // Update vessel/transport info if available
+            if (data.vessel) {
+                document.querySelectorAll('.info-card')[0].querySelector('.info-list').innerHTML = `
+                    <div class="info-row"><span>Vessel Name:</span><strong>${data.vessel}</strong></div>
+                    <div class="info-row"><span>Container No:</span><strong>${data.container || 'N/A'}</strong></div>
+                    <div class="info-row"><span>Service:</span><strong>${data.service}</strong></div>
+                `;
+            } else if (data.flight) {
+                document.querySelectorAll('.info-card')[0].querySelector('h4').innerHTML = '<span class="material-icons">flight</span> Flight Information';
+                document.querySelectorAll('.info-card')[0].querySelector('.info-list').innerHTML = `
+                    <div class="info-row"><span>Flight:</span><strong>${data.flight}</strong></div>
+                    <div class="info-row"><span>AWB:</span><strong>${data.awb || 'N/A'}</strong></div>
+                    <div class="info-row"><span>Service:</span><strong>${data.service}</strong></div>
+                `;
+            } else if (data.truck) {
+                document.querySelectorAll('.info-card')[0].querySelector('h4').innerHTML = '<span class="material-icons">local_shipping</span> Vehicle Information';
+                document.querySelectorAll('.info-card')[0].querySelector('.info-list').innerHTML = `
+                    <div class="info-row"><span>Truck:</span><strong>${data.truck}</strong></div>
+                    <div class="info-row"><span>Service:</span><strong>${data.service}</strong></div>
+                `;
+            }
+        }
+
+        function showNoDataMessage() {
+            document.querySelector('.tracking-results-section .container').innerHTML = `
+                <div class="modern-card" style="text-align: center; padding: 60px 20px;">
+                    <span class="material-icons" style="font-size: 80px; color: #E0E0E0; margin-bottom: 20px;">search_off</span>
+                    <h2 style="color: var(--text-dark); margin-bottom: 15px;">Tracking Number Not Found</h2>
+                    <p style="color: var(--text-light); margin-bottom: 30px;">
+                        Please check your tracking number and try again.
+                    </p>
+                    <a href="index.html#tracking" class="btn btn-primary">
+                        <span class="material-icons">arrow_back</span>
+                        Back to Tracking
+                    </a>
                 </div>
-            </footer>
             `;
-            
-            document.getElementById('header-placeholder').outerHTML = headerHTML;
-            document.getElementById('footer-placeholder').outerHTML = footerHTML;
+        }
+
+        function setupExportPDF() {
+            document.querySelector('[title="Download PDF"]')?.addEventListener('click', () => {
+                const trackingNumber = document.getElementById('trackingNumber').value;
+                exportToPDF(trackingNumber);
+            });
         }
     </script>
     <script src="back-to-top.js"></script>

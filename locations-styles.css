@@ -1,0 +1,398 @@
+/* ========================================
+   LOCATIONS PAGE - COMPLETE CSS
+   Professional Logistics Design
+   ======================================== */
+
+/* Office Card - Minimalist Design */
+.office-card {
+    background: white;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 20px rgba(0, 102, 204, 0.08);
+    border: 1px solid rgba(0, 102, 204, 0.06);
+    transition: all 0.3s ease;
+}
+
+.office-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 102, 204, 0.15);
+}
+
+/* Office Header */
+.office-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 24px;
+}
+
+.office-header h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1F2937;
+    margin: 0 0 10px 0;
+}
+
+/* Office Badges */
+.office-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.office-badge.head-office {
+    background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+    color: white;
+}
+
+.office-badge.regional-hub {
+    background: linear-gradient(135deg, #0066CC 0%, #4F9CF9 100%);
+    color: white;
+}
+
+.office-badge.branch {
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+    color: #0066CC;
+}
+
+.office-badge.warehouse {
+    background: linear-gradient(135deg, #E0F2F1 0%, #4DB6AC 100%);
+    color: #00796B;
+}
+
+.office-badge.port {
+    background: linear-gradient(135deg, #E8F5E9 0%, #81C784 100%);
+    color: #388E3C;
+}
+
+/* Office Icon */
+.office-icon-container {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.office-icon {
+    font-size: 28px;
+    color: #0066CC;
+}
+
+/* Office Details */
+.office-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.detail-item {
+    display: flex;
+    gap: 12px;
+    align-items: start;
+}
+
+.detail-item .material-icons {
+    font-size: 20px;
+    color: #6B7280;
+    flex-shrink: 0;
+}
+
+.detail-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #4B5563;
+    line-height: 1.6;
+}
+
+.detail-item.email p {
+    color: #0066CC;
+    font-weight: 500;
+}
+
+.detail-item.phone p {
+    font-weight: 500;
+}
+
+/* Office Actions */
+.office-actions {
+    display: flex;
+    gap: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #E5E7EB;
+}
+
+.action-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.action-btn.primary {
+    background: #0066CC;
+    color: white;
+}
+
+.action-btn.primary:hover {
+    background: #004499;
+}
+
+.action-btn.secondary {
+    background: white;
+    color: #0066CC;
+    border: 2px solid #0066CC;
+}
+
+.action-btn.secondary:hover {
+    background: #E3F2FD;
+}
+
+.action-btn .material-icons {
+    font-size: 18px;
+}
+
+/* Region Section */
+.region-section {
+    margin-bottom: 60px;
+}
+
+.region-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 3px solid #0066CC;
+}
+
+.region-header .material-icons {
+    font-size: 32px;
+    color: #0066CC;
+}
+
+.region-header h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1F2937;
+    margin: 0;
+}
+
+.region-count {
+    margin-left: auto;
+    padding: 6px 16px;
+    background: #E3F2FD;
+    color: #0066CC;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Offices Grid */
+.offices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 24px;
+}
+
+/* Global Network Cards */
+.world-regions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+    margin-top: 50px;
+}
+
+.region-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 102, 204, 0.1);
+    border-radius: 24px;
+    padding: 36px 28px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.region-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 102, 204, 0.15);
+    background: white;
+}
+
+.region-card h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 12px;
+}
+
+.region-card > p {
+    font-size: 1.1rem;
+    color: #0066CC;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.region-countries {
+    font-size: 0.9rem;
+    color: #6B7280;
+    line-height: 1.8;
+    padding-top: 20px;
+    border-top: 2px solid #E3F2FD;
+}
+
+/* Filter Buttons */
+.filter-btn {
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 2px solid #E5E7EB;
+    background: white;
+    color: #6B7280;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    border-color: #0066CC;
+    background: #0066CC;
+    color: white;
+}
+
+/* Search Input */
+.search-container {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #F8FAFC;
+    border-radius: 12px;
+}
+
+.search-container input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+    color: #1F2937;
+}
+
+.search-container input::placeholder {
+    color: #9CA3AF;
+}
+
+.search-container .material-icons {
+    color: #6B7280;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .offices-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .office-card {
+        padding: 24px;
+    }
+    
+    .office-header {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .office-icon-container {
+        align-self: flex-start;
+    }
+    
+    .region-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .region-count {
+        margin-left: 0;
+    }
+    
+    .world-regions {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .office-actions {
+        flex-direction: column;
+    }
+    
+    .action-btn {
+        width: 100%;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.office-card {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Loading State */
+.office-card.loading {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Empty State */
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6B7280;
+}
+
+.no-results .material-icons {
+    font-size: 64px;
+    color: #D1D5DB;
+    margin-bottom: 16px;
+}
+
+.no-results h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4B5563;
+    margin-bottom: 8px;
+}
+
+.no-results p {
+    font-size: 1rem;
+    color: #6B7280;
+}

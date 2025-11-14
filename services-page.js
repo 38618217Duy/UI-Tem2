@@ -1,96 +1,18 @@
 // Services Page JavaScript
+// Note: Navbar is now loaded via navbar-loader.js
 
 document.addEventListener('DOMContentLoaded', function() {
-    loadHeaderFooter();
+    loadFooter();
     loadServicesContent();
+    
+    // Listen for language changes
+    window.addEventListener('languageChanged', function(e) {
+        loadServicesContent();
+    });
 });
 
-// Load Header and Footer
-function loadHeaderFooter() {
-    const headerHTML = `
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="nav-wrapper">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="img/logo/logo_mol-1.png" alt="MOL Logistics Vietnam">
-                        </a>
-                    </div>
-                    
-                    <ul class="nav-menu" id="navMenu">
-                        <li><a href="index.html" class="nav-link">Home</a></li>
-                        <li class="nav-dropdown">
-                            <a href="services.html" class="nav-link active">
-                                Services
-                                <span class="material-icons dropdown-icon">expand_more</span>
-                            </a>
-                            <div class="mega-menu">
-                                <div class="mega-menu-grid">
-                                    <div class="mega-menu-column">
-                                        <h4>Freight Services</h4>
-                                        <ul class="mega-menu-list">
-                                            <li><a href="#ocean-freight"><span class="material-icons">directions_boat</span><div><strong>Ocean Freight</strong><span>Global sea transport</span></div></a></li>
-                                            <li><a href="#air-freight"><span class="material-icons">flight</span><div><strong>Air Freight</strong><span>Fast delivery</span></div></a></li>
-                                            <li><a href="#land-transport"><span class="material-icons">local_shipping</span><div><strong>Land Transport</strong><span>Nationwide trucking</span></div></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="mega-menu-column">
-                                        <h4>Logistics Solutions</h4>
-                                        <ul class="mega-menu-list">
-                                            <li><a href="#warehousing"><span class="material-icons">warehouse</span><div><strong>Warehousing</strong><span>Modern facilities</span></div></a></li>
-                                            <li><a href="#customs"><span class="material-icons">gavel</span><div><strong>Customs Clearance</strong><span>Expert brokerage</span></div></a></li>
-                                            <li><a href="#supply-chain"><span class="material-icons">hub</span><div><strong>Supply Chain</strong><span>End-to-end</span></div></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="mega-menu-column mega-menu-featured">
-                                        <div class="featured-service">
-                                            <span class="featured-badge">Featured</span>
-                                            <span class="material-icons featured-icon">ac_unit</span>
-                                            <h4>Cold Chain Solutions</h4>
-                                            <p>11,000 tons capacity</p>
-                                            <a href="index.html#investment" class="featured-link">Learn More <span class="material-icons">arrow_forward</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-dropdown">
-                            <a href="index.html#about" class="nav-link">Company <span class="material-icons dropdown-icon">expand_more</span></a>
-                            <div class="compact-menu">
-                                <ul class="compact-menu-list">
-                                    <li><a href="index.html#about"><span class="material-icons">info</span><span>About Us</span></a></li>
-                                    <li><a href="index.html#sustainability"><span class="material-icons">eco</span><span>Sustainability</span></a></li>
-                                    <li><a href="index.html#network"><span class="material-icons">location_on</span><span>Network</span></a></li>
-                                    <li><a href="index.html#testimonials"><span class="material-icons">star</span><span>Testimonials</span></a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="news.html" class="nav-link">News</a></li>
-                        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-                    </ul>
-
-                    <div class="nav-actions">
-                        <button class="search-toggle" id="searchToggle">
-                            <span class="material-icons">search</span>
-                        </button>
-                        <div class="language-switcher">
-                            <button class="lang-btn active" data-lang="en">EN</button>
-                            <button class="lang-btn" data-lang="vi">VI</button>
-                            <button class="lang-btn" data-lang="ja">JA</button>
-                        </div>
-                        <button class="mobile-menu-toggle" id="mobileMenuToggle">
-                            <span class="material-icons">menu</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    `;
-    
-    document.getElementById('header-placeholder').outerHTML = headerHTML;
-    
+// Load Footer only
+function loadFooter() {
     const footerHTML = `
     <footer class="footer">
         <div class="container">
@@ -101,10 +23,10 @@ function loadHeaderFooter() {
     </footer>
     `;
     
-    document.getElementById('footer-placeholder').outerHTML = footerHTML;
-    
-    initMobileMenu();
-    initSmoothScroll();
+    const footerPlaceholder = document.getElementById('footer-placeholder');
+    if (footerPlaceholder) {
+        footerPlaceholder.outerHTML = footerHTML;
+    }
 }
 
 // Load Services Content
@@ -114,6 +36,7 @@ function loadServicesContent() {
             id: 'ocean-freight',
             icon: 'directions_boat',
             title: 'Ocean Freight',
+            detailPage: 'ocean-freight.html',
             description: 'Comprehensive sea freight solutions with global coverage',
             features: [
                 'Full Container Load (FCL)',
@@ -127,6 +50,7 @@ function loadServicesContent() {
             id: 'air-freight',
             icon: 'flight',
             title: 'Air Freight',
+            detailPage: 'air-freight.html',
             description: 'Fast and reliable air cargo services',
             features: [
                 'Express Air Cargo',
@@ -140,6 +64,7 @@ function loadServicesContent() {
             id: 'land-transport',
             icon: 'local_shipping',
             title: 'Land Transportation',
+            detailPage: 'land-transport.html',
             description: 'Nationwide trucking solutions with GPS tracking',
             features: [
                 'Full Truckload (FTL)',
@@ -153,6 +78,7 @@ function loadServicesContent() {
             id: 'warehousing',
             icon: 'warehouse',
             title: 'Warehousing',
+            detailPage: 'warehousing.html',
             description: 'Modern storage facilities with inventory management',
             features: [
                 'Ambient & Temperature-Controlled Storage',
@@ -166,6 +92,7 @@ function loadServicesContent() {
             id: 'customs',
             icon: 'gavel',
             title: 'Customs Clearance',
+            detailPage: 'customs-clearance.html',
             description: 'Expert customs brokerage services',
             features: [
                 'Import/Export Clearance',
@@ -179,6 +106,7 @@ function loadServicesContent() {
             id: 'supply-chain',
             icon: 'hub',
             title: 'Supply Chain Solutions',
+            detailPage: 'supply-chain.html',
             description: 'End-to-end supply chain management',
             features: [
                 'Supply Chain Consulting',
@@ -221,9 +149,12 @@ function loadServicesContent() {
                             `).join('')}
                         </div>
                         <div class="service-cta">
-                            <a href="index.html#tools" class="btn btn-primary">
-                                Get a Quote
+                            <a href="${service.detailPage}" class="btn btn-primary">
+                                Learn More
                                 <span class="material-icons">arrow_forward</span>
+                            </a>
+                            <a href="quote-calculator.html" class="btn" style="margin-left: 15px; background: linear-gradient(135deg, #FF6600, #E55A00); color: white; box-shadow: 0 4px 12px rgba(255, 102, 0, 0.25);">
+                                Get a Quote
                             </a>
                         </div>
                     </div>

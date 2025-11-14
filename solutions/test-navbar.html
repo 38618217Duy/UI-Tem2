@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Navbar</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div style="padding: 100px 20px;">
+        <h1>Test Navbar Loading</h1>
+        <p>Check console for debug messages</p>
+        <p>Logo should appear above</p>
+    </div>
+
+    <script src="../navbar-loader.js"></script>
+    <script>
+        console.log('Test page loaded');
+        console.log('Path:', window.location.pathname);
+        console.log('Path depth:', window.location.pathname.split('/').length - 2);
+    </script>
+</body>
+</html>

@@ -8,110 +8,184 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="modern-design.css">
+    <link rel="stylesheet" href="locations-styles.css">
     <link rel="stylesheet" href="back-to-top.css">
 </head>
 <body>
     <div id="header-placeholder"></div>
 
-    <!-- Locations Hero -->
-    <section class="page-hero locations-hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">Our Network</h1>
-            <p class="hero-subtitle">17 locations across Vietnam, 650+ worldwide</p>
-        </div>
-    </section>
-
-    <!-- Network Stats -->
-    <section class="network-stats">
-        <div class="container">
-            <div class="stats-row">
-                <div class="stat-card-modern">
-                    <span class="material-icons">location_city</span>
-                    <h3>17</h3>
-                    <p>Offices in Vietnam</p>
+    <!-- Locations Hero - Minimalist Design -->
+    <section style="position: relative; min-height: 65vh; display: flex; align-items: center; background: linear-gradient(135deg, #0066CC 0%, #004499 100%); overflow: hidden;">
+        <!-- Background Pattern -->
+        <div style="position: absolute; inset: 0; opacity: 0.05; background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        
+        <!-- Decorative Shapes -->
+        <div style="position: absolute; width: 500px; height: 500px; background: rgba(255,255,255,0.05); border-radius: 50%; top: -250px; right: -100px; animation: float 8s ease-in-out infinite;"></div>
+        <div style="position: absolute; width: 300px; height: 300px; background: rgba(255,255,255,0.03); border-radius: 50%; bottom: -150px; left: -50px; animation: float 6s ease-in-out infinite reverse;"></div>
+        
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="max-width: 900px; margin: 0 auto; text-align: center; color: white;">
+                <!-- Badge -->
+                <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 10px 24px; border-radius: 50px; margin-bottom: 28px;">
+                    <span class="material-icons" style="font-size: 20px;">location_on</span>
+                    <span style="font-weight: 600; font-size: 0.9rem; letter-spacing: 0.5px;">MẠNG LƯỚI TOÀN CẦU</span>
                 </div>
-                <div class="stat-card-modern">
-                    <span class="material-icons">public</span>
-                    <h3>100+</h3>
-                    <p>Countries Served</p>
-                </div>
-                <div class="stat-card-modern">
-                    <span class="material-icons">warehouse</span>
-                    <h3>650+</h3>
-                    <p>Global Locations</p>
-                </div>
-                <div class="stat-card-modern">
-                    <span class="material-icons">groups</span>
-                    <h3>500+</h3>
-                    <p>Team Members</p>
+                
+                <!-- Title -->
+                <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; margin-bottom: 24px; line-height: 1.1;">
+                    Mạng lưới <span style="background: linear-gradient(135deg, #fff 0%, #90CAF9 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">toàn cầu</span>
+                </h1>
+                
+                <!-- Description -->
+                <p style="font-size: clamp(1.1rem, 2.5vw, 1.4rem); opacity: 0.95; max-width: 700px; margin: 0 auto 50px; line-height: 1.6;">
+                    17 địa điểm tại Việt Nam • 650+ văn phòng trên toàn thế giới
+                </p>
+                
+                <!-- Stats Grid - Glassmorphism -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto;">
+                    <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 28px 20px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(255,255,255,0.1)'">
+                        <span class="material-icons" style="font-size: 32px; margin-bottom: 12px; opacity: 0.9;">location_city</span>
+                        <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 8px;">17</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">Văn phòng VN</div>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 28px 20px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(255,255,255,0.1)'">
+                        <span class="material-icons" style="font-size: 32px; margin-bottom: 12px; opacity: 0.9;">public</span>
+                        <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 8px;">100+</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">Quốc gia</div>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 28px 20px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(255,255,255,0.1)'">
+                        <span class="material-icons" style="font-size: 32px; margin-bottom: 12px; opacity: 0.9;">warehouse</span>
+                        <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 8px;">650+</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">Địa điểm</div>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 28px 20px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(255,255,255,0.1)'">
+                        <span class="material-icons" style="font-size: 32px; margin-bottom: 12px; opacity: 0.9;">groups</span>
+                        <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 8px;">500+</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">Nhân viên</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-30px) scale(1.05); }
+        }
+    </style>
 
-    <!-- Interactive Map Section -->
-    <section class="locations-map-section">
+    <!-- Search & Filter Section -->
+    <section style="padding: 80px 0; background: #FAFBFC;">
         <div class="container">
-            <div class="map-filters">
-                <button class="filter-btn active" data-region="all">All Locations</button>
-                <button class="filter-btn" data-region="north">Northern Vietnam</button>
-                <button class="filter-btn" data-region="central">Central Vietnam</button>
-                <button class="filter-btn" data-region="south">Southern Vietnam</button>
-            </div>
-
-            <div class="map-container">
-                <div class="map-placeholder">
-                    <span class="material-icons">map</span>
-                    <p>Interactive Map of Vietnam</p>
-                    <small>Map integration with Mapbox/Google Maps</small>
+            <!-- Section Header -->
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 50px;">
+                <div style="display: inline-block; background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); color: #0066CC; padding: 8px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 16px;">
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 6px;">explore</span>
+                    TÌM VĂN PHÒNG
                 </div>
+                <h2 style="font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; color: #1F2937; margin-bottom: 16px;">
+                    Văn phòng tại <span style="background: linear-gradient(135deg, #0066CC 0%, #4F9CF9 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Việt Nam</span>
+                </h2>
+                <p style="font-size: 1.05rem; color: #6B7280; line-height: 1.6;">
+                    17 địa điểm chiến lược phủ khắp các khu công nghiệp và thành phố lớn
+                </p>
             </div>
-        </div>
-    </section>
-
-    <!-- Office Locations Grid -->
-    <section class="offices-grid-section">
-        <div class="container">
-            <h2 class="section-title">Vietnam Offices</h2>
             
+            <!-- Search & Filter Bar -->
+            <div style="max-width: 900px; margin: 0 auto 50px;">
+                <div style="background: white; padding: 12px; border-radius: 20px; box-shadow: 0 4px 24px rgba(0,102,204,0.08); display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+                    <!-- Search Input -->
+                    <div style="flex: 1; min-width: 250px; display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: #F8FAFC; border-radius: 12px;">
+                        <span class="material-icons" style="color: #6B7280;">search</span>
+                        <input type="text" placeholder="Tìm kiếm văn phòng..." style="flex: 1; border: none; background: transparent; outline: none; font-size: 1rem; color: #1F2937;" id="locationSearch">
+                    </div>
+                    
+                    <!-- Region Filters -->
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <button class="filter-btn" data-region="all" style="padding: 10px 20px; border-radius: 12px; border: 2px solid #0066CC; background: #0066CC; color: white; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: all 0.2s ease; white-space: nowrap;" onclick="filterLocation('all', this)">
+                            Tất cả
+                        </button>
+                        <button class="filter-btn" data-region="north" style="padding: 10px 20px; border-radius: 12px; border: 2px solid #E5E7EB; background: white; color: #6B7280; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: all 0.2s ease; white-space: nowrap;" onclick="filterLocation('north', this)">
+                            Miền Bắc
+                        </button>
+                        <button class="filter-btn" data-region="central" style="padding: 10px 20px; border-radius: 12px; border: 2px solid #E5E7EB; background: white; color: #6B7280; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: all 0.2s ease; white-space: nowrap;" onclick="filterLocation('central', this)">
+                            Miền Trung
+                        </button>
+                        <button class="filter-btn" data-region="south" style="padding: 10px 20px; border-radius: 12px; border: 2px solid #E5E7EB; background: white; color: #6B7280; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: all 0.2s ease; white-space: nowrap;" onclick="filterLocation('south', this)">
+                            Miền Nam
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map Placeholder - Professional -->
+            <div style="background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,102,204,0.12); margin-bottom: 60px;">
+                <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 20px; padding: 40px; text-align: center;">
+                    <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <span class="material-icons" style="font-size: 64px; color: #0066CC;">map</span>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1F2937; margin-bottom: 12px;">Bản đồ tương tác</h3>
+                        <p style="font-size: 1rem; color: #6B7280; max-width: 500px; margin: 0 auto;">Tích hợp với Google Maps / Mapbox để hiển thị vị trí chính xác và chỉ đường</p>
+                    </div>
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
+                        <span style="padding: 8px 16px; background: rgba(0,102,204,0.1); border-radius: 20px; color: #0066CC; font-size: 0.85rem; font-weight: 600;">📍 Định vị GPS</span>
+                        <span style="padding: 8px 16px; background: rgba(0,102,204,0.1); border-radius: 20px; color: #0066CC; font-size: 0.85rem; font-weight: 600;">🚗 Chỉ đường</span>
+                        <span style="padding: 8px 16px; background: rgba(0,102,204,0.1); border-radius: 20px; color: #0066CC; font-size: 0.85rem; font-weight: 600;">🔍 Zoom & Pan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Locations Grid - Minimalist -->
+    <section style="padding: 0 0 80px 0; background: #FAFBFC;">
+        <div class="container">
             <!-- Southern Region -->
-            <div class="region-section">
-                <h3 class="region-title">
-                    <span class="material-icons">place</span>
-                    Southern Vietnam
-                </h3>
-                <div class="offices-grid">
-                    <div class="office-card modern-card">
-                        <div class="office-header">
+            <div class="region-section" data-region="south" style="margin-bottom: 60px;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 32px; padding-bottom: 16px; border-bottom: 3px solid #0066CC;">
+                    <span class="material-icons" style="font-size: 32px; color: #0066CC;">place</span>
+                    <h3 style="font-size: 1.8rem; font-weight: 700; color: #1F2937; margin: 0;">Miền Nam</h3>
+                    <span style="margin-left: auto; padding: 6px 16px; background: #E3F2FD; color: #0066CC; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">7 văn phòng</span>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px;">
+                    <!-- HCM Office -->
+                    <div style="background: white; border-radius: 20px; padding: 28px; box-shadow: 0 4px 20px rgba(0,102,204,0.08); border: 1px solid rgba(0,102,204,0.06); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 12px 32px rgba(0,102,204,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,102,204,0.08)'">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 24px;">
                             <div>
-                                <h4>Ho Chi Minh City</h4>
-                                <span class="office-badge">Head Office</span>
+                                <h4 style="font-size: 1.3rem; font-weight: 700; color: #1F2937; margin: 0 0 10px 0;">TP. Hồ Chí Minh</h4>
+                                <span style="display: inline-block; padding: 6px 14px; background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); color: white; border-radius: 20px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.3px;">TRỤ SỞ CHÍNH</span>
                             </div>
-                            <span class="office-icon material-icons">apartment</span>
-                        </div>
-                        <div class="office-details">
-                            <div class="detail-item">
-                                <span class="material-icons">location_on</span>
-                                <p>18th Floor, Vincom Center, 72 Le Thanh Ton Street, District 1</p>
-                            </div>
-                            <div class="detail-item">
-                                <span class="material-icons">phone</span>
-                                <p>+84 (28) 3827 0888</p>
-                            </div>
-                            <div class="detail-item">
-                                <span class="material-icons">email</span>
-                                <p>hcm@mollogistics.com.vn</p>
+                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <span class="material-icons" style="font-size: 28px; color: #0066CC;">apartment</span>
                             </div>
                         </div>
-                        <div class="office-actions">
-                            <button class="action-btn">
-                                <span class="material-icons">directions</span>
-                                Get Directions
+                        <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px;">
+                            <div style="display: flex; gap: 12px; align-items: start;">
+                                <span class="material-icons" style="font-size: 20px; color: #6B7280; flex-shrink: 0;">location_on</span>
+                                <p style="margin: 0; font-size: 0.95rem; color: #4B5563; line-height: 1.6;">Phòng 2.5A, Tầng 2, Tòa nhà E-Town 6, 364 Cộng Hòa, P.13, Q. Tân Bình</p>
+                            </div>
+                            <div style="display: flex; gap: 12px; align-items: center;">
+                                <span class="material-icons" style="font-size: 20px; color: #6B7280;">phone</span>
+                                <p style="margin: 0; font-size: 0.95rem; color: #4B5563; font-weight: 500;">+84 (28) 3812-1349</p>
+                            </div>
+                            <div style="display: flex; gap: 12px; align-items: center;">
+                                <span class="material-icons" style="font-size: 20px; color: #6B7280;">email</span>
+                                <p style="margin: 0; font-size: 0.95rem; color: #0066CC; font-weight: 500;">mlgvn.salehcm-group@molgroup.com</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 10px; padding-top: 20px; border-top: 1px solid #E5E7EB;">
+                            <button style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background: #0066CC; color: white; border: none; border-radius: 12px; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: all 0.2s ease;" onmouseover="this.style.background='#004499'" onmouseout="this.style.background='#0066CC'">
+                                <span class="material-icons" style="font-size: 18px;">directions</span>
+                                Chỉ đường
                             </button>
-                            <button class="action-btn">
-                                <span class="material-icons">info</span>
-                                More Info
+                            <button style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background: white; color: #0066CC; border: 2px solid #0066CC; border-radius: 12px; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: all 0.2s ease;" onmouseover="this.style.background='#E3F2FD'" onmouseout="this.style.background='white'">
+                                <span class="material-icons" style="font-size: 18px;">info</span>
+                                Chi tiết
                             </button>
                         </div>
                     </div>
@@ -327,38 +401,11 @@
         <span class="material-icons">arrow_upward</span>
     </button>
 
+    <script src="navbar-loader.js"></script>
     <script src="script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            loadHeaderFooter();
-            initLocationFilters();
-        });
-
-        function loadHeaderFooter() {
-            const headerHTML = `
-            <header>
-                <nav class="navbar">
-                    <div class="container">
-                        <div class="nav-wrapper">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <img src="img/logo/logo_mol-1.png" alt="MOL Logistics Vietnam">
-                                </a>
-                            </div>
-                            <ul class="nav-menu">
-                                <li><a href="index.html" class="nav-link">Home</a></li>
-                                <li><a href="services.html" class="nav-link">Services</a></li>
-                                <li><a href="about.html" class="nav-link">About</a></li>
-                                <li><a href="locations.html" class="nav-link active">Locations</a></li>
-                                <li><a href="news.html" class="nav-link">News</a></li>
-                                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-            `;
-            
+            // Load footer
             const footerHTML = `
             <footer class="footer">
                 <div class="container">
@@ -368,26 +415,63 @@
                 </div>
             </footer>
             `;
+            const footerPlaceholder = document.getElementById('footer-placeholder');
+            if (footerPlaceholder) {
+                footerPlaceholder.outerHTML = footerHTML;
+            }
             
-            document.getElementById('header-placeholder').outerHTML = headerHTML;
-            document.getElementById('footer-placeholder').outerHTML = footerHTML;
-        }
+            initLocationFilters();
+        });
 
         function initLocationFilters() {
-            const filters = document.querySelectorAll('.map-filters .filter-btn');
+            const searchInput = document.getElementById('locationSearch');
             const regions = document.querySelectorAll('.region-section');
             
-            filters.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    filters.forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
+            // Search functionality
+            if (searchInput) {
+                searchInput.addEventListener('input', function(e) {
+                    const searchTerm = e.target.value.toLowerCase();
+                    const allCards = document.querySelectorAll('.office-card, [style*="background: white"]');
                     
-                    const region = this.getAttribute('data-region');
-                    // Filter logic here
+                    allCards.forEach(card => {
+                        const text = card.textContent.toLowerCase();
+                        if (text.includes(searchTerm)) {
+                            card.style.display = '';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
                 });
+            }
+        }
+
+        // Filter by region function
+        function filterLocation(region, button) {
+            // Update button states
+            const allButtons = document.querySelectorAll('.filter-btn');
+            allButtons.forEach(btn => {
+                btn.style.borderColor = '#E5E7EB';
+                btn.style.background = 'white';
+                btn.style.color = '#6B7280';
+            });
+            
+            button.style.borderColor = '#0066CC';
+            button.style.background = '#0066CC';
+            button.style.color = 'white';
+            
+            // Show/hide regions
+            const regions = document.querySelectorAll('.region-section');
+            regions.forEach(section => {
+                const sectionRegion = section.getAttribute('data-region');
+                if (region === 'all' || sectionRegion === region) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
             });
         }
     </script>
+    <script src="i18n.js"></script>
     <script src="back-to-top.js"></script>
 </body>
 </html>

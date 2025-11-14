@@ -35,34 +35,32 @@
     z-index: 2;
 }
 
-/* Morphing blobs for each slide */
+/* Simplified decorative elements - removed morphing blobs for better performance */
 .hero-slide::before {
     content: '';
     position: absolute;
-    width: 800px;
-    height: 800px;
-    background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
-    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-    top: -300px;
-    right: -300px;
-    animation: morphBlob 20s ease-in-out infinite;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    top: -100px;
+    right: -100px;
     pointer-events: none;
 }
 
 .hero-slide::after {
     content: '';
     position: absolute;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    bottom: -200px;
-    left: -200px;
-    animation: morphBlob 15s ease-in-out infinite reverse;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);
+    border-radius: 50%;
+    bottom: -80px;
+    left: -80px;
     pointer-events: none;
 }
 
-/* Hero Overlay */
+/* Hero Overlay - Improved contrast with lighter overlay */
 .hero-slide .hero-overlay {
     position: absolute;
     top: 0;
@@ -70,9 +68,8 @@
     right: 0;
     bottom: 0;
     background: linear-gradient(135deg, 
-        rgba(0, 102, 204, 0.85) 0%, 
-        rgba(79, 156, 249, 0.75) 50%, 
-        rgba(139, 92, 246, 0.85) 100%
+        rgba(0, 102, 204, 0.65) 0%, 
+        rgba(0, 68, 153, 0.70) 100%
     );
     z-index: 1;
 }
@@ -87,38 +84,37 @@
     padding: 0 40px;
 }
 
-/* Hero Badge (Slide Label) */
+/* Hero Badge (Slide Label) - Better contrast */
 .hero-badge {
     display: inline-block;
     padding: 8px 24px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 50px;
     font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 24px;
-    animation: fadeInDown 0.8s ease;
 }
 
-/* Hero Title */
+/* Hero Title - Better readability */
 .hero-slide .hero-title {
     font-size: 56px;
     font-weight: 700;
     margin-bottom: 24px;
     line-height: 1.2;
-    animation: fadeInUp 1s ease 0.2s backwards;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Hero Subtitle */
+/* Hero Subtitle - Better readability */
 .hero-slide .hero-subtitle {
     font-size: 20px;
     line-height: 1.6;
     margin-bottom: 40px;
-    opacity: 0.95;
-    animation: fadeInUp 1s ease 0.4s backwards;
+    opacity: 1;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Hero Buttons */
@@ -127,7 +123,6 @@
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
-    animation: fadeInUp 1s ease 0.6s backwards;
 }
 
 /* ========================================
@@ -214,7 +209,7 @@
 }
 
 /* ========================================
-   Scroll Indicator
+   Scroll Indicator - Simplified animation
    ======================================== */
 
 .hero-carousel .scroll-indicator {
@@ -223,69 +218,29 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    animation: bounce 2s infinite;
+    animation: gentleBounce 3s ease-in-out infinite;
 }
 
 .scroll-indicator .material-icons {
     font-size: 32px;
     color: white;
-    opacity: 0.7;
+    opacity: 0.8;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+@keyframes gentleBounce {
+    0%, 100% {
         transform: translateX(-50%) translateY(0);
     }
-    40% {
-        transform: translateX(-50%) translateY(-10px);
-    }
-    60% {
-        transform: translateX(-50%) translateY(-5px);
+    50% {
+        transform: translateX(-50%) translateY(-8px);
     }
 }
 
 /* ========================================
-   Slide Animations
+   Slide Animations - Removed for simplicity
+   Content appears immediately for better performance
    ======================================== */
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Re-trigger animations when slide becomes active */
-.hero-slide.active .hero-badge {
-    animation: fadeInDown 0.8s ease;
-}
-
-.hero-slide.active .hero-title {
-    animation: fadeInUp 1s ease 0.2s backwards;
-}
-
-.hero-slide.active .hero-subtitle {
-    animation: fadeInUp 1s ease 0.4s backwards;
-}
-
-.hero-slide.active .hero-buttons {
-    animation: fadeInUp 1s ease 0.6s backwards;
-}
 
 /* ========================================
    Progress Bar (Optional)
@@ -428,7 +383,4 @@
     outline-offset: 4px;
 }
 
-/* Smooth transitions for better performance */
-.hero-slide * {
-    will-change: opacity, transform;
-}
+/* Optimized for performance - removed will-change to reduce GPU usage */

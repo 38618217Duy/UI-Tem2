@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Quote - MOL Logistics Vietnam</title>
+    <meta name="description" content="Calculate shipping costs and get instant quotes for ocean freight, air freight, and land transportation services.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modern-design.css">
+    <link rel="stylesheet" href="quote-calculator.css">
+    <link rel="stylesheet" href="back-to-top.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Page Hero -->
+    <section class="page-hero" style="background: #0066CC; padding: 60px 0;">
+        <div class="hero-content">
+            <h1 class="hero-title" style="font-size: 42px; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.5px;">Tính toán báo giá</h1>
+            <p class="hero-subtitle" style="font-size: 20px; font-weight: 400; margin-bottom: 24px;">Tính chi phí vận chuyển của bạn chỉ trong vài bước đơn giản</p>
+            <div class="breadcrumb" style="font-size: 15px;">
+                <a href="index.html" style="color: rgba(255,255,255,0.9); text-decoration: none; font-weight: 500;">Trang chủ</a>
+                <span class="material-icons" style="font-size: 18px; vertical-align: middle;">chevron_right</span>
+                <span style="color: white; font-weight: 600;">Tính toán báo giá</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Calculator Container -->
+    <section class="quote-calculator-section">
+        <div class="container">
+            <!-- Progress Steps -->
+            <div class="progress-steps">
+                <div class="step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Loại dịch vụ</div>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Chi tiết hàng hóa</div>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Tuyến đường</div>
+                </div>
+                <div class="step" data-step="4">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Kết quả</div>
+                </div>
+            </div>
+
+            <!-- Calculator Form -->
+            <div class="calculator-card">
+                <!-- Step 1: Service Type -->
+                <div class="calculator-step active" id="step1">
+                    <h2>Chọn loại dịch vụ</h2>
+                    <p class="step-description">Lựa chọn phương thức vận chuyển phù hợp với nhu cầu của bạn</p>
+                    
+                    <div class="service-options">
+                        <div class="service-option" data-service="ocean">
+                            <span class="material-icons">directions_boat</span>
+                            <h3>Vận tải đường biển</h3>
+                            <p>Tiết kiệm chi phí cho lô hàng lớn</p>
+                        </div>
+                        <div class="service-option" data-service="air">
+                            <span class="material-icons">flight</span>
+                            <h3>Vận tải đường hàng không</h3>
+                            <p>Giao hàng nhanh cho hàng hóa khẩn cấp</p>
+                        </div>
+                        <div class="service-option" data-service="land">
+                            <span class="material-icons">local_shipping</span>
+                            <h3>Vận tải đường bộ</h3>
+                            <p>Vận chuyển nội địa đáng tin cậy</p>
+                        </div>
+                    </div>
+
+                    <div class="step-actions">
+                        <button class="btn btn-primary" id="nextStep1" disabled>
+                            Bước tiếp theo
+                            <span class="material-icons">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Cargo Details -->
+                <div class="calculator-step" id="step2">
+                    <h2>Chi tiết hàng hóa</h2>
+                    <p class="step-description">Cung cấp thông tin về lô hàng của bạn</p>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Loại hàng hóa</label>
+                            <select id="cargoType" required>
+                                <option value="">Chọn loại hàng hóa</option>
+                                <option value="general">Hàng hóa thông thường</option>
+                                <option value="hazmat">Hàng nguy hiểm</option>
+                                <option value="perishable">Hàng dễ hỏng</option>
+                                <option value="fragile">Hàng dễ vỡ</option>
+                                <option value="bulk">Hàng rời</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Loại container <span class="service-specific ocean-only">(Chỉ đường biển)</span></label>
+                            <select id="containerType">
+                                <option value="">Chọn loại container</option>
+                                <option value="20ft">Container 20ft chuẩn</option>
+                                <option value="40ft">Container 40ft chuẩn</option>
+                                <option value="40hc">Container 40ft HC</option>
+                                <option value="reefer">Container lạnh</option>
+                                <option value="lcl">LCL (Hàng lẻ)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Khối lượng (kg)</label>
+                            <input type="number" id="weight" placeholder="Nhập khối lượng (kg)" min="1" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Thể tích (m³)</label>
+                            <input type="number" id="volume" placeholder="Nhập thể tích (m³)" min="0.1" step="0.1" required>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label>Dịch vụ bổ sung</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="insurance" value="insurance">
+                                    <span>Bảo hiểm hàng hóa</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="customs" value="customs">
+                                    <span>Thông quan hải quan</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="warehousing" value="warehousing">
+                                    <span>Kho bãi</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="packaging" value="packaging">
+                                    <span>Đóng gói đặc biệt</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-actions">
+                        <button class="btn btn-secondary" id="prevStep2">
+                            <span class="material-icons">arrow_back</span>
+                            Quay lại
+                        </button>
+                        <button class="btn btn-primary" id="nextStep2">
+                            Bước tiếp theo
+                            <span class="material-icons">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Route -->
+                <div class="calculator-step" id="step3">
+                    <h2>Thông tin tuyến đường</h2>
+                    <p class="step-description">Bạn muốn vận chuyển từ đâu đến đâu?</p>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Quốc gia xuất phát</label>
+                            <select id="originCountry" required>
+                                <option value="">Chọn quốc gia</option>
+                                <option value="VN">Việt Nam</option>
+                                <option value="JP">Nhật Bản</option>
+                                <option value="CN">Trung Quốc</option>
+                                <option value="KR">Hàn Quốc</option>
+                                <option value="TH">Thái Lan</option>
+                                <option value="US">Hoa Kỳ</option>
+                                <option value="DE">Đức</option>
+                                <option value="GB">Anh</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Cảng/Thành phố xuất phát</label>
+                            <input type="text" id="originPort" placeholder="VD: Thành phố Hồ Chí Minh" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Quốc gia đích</label>
+                            <select id="destCountry" required>
+                                <option value="">Chọn quốc gia</option>
+                                <option value="VN">Việt Nam</option>
+                                <option value="JP">Nhật Bản</option>
+                                <option value="CN">Trung Quốc</option>
+                                <option value="KR">Hàn Quốc</option>
+                                <option value="TH">Thái Lan</option>
+                                <option value="US">Hoa Kỳ</option>
+                                <option value="DE">Đức</option>
+                                <option value="GB">Anh</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Cảng/Thành phố đích</label>
+                            <input type="text" id="destPort" placeholder="VD: Tokyo" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Ngày vận chuyển dự kiến</label>
+                            <input type="date" id="shippingDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Điều kiện giao hàng (Incoterms)</label>
+                            <select id="incoterms">
+                                <option value="EXW">EXW - Giao tại xưởng</option>
+                                <option value="FOB" selected>FOB - Giao lên tàu</option>
+                                <option value="CIF">CIF - Bao gồm cước & bảo hiểm</option>
+                                <option value="DDP">DDP - Giao tận nơi đã đóng thuế</option>
+                                <option value="DAP">DAP - Giao tận nơi</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="step-actions">
+                        <button class="btn btn-secondary" id="prevStep3">
+                            <span class="material-icons">arrow_back</span>
+                            Quay lại
+                        </button>
+                        <button class="btn btn-primary" id="calculateBtn">
+                            Tính toán báo giá
+                            <span class="material-icons">calculate</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Results -->
+                <div class="calculator-step" id="step4">
+                    <h2>Báo giá ước tính của bạn</h2>
+                    <p class="step-description">Dựa trên thông tin bạn đã cung cấp</p>
+
+                    <div class="quote-results">
+                        <div class="quote-summary">
+                            <div class="summary-item">
+                                <span class="material-icons">local_shipping</span>
+                                <div>
+                                    <div class="summary-label">DỊCH VỤ</div>
+                                    <div class="summary-value" id="resultService">-</div>
+                                </div>
+                            </div>
+                            <div class="summary-item">
+                                <span class="material-icons">route</span>
+                                <div>
+                                    <div class="summary-label">TUYẾN ĐƯỜNG</div>
+                                    <div class="summary-value" id="resultRoute">-</div>
+                                </div>
+                            </div>
+                            <div class="summary-item">
+                                <span class="material-icons">schedule</span>
+                                <div>
+                                    <div class="summary-label">THỜI GIAN VẬN CHUYỂN</div>
+                                    <div class="summary-value" id="resultTransit">-</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="price-breakdown">
+                            <h3>Chi tiết chi phí</h3>
+                            <div class="price-item">
+                                <span>Cước vận chuyển cơ bản</span>
+                                <span id="baseFreight">$0</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Phụ phí nhiên liệu</span>
+                                <span id="fuelSurcharge">$0</span>
+                            </div>
+                            <div class="price-item" id="insuranceItem" style="display: none;">
+                                <span>Bảo hiểm</span>
+                                <span id="insuranceFee">$0</span>
+                            </div>
+                            <div class="price-item" id="customsItem" style="display: none;">
+                                <span>Thông quan hải quan</span>
+                                <span id="customsFee">$0</span>
+                            </div>
+                            <div class="price-item" id="warehousingItem" style="display: none;">
+                                <span>Kho bãi</span>
+                                <span id="warehousingFee">$0</span>
+                            </div>
+                            <div class="price-item total">
+                                <span>TỔNG CHI PHÍ ƯỚC TÍNH</span>
+                                <span id="totalCost">$0</span>
+                            </div>
+                        </div>
+
+                        <div class="quote-disclaimer">
+                            <span class="material-icons">info</span>
+                            <p><strong>Lưu ý:</strong> Đây là báo giá ước tính. Chi phí thực tế có thể thay đổi dựa trên kích thước hàng hóa, tình trạng tuyến đường và giá thị trường hiện tại. Vui lòng yêu cầu báo giá chính thức để có mức giá chính xác.</p>
+                        </div>
+
+                        <div class="quote-actions">
+                            <button class="btn btn-primary" id="requestQuoteBtn">
+                                <span class="material-icons">email</span>
+                                Yêu cầu báo giá chính thức
+                            </button>
+                            <button class="btn btn-secondary" id="newQuoteBtn">
+                                <span class="material-icons">refresh</span>
+                                Tính toán mới
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="cta-section" style="padding: 80px 0; background: #F5F5F5; border-top: 3px solid #E0E0E0;">
+        <div class="container" style="text-align: center;">
+            <h2 style="font-size: 32px; font-weight: 700; color: #212121; margin-bottom: 16px;">Cần hỗ trợ?</h2>
+            <p style="margin-bottom: 40px; font-size: 18px; color: #424242;">Đội ngũ chuyên gia logistics của chúng tôi luôn sẵn sàng hỗ trợ bạn</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-primary">
+                    <span class="material-icons">phone</span>
+                    Liên hệ ngay
+                </a>
+                <a href="services.html" class="btn btn-secondary">
+                    <span class="material-icons">explore</span>
+                    Xem dịch vụ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <button id="backToTop" class="back-to-top">
+        <span class="material-icons">arrow_upward</span>
+    </button>
+
+    <script src="navbar-loader.js"></script>
+    <script src="script.js"></script>
+    <script src="i18n.js"></script>
+    <script src="quote-calculator.js"></script>
+    <script src="back-to-top.js"></script>
+</body>
+</html>

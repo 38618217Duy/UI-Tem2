@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i18n Demo - MOL Logistics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .demo-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .language-switcher {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        
+        .lang-btn {
+            padding: 12px 30px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-btn:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+        }
+        
+        .lang-btn.active {
+            background: #667eea;
+            color: white;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .demo-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .demo-section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .demo-section p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 0.9em;
+            margin: 0;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-item .number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-item .label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .code-example {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+        
+        .code-example code {
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        
+        .success-badge {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <div class="header">
+            <h1 data-lang-key="demo_title">🌐 Multilingual System Demo</h1>
+            <p data-lang-key="demo_subtitle">Click the buttons below to change language</p>
+        </div>
+        
+        <div class="language-switcher">
+            <button class="lang-btn active" data-lang="en">🇬🇧 English</button>
+            <button class="lang-btn" data-lang="vi">🇻🇳 Tiếng Việt</button>
+            <button class="lang-btn" data-lang="ja">🇯🇵 日本語</button>
+        </div>
+        
+        <div class="demo-section">
+            <h2 data-lang-key="about_title">About MOL Logistics Vietnam</h2>
+            <p data-lang-key="about_p1">MOL Logistics (Vietnam) Co., Ltd. is a leading provider of comprehensive logistics solutions in Vietnam, backed by the global expertise of Mitsui O.S.K. Lines (MOL), one of the world's largest shipping companies.</p>
+            <p data-lang-key="about_p2">With a strong presence in major Vietnamese cities including Ho Chi Minh City and Hanoi, we offer integrated logistics services that connect Vietnam to the world through our extensive global network spanning over 650 locations in more than 100 countries.</p>
+        </div>
+        
+        <div class="demo-section">
+            <h2 data-lang-key="services_title">Our Services</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3 data-lang-key="service_ocean_title">Ocean Freight</h3>
+                    <p data-lang-key="service_ocean_desc">Global sea transport solutions</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-lang-key="service_air_title">Air Freight</h3>
+                    <p data-lang-key="service_air_desc">Fast international delivery</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-lang-key="service_warehouse_title">Warehousing</h3>
+                    <p data-lang-key="service_warehouse_desc">Modern storage facilities</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2 data-lang-key="network_title">Nationwide Coverage</h2>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="number">100+</div>
+                    <div class="label" data-lang-key="stat_countries">Countries Worldwide</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number">650+</div>
+                    <div class="label" data-lang-key="stat_locations">Global Offices</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number">17</div>
+                    <div class="label" data-lang-key="stat_offices_vn">Offices in Vietnam</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>✅ System Status <span class="success-badge">Active</span></h2>
+            <div class="code-example">
+                <code>
+// Language changed successfully!<br>
+Current Language: <span id="current-lang">en</span><br>
+Translations Loaded: ✅<br>
+Auto-save: ✅ Enabled<br>
+Total Keys: 200+
+                </code>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="i18n.js"></script>
+    <script>
+        // Update current language display
+        window.addEventListener('languageChanged', function(e) {
+            document.getElementById('current-lang').textContent = e.detail.lang;
+        });
+        
+        // Set initial language display
+        document.getElementById('current-lang').textContent = window.i18n.currentLang;
+    </script>
+</body>
+</html>

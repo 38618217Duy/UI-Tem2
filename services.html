@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="back-to-top.css">
+    <!-- I18N Scripts -->
+    <script src="translations.js"></script>
 </head>
 <body>
     <div id="header-placeholder"></div>
@@ -16,12 +18,12 @@
     <section class="page-hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">Our Services</h1>
-            <p class="hero-subtitle">Comprehensive logistics solutions tailored to your business needs</p>
+            <h1 class="hero-title" data-lang-key="services_page_title">Our Services</h1>
+            <p class="hero-subtitle" data-lang-key="services_page_subtitle">Comprehensive logistics solutions tailored to your business needs</p>
             <div class="breadcrumb">
-                <a href="index.html">Home</a>
+                <a href="index.html" data-lang-key="breadcrumb_home">Home</a>
                 <span class="material-icons">chevron_right</span>
-                <span>Services</span>
+                <span data-lang-key="nav_services">Services</span>
             </div>
         </div>
     </section>
@@ -33,22 +35,22 @@
                 <div class="stat-item">
                     <span class="material-icons">public</span>
                     <h3>100+</h3>
-                    <p>Countries Served</p>
+                    <p data-lang-key="services_countries_served">Countries Served</p>
                 </div>
                 <div class="stat-item">
                     <span class="material-icons">verified</span>
-                    <h3>ISO Certified</h3>
-                    <p>Quality Assured</p>
+                    <h3 data-lang-key="services_iso_certified">ISO Certified</h3>
+                    <p data-lang-key="services_quality_assured">Quality Assured</p>
                 </div>
                 <div class="stat-item">
                     <span class="material-icons">support_agent</span>
                     <h3>24/7</h3>
-                    <p>Customer Support</p>
+                    <p data-lang-key="services_customer_support">Customer Support</p>
                 </div>
                 <div class="stat-item">
                     <span class="material-icons">speed</span>
-                    <h3>Real-Time</h3>
-                    <p>Tracking System</p>
+                    <h3 data-lang-key="services_real_time">Real-Time</h3>
+                    <p data-lang-key="services_tracking_system">Tracking System</p>
                 </div>
             </div>
         </div>
@@ -60,11 +62,11 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Ready to Optimize Your Logistics?</h2>
-            <p>Contact our team to discuss your requirements</p>
+            <h2 data-lang-key="services_cta_title">Ready to Optimize Your Logistics?</h2>
+            <p data-lang-key="services_cta_desc">Contact our team to discuss your requirements</p>
             <div class="cta-buttons">
-                <a href="index.html#tools" class="btn btn-primary">Get a Quote</a>
-                <a href="index.html#contact" class="btn btn-secondary">Contact Us</a>
+                <a href="quote-calculator.html" class="btn" data-lang-key="services_get_quote" style="background: linear-gradient(135deg, #FF6600, #E55A00); color: white; box-shadow: 0 4px 12px rgba(255, 102, 0, 0.25);">Get a Quote</a>
+                <a href="index.html#contact" class="btn btn-secondary" data-lang-key="services_contact_us">Contact Us</a>
             </div>
         </div>
     </section>
@@ -76,7 +78,9 @@
         <span class="material-icons">arrow_upward</span>
     </button>
 
+    <script src="navbar-loader.js"></script>
     <script src="script.js"></script>
+    <script src="i18n.js"></script>
     <script src="services-page.js"></script>
     <script src="back-to-top.js"></script>
 </body>
