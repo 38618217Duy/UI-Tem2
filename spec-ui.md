@@ -1602,10 +1602,3 @@ UI Icons:
     grid-template-columns: repeat(2, 1fr);
   }
 }
-```
-
----
-
-**Ngày cập nhật**: 14/11/2025
-**Phiên bản**: 1.1
-**Người thực hiện**: Cascade AI Assistant
