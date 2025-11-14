@@ -31,89 +31,62 @@ function loadFooter() {
 
 // Load Services Content
 function loadServicesContent() {
+    // Get translation function
+    const t = (key) => window.i18n ? window.i18n.t(key) : key;
+    
     const services = [
         {
             id: 'ocean-freight',
             icon: 'directions_boat',
-            title: 'Ocean Freight',
+            titleKey: 'service_ocean_title',
             detailPage: 'ocean-freight.html',
-            description: 'Comprehensive sea freight solutions with global coverage',
-            features: [
-                'Full Container Load (FCL)',
-                'Less than Container Load (LCL)',
-                'Reefer Containers',
-                'Break Bulk & Project Cargo'
-            ],
+            descKey: 'service_ocean_desc_full',
+            featureKeys: ['service_ocean_f1', 'service_ocean_f2', 'service_ocean_f3', 'service_ocean_f4'],
             image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80'
         },
         {
             id: 'air-freight',
             icon: 'flight',
-            title: 'Air Freight',
+            titleKey: 'service_air_title',
             detailPage: 'air-freight.html',
-            description: 'Fast and reliable air cargo services',
-            features: [
-                'Express Air Cargo',
-                'Standard Air Freight',
-                'Dangerous Goods Handling',
-                'Charter Services'
-            ],
+            descKey: 'service_air_desc_full',
+            featureKeys: ['service_air_f1', 'service_air_f2', 'service_air_f3', 'service_air_f4'],
             image: 'https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=800&q=80'
         },
         {
             id: 'land-transport',
             icon: 'local_shipping',
-            title: 'Land Transportation',
+            titleKey: 'service_land_title',
             detailPage: 'land-transport.html',
-            description: 'Nationwide trucking solutions with GPS tracking',
-            features: [
-                'Full Truckload (FTL)',
-                'Less than Truckload (LTL)',
-                'Cross-Border Transport',
-                'Real-time GPS Tracking'
-            ],
+            descKey: 'service_land_desc_full',
+            featureKeys: ['service_land_f1', 'service_land_f2', 'service_land_f3', 'service_land_f4'],
             image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80'
         },
         {
             id: 'warehousing',
             icon: 'warehouse',
-            title: 'Warehousing',
+            titleKey: 'service_warehouse_title',
             detailPage: 'warehousing.html',
-            description: 'Modern storage facilities with inventory management',
-            features: [
-                'Ambient & Temperature-Controlled Storage',
-                'Warehouse Management System',
-                'Cross-Docking Services',
-                'Value-Added Services'
-            ],
+            descKey: 'service_warehouse_desc_full',
+            featureKeys: ['service_warehouse_f1', 'service_warehouse_f2', 'service_warehouse_f3', 'service_warehouse_f4'],
             image: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80'
         },
         {
             id: 'customs',
             icon: 'gavel',
-            title: 'Customs Clearance',
+            titleKey: 'service_customs_title',
             detailPage: 'customs-clearance.html',
-            description: 'Expert customs brokerage services',
-            features: [
-                'Import/Export Clearance',
-                'Compliance Consulting',
-                'Duty & Tax Management',
-                'AEO Certified'
-            ],
+            descKey: 'service_customs_desc_full',
+            featureKeys: ['service_customs_f1', 'service_customs_f2', 'service_customs_f3', 'service_customs_f4'],
             image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80'
         },
         {
             id: 'supply-chain',
             icon: 'hub',
-            title: 'Supply Chain Solutions',
+            titleKey: 'service_supply_title',
             detailPage: 'supply-chain.html',
-            description: 'End-to-end supply chain management',
-            features: [
-                'Supply Chain Consulting',
-                'System Integration',
-                'Visibility Solutions',
-                'Data Analytics'
-            ],
+            descKey: 'service_supply_desc_full',
+            featureKeys: ['service_supply_f1', 'service_supply_f2', 'service_supply_f3', 'service_supply_f4'],
             image: 'https://images.unsplash.com/photo-1586528116493-a029325540fa?w=800&q=80'
         }
     ];
@@ -124,6 +97,8 @@ function loadServicesContent() {
     services.forEach((service, index) => {
         const isReverse = index % 2 === 1;
         const bgClass = isReverse ? 'alt-bg' : '';
+        const title = t(service.titleKey);
+        const description = t(service.descKey);
         
         html += `
         <section id="${service.id}" class="service-detail ${bgClass}">
@@ -131,36 +106,36 @@ function loadServicesContent() {
                 <div class="service-detail-wrapper ${isReverse ? 'reverse' : ''}">
                     ${isReverse ? `
                     <div class="service-detail-image">
-                        <img src="${service.image}" alt="${service.title}">
+                        <img src="${service.image}" alt="${title}">
                     </div>
                     ` : ''}
                     <div class="service-detail-content">
                         <div class="service-badge">
                             <span class="material-icons">${service.icon}</span>
                         </div>
-                        <h2>${service.title}</h2>
-                        <p class="service-lead">${service.description}</p>
+                        <h2>${title}</h2>
+                        <p class="service-lead">${description}</p>
                         <div class="service-features-list">
-                            ${service.features.map(feature => `
+                            ${service.featureKeys.map(featureKey => `
                             <div class="feature-item">
                                 <span class="material-icons">check_circle</span>
-                                <p>${feature}</p>
+                                <p>${t(featureKey)}</p>
                             </div>
                             `).join('')}
                         </div>
                         <div class="service-cta">
                             <a href="${service.detailPage}" class="btn btn-primary">
-                                Learn More
+                                ${t('learn_more')}
                                 <span class="material-icons">arrow_forward</span>
                             </a>
                             <a href="quote-calculator.html" class="btn" style="margin-left: 15px; background: linear-gradient(135deg, #FF6600, #E55A00); color: white; box-shadow: 0 4px 12px rgba(255, 102, 0, 0.25);">
-                                Get a Quote
+                                ${t('services_get_quote')}
                             </a>
                         </div>
                     </div>
                     ${!isReverse ? `
                     <div class="service-detail-image">
-                        <img src="${service.image}" alt="${service.title}">
+                        <img src="${service.image}" alt="${title}">
                     </div>
                     ` : ''}
                 </div>

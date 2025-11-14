@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - MOL Logistics Vietnam</title>
+    <title>Dịch vụ của chúng tôi - MOL Logistics Vietnam</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -19,12 +19,12 @@
     <section class="page-hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title" data-lang-key="services_page_title">Our Services</h1>
-            <p class="hero-subtitle" data-lang-key="services_page_subtitle">Comprehensive logistics solutions tailored to your business needs</p>
+            <h1 class="hero-title" data-lang-key="services_page_title">Dịch vụ của chúng tôi</h1>
+            <p class="hero-subtitle" data-lang-key="services_page_subtitle">Giải pháp logistics toàn diện, được thiết kế theo nhu cầu doanh nghiệp</p>
             <div class="breadcrumb">
-                <a href="index.html" data-lang-key="breadcrumb_home">Home</a>
+                <a href="index.html" data-lang-key="breadcrumb_home">Trang chủ</a>
                 <span class="material-icons">chevron_right</span>
-                <span data-lang-key="nav_services">Services</span>
+                <span data-lang-key="nav_services">Dịch vụ</span>
             </div>
         </div>
     </section>
@@ -36,22 +36,22 @@
                 <div class="stat-item">
                     <span class="material-icons">public</span>
                     <h3>100+</h3>
-                    <p data-lang-key="services_countries_served">Countries Served</p>
+                    <p data-lang-key="services_countries_served">Quốc gia đang phục vụ</p>
                 </div>
                 <div class="stat-item">
                     <span class="material-icons">verified</span>
-                    <h3 data-lang-key="services_iso_certified">ISO Certified</h3>
-                    <p data-lang-key="services_quality_assured">Quality Assured</p>
+                    <h3 data-lang-key="services_iso_certified">Chứng nhận ISO</h3>
+                    <p data-lang-key="services_quality_assured">Chất lượng đảm bảo</p>
                 </div>
                 <div class="stat-item">
                     <span class="material-icons">support_agent</span>
                     <h3>24/7</h3>
-                    <p data-lang-key="services_customer_support">Customer Support</p>
+                    <p data-lang-key="services_customer_support">Hỗ trợ khách hàng</p>
                 </div>
                 <div class="stat-item">
                     <span class="material-icons">speed</span>
-                    <h3 data-lang-key="services_real_time">Real-Time</h3>
-                    <p data-lang-key="services_tracking_system">Tracking System</p>
+                    <h3 data-lang-key="services_real_time">Thời gian thực</h3>
+                    <p data-lang-key="services_tracking_system">Hệ thống theo dõi</p>
                 </div>
             </div>
         </div>
@@ -63,11 +63,11 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2 data-lang-key="services_cta_title">Ready to Optimize Your Logistics?</h2>
-            <p data-lang-key="services_cta_desc">Contact our team to discuss your requirements</p>
+            <h2 data-lang-key="services_cta_title">Sẵn sàng tối ưu logistics của bạn?</h2>
+            <p data-lang-key="services_cta_desc">Liên hệ với đội ngũ của chúng tôi để trao đổi nhu cầu của bạn</p>
             <div class="cta-buttons">
-                <a href="quote-calculator.html" class="btn" data-lang-key="services_get_quote" style="background: linear-gradient(135deg, #FF6600, #E55A00); color: white; box-shadow: 0 4px 12px rgba(255, 102, 0, 0.25);">Get a Quote</a>
-                <a href="index.html#contact" class="btn btn-secondary" data-lang-key="services_contact_us">Contact Us</a>
+                <a href="quote-calculator.html" class="btn" data-lang-key="services_get_quote" style="background: linear-gradient(135deg, #FF6600, #E55A00); color: white; box-shadow: 0 4px 12px rgba(255, 102, 0, 0.25);">Nhận báo giá</a>
+                <a href="index.html#contact" class="btn btn-secondary" data-lang-key="services_contact_us">Liên hệ</a>
             </div>
         </div>
     </section>
@@ -75,14 +75,32 @@
     <div id="footer-placeholder"></div>
 
     <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <button id="backToTop" class="back-to-top" aria-label="Lên đầu trang">
         <span class="material-icons">arrow_upward</span>
     </button>
 
     <script src="navbar-loader.js"></script>
+    <script src="translations.js"></script>
     <script src="script.js"></script>
     <script src="i18n.js"></script>
     <script src="services-page.js"></script>
     <script src="back-to-top.js"></script>
+    <script>
+        // Nạp footer từ trang chủ để đồng bộ giữa các trang
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('index.html')
+                .then(r => r.text())
+                .then(html => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    const footer = doc.querySelector('footer');
+                    const footerPlaceholder = document.getElementById('footer-placeholder');
+                    if (footer && footerPlaceholder) {
+                        footerPlaceholder.outerHTML = footer.outerHTML;
+                    }
+                })
+                .catch(err => console.error('Không thể load footer:', err));
+        });
+    </script>
 </body>
 </html>

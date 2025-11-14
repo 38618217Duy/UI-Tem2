@@ -6,7 +6,8 @@
 
 class I18nManager {
     constructor() {
-        this.currentLang = localStorage.getItem('preferredLang') || 'en';
+        // Luôn cố định sử dụng tiếng Việt
+        this.currentLang = 'vi';
         this.translations = window.translations || {};
     }
 
@@ -62,24 +63,25 @@ class I18nManager {
     }
 
     // Initialize language switcher buttons
+    // Ở đây chỉ hiển thị nút, không cho đổi ngôn ngữ (luôn là VI)
     initLanguageSwitcher() {
         const langButtons = document.querySelectorAll('.lang-btn');
-        
+
         langButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const lang = btn.getAttribute('data-lang');
-                this.changeLanguage(lang);
-                
-                // Update active state
-                langButtons.forEach(b => b.classList.remove('active'));
+            const lang = btn.getAttribute('data-lang');
+
+            // Chỉ đánh dấu VI là active, các nút khác không active và bị vô hiệu hóa
+            if (lang === 'vi') {
                 btn.classList.add('active');
-            });
-            
-            // Set initial active state
-            if (btn.getAttribute('data-lang') === this.currentLang) {
-                btn.classList.add('active');
+                btn.disabled = false;
+            } else {
+                btn.classList.remove('active');
+                btn.disabled = true; // không cho click EN/JA
             }
         });
+
+        // Đảm bảo nội dung trang luôn cập nhật theo tiếng Việt
+        this.changeLanguage('vi');
     }
 
     // Initialize on page load
